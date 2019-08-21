@@ -1,5 +1,10 @@
 # Introduction
 
+Note: There is a one-line shell script that uses the `clojure`
+command, and the `deps.edn` file in the root directory of this
+repository, to invoke a very simple Clojure program that automates the
+steps below, at least for the first function `foo2` shown.
+
 I came across this odd behavior while testing the performance of
 pretty simple Clojure code, and am curious how to explain what is
 happening.
@@ -187,6 +192,8 @@ form were 3 to 4 times slower, with some other JDK versions and OS:
   * OpenJDK 11.0.4+11
   * Amazon Corretto JDK 8.222.10.1
   * Amazon Corretto JDK 11.0.4.11.1
+  * Azul Zulu 8.31.0.1-linux64 build 1.8.0_181-b02
+  * Azul Zulu 11.2+3 build 11.0.1+13-LTS
 * Clojure 1.10.1
 
 ----------------------------------------
