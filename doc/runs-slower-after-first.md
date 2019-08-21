@@ -168,3 +168,11 @@ with some other JDK verisons and OS:
 * Ubuntu 18.04.3 Desktop Linux
 * OpenJDK 11.0.4+11
 * Clojure 1.10.1
+
+* Mid 2011 13-inch MacBook Air, 1.7 GHz Intel Core i5
+* macOS 10.13.6
+* several JDK versions:
+** AdoptOpenJDK 1.8.0_222-b10
+** AdoptOpenJDK 11.0.4+11
+** AdoptOpenJDK 12.0.2+10
+* Clojure 1.10.1
