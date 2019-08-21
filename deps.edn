@@ -1,13 +1,13 @@
 {:paths ["src/leeuwenhoek"]
- :deps {;;com.clojure-goes-fast/clj-java-decompiler {:mvn/version "0.2.1"}
-        ;;nodisassemble {:mvn/version "0.1.3"}
-        ;;lein-nodisassemble {:mvn/version "0.1.3"}
-        }
  :aliases
  {;; Common alias to use for all Clojure/Java commands
   :clj {:jvm-opts ["-XX:-OmitStackTraceInFastThrow"]}
-
   :jitlog {:jvm-opts ["-XX:+PrintCompilation"]}
+  ;; Extra dependencies for decompiling/disassembling
+  :decompile {:extra-deps {com.clojure-goes-fast/clj-java-decompiler {:mvn/version "0.3.0-SNAPSHOT"}
+                           nodisassemble {:mvn/version "0.1.3"}
+                           lein-nodisassemble {:mvn/version "0.1.3"}}}
+  :criterium {:extra-deps {criterium {:mvn/version "0.4.5"}}}
 
   ;; - start a Clojure/Java Socket REPL on port 50505
   :socket {:jvm-opts ["-Dclojure.server.repl={:port,50505,:accept,clojure.core.server/repl}"]}
