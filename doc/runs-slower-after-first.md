@@ -92,6 +92,39 @@ Note that after those longer runs, I can go back and redo the `defn`
 form to define the function again, and the first run after that is
 fast again, and the second and later runs are slow again.
 
+Try out a variant of `foo2` that uses `long` instead of `int`:
+
+```
+user=> (defn foo2-long [n]
+         (let [n (long n)]
+           (loop [i (long 0)]
+             (if (< i n)
+               (recur (inc i))
+               i))))
+user=> (time (foo2-long 100000000))
+
+;; Same weird behavior of fast on first run after `defn`, slower on
+;; second and later runs, but back to fast if you do `defn` again, on
+;; the first call after the `defn`.
+```
+
+```
+user=> (defn foo2 [n]
+         (let [n (int n)]
+           (loop [i (int 0)]
+             (if (< i n)
+               (recur (inc i))
+               i))))
+user=> (def my-test #(foo2 100000000))
+user=> (time (my-test))
+
+;; Same weird behavior of fast on first run after `defn`, slower on
+;; second and later runs.  Back to fast if I evaluate `defn` form then
+;; `def` again, but does _not_ go back to a fast run if I only
+;; re-evaluate the `def` form, without also re-eval'ing the `defn`
+;; form.
+```
+
 
 # Hardware and software details
 
