@@ -88,6 +88,10 @@ user=>  104379 1610       4       jdk.internal.reflect.ReflectionFactory::copyMe
 Additional evaluations of the expression `(time (foo2 100000000))`
 show a similar longer run time of around 225 msec.
 
+Note that after those longer runs, I can go back and redo the `defn`
+form to define the function again, and the first run after that is
+fast again, and the second and later runs are slow again.
+
 
 # Hardware and software details
 
@@ -120,3 +124,14 @@ $ clj -Sdescribe
  :main-aliases ""
  :all-aliases ""}
 ```
+
+Saw similar behavior, with different precise time measurements, but
+similar i nthat the second and later runs were 3 to 4 times slower,
+with some other JDK verisons and OS:
+
+* Mid 2015 15-inch MacBook Pro, 2.2 GHz Intel Core i7
+* macOS 10.13.6
+* VirtualBox 6.0.10
+* Ubuntu 18.04.3 Desktop Linux
+* OpenJDK 11.0.4+11
+* Clojure 1.10.1
