@@ -39,17 +39,24 @@
   (print (format "Trial %2d: " (inc i)))
   (time (foo2 100000000)))
 
+(println "----------------------------------------")
 (require '[clojure.java.shell :as sh]
          '[clojure.pprint :as pp]
          '[clojure.string :as str])
+(import '(java.io IOException))
 (defn run-sh [& sh-args]
   (println (str/join " " (cons "$" sh-args)))
-  (let [ret (apply sh/sh sh-args)]
+  (let [ret (try
+              (apply sh/sh sh-args)
+              (catch IOException e
+                {:exit 1, :out "",
+                 :err (str/join " " (cons "IOException occurred during clojure.java.shell/sh, probably because command not found: " sh-args))}))]
     (println (str "[exit status " (:exit ret) "]"))
     (println (:out ret))
     (println (:err ret))))
 (run-sh "uname" "-a")
 (run-sh "lsb_release" "-a")
+(println)
 (let [props (System/getProperties)]
   (doseq [p ["os.name"
              "os.version"
