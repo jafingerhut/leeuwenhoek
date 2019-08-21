@@ -125,6 +125,23 @@ user=> (time (my-test))
 ;; form.
 ```
 
+```
+user=> (defn foo2 [n]
+         (let [n (int n)]
+           (loop [i (int 0)]
+             (if (< i n)
+               (recur (inc i))
+               i))))
+user=> (def my-test #(time (foo2 100000000)))
+user=> (my-test)
+
+;; Same weird behavior of fast on first run after `defn`, slower on
+;; second and later runs.  Back to fast if I evaluate `defn` form then
+;; `def` again, but does _not_ go back to a fast run if I only
+;; re-evaluate the `def` form, without also re-eval'ing the `defn`
+;; form.
+```
+
 
 # Hardware and software details
 
