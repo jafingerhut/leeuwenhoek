@@ -191,6 +191,16 @@ form were 3 to 4 times slower, with some other JDK versions and OS:
 
 ----------------------------------------
 
+* Mid 2015 15-inch MacBook Pro, 2.2 GHz Intel Core i7
+* macOS 10.13.6
+* VirtualBox 6.0.10
+* Ubuntu 16.04.6 Desktop Linux
+* several JDK versions:
+  * OpenJDK 1.8.0_222
+* Clojure 1.10.1
+
+----------------------------------------
+
 * Mid 2011 13-inch MacBook Air, 1.7 GHz Intel Core i5
 * macOS 10.13.6
 * several JDK versions:
