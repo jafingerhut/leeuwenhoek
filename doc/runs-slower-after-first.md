@@ -176,14 +176,17 @@ $ clj -Sdescribe
 ```
 
 Saw similar behavior, with different precise time measurements, but
-similar i nthat the second and later runs were 3 to 4 times slower,
-with some other JDK verisons and OS:
+similar in that the second and later runs after evaluating the `defn`
+form were 3 to 4 times slower, with some other JDK versions and OS:
 
 * Mid 2015 15-inch MacBook Pro, 2.2 GHz Intel Core i7
 * macOS 10.13.6
 * VirtualBox 6.0.10
 * Ubuntu 18.04.3 Desktop Linux
-* OpenJDK 11.0.4+11
+* several JDK versions:
+  * OpenJDK 11.0.4+11
+  * Amazon Corretto JDK 8.222.10.1
+  * Amazon Corretto JDK 11.0.4.11.1
 * Clojure 1.10.1
 
 ----------------------------------------
