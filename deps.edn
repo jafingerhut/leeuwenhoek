@@ -3,6 +3,9 @@
  {;; Common alias to use for all Clojure/Java commands
   :clj {:jvm-opts ["-XX:-OmitStackTraceInFastThrow"]}
   :jitlog {:jvm-opts ["-XX:+PrintCompilation"]}
+  :gclog {:jvm-opts ["-XX:+PrintGC"
+                     "-XX:+PrintGCDetails"
+                     "-XX:+PrintGCTimeStamps"]}
   ;; Extra dependencies for decompiling/disassembling
   :decompile {:extra-deps {com.clojure-goes-fast/clj-java-decompiler {:mvn/version "0.3.0-SNAPSHOT"}
                            nodisassemble {:mvn/version "0.1.3"}
