@@ -14,5 +14,5 @@
              "java.vm.version"]]
     (println (str p ": " (get props p)))))
 
-(shutdown-agents)
-(System/exit 0)
+(defn -main [& args]
+  (shutdown-agents))

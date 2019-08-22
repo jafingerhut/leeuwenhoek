@@ -67,5 +67,5 @@ Use ps to see all JVM command line options used.
                  (re-find #" PID " line)))
       (println line))))
 
-(shutdown-agents)
-(System/exit 0)
+(defn -main [& args]
+  (shutdown-agents))
