@@ -1,9 +1,5 @@
 (ns leeuwenhoek.maybe-jit-slower)
 
-(println "
-----------------------------------------------------------------------
-Start experiment now
-----------------------------------------------------------------------")
 (println "Before defn of foo2 #1")
 (defn foo2 [n]
   (let [n (int n)]
@@ -13,6 +9,10 @@ Start experiment now
         i))))
 (println "After  defn of foo2 #1")
 
+(println "
+----------------------------------------------------------------------
+Start experiment now - foo2 was recently defined above, but below is 1st call
+----------------------------------------------------------------------")
 (dotimes [i 10]
   (print (format "\nTrial %2d: " (inc i)))
   (time (foo2 100000000)))
