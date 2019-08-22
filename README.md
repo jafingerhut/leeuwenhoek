@@ -5,7 +5,7 @@ microscope, to see if we can learn anything therefrom.
 
 Named in honor of [Antonie van
 Leeuwenhoek](https://ucmp.berkeley.edu/history/leeuwenhoek.html)
-[Wikipedia article](https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek).
+[[Wikipedia article]](https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek).
 
 
 ## Usage
