@@ -1,7 +1,4 @@
-(ns leeuwenhoek.collect-jvm-info
-  (:require [clojure.java.shell :as sh]
-            [clojure.string :as str])
-  (:import (java.io IOException)))
+(ns leeuwenhoek.collect-jvm-info)
 
 (let [props (System/getProperties)]
   (doseq [p ["os.name"
@@ -12,7 +9,7 @@
              "java.vm.name"
              "java.vm.vendor"
              "java.vm.version"]]
-    (println (str p ": " (get props p)))))
+    (println (str p ": " (get props p "(unknown)")))))
 
 (defn -main [& args]
   (shutdown-agents))
