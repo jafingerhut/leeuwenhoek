@@ -4,6 +4,7 @@ echo "----------------------------------------------------------------------"
 echo "All JVM output from here until 'Start experiment now'"
 echo "is probably irrelevant."
 echo "----------------------------------------------------------------------"
+#clojure -A:clj:gclogjdk8:jitlog:1.10 -m leeuwenhoek.maybe-jit-slower | tee tryme-out.txt
 clojure -A:clj:gclog:jitlog:1.10 -m leeuwenhoek.maybe-jit-slower | tee tryme-out.txt
 echo ""
 echo ""

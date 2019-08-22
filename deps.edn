@@ -2,7 +2,48 @@
  :aliases
  {;; Common alias to use for all Clojure/Java commands
   :clj {:jvm-opts ["-XX:-OmitStackTraceInFastThrow"]}
+
+  ;; Tested the option below with all of these JDKs:
+  ;; AdoptOpenJDK 8
+  ;; Amazon Corretto 8
+  ;; Azul Zulu 8
+  ;; AdoptOpenJDK 11
+  ;; Amazon Corretto 11
+  ;; Azul Zulu 11
+  ;; AdoptOpenJDK 12
   :jitlog {:jvm-opts ["-XX:+PrintCompilation"]}
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; These JDKs:
+  ;; AdoptOpenJDK 8
+  ;; Amazon Corretto 8
+  ;; Azul Zulu 8
+
+  ;; support the options below for printing details about GC events,
+  ;; but gives errors for the corresponding options below that are
+  ;; supported by 11 and 12:
+
+  ;; -XX:+PrintGC -XX:+PrintGCDetails
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ;; These JDKs:
+  ;; AdoptOpenJDK 11
+  ;; Amazon Corretto 11
+  ;; Azul Zulu 11
+  ;; AdoptOpenJDK 12
+
+  ;; support the options below for printing details about GC events,
+  ;; and deprecate the ones above:
+
+  ;; -Xlog:gc
+  ;; -Xlog:gc*
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  
+  :gclogjdk8 {:jvm-opts ["-XX:+PrintGC" "-XX:+PrintGCDetails"
+                         ;; Amazon Corretto JDK does not recognize this option
+                         ;;"-XX:+PrintGCTimeStamps"
+                         ]}
+  :gclog {:jvm-opts ["-Xlog:gc" "-Xlog:gc*"]}
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; In one run I used this option, where the contents of the
@@ -21,11 +62,6 @@
   :hotspotfile {:jvm-opts ["-XX:CompileCommandFile=.hotspot_compiler"]}
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  :gclog {:jvm-opts ["-XX:+PrintGC"
-                     "-XX:+PrintGCDetails"
-                     ;; Amazon Corretto JDK does not recognize this option
-                     ;;"-XX:+PrintGCTimeStamps"
-                     ]}
   ;; Extra dependencies for decompiling/disassembling
   :decompile {:extra-deps {com.clojure-goes-fast/clj-java-decompiler {:mvn/version "0.3.0-SNAPSHOT"}
                            nodisassemble {:mvn/version "0.1.3"}
