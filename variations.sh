@@ -1,6 +1,7 @@
 #! /bin/bash
 
 clojure -A:clj:1.10 -m leeuwenhoek.variations-on-a-loop
+clojure -A:clj:1.10:decompile -m leeuwenhoek.variations-on-a-loop-disassemble
 
 echo ""
 echo ""
