@@ -3,6 +3,24 @@
  {;; Common alias to use for all Clojure/Java commands
   :clj {:jvm-opts ["-XX:-OmitStackTraceInFastThrow"]}
   :jitlog {:jvm-opts ["-XX:+PrintCompilation"]}
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; In one run I used this option, where the contents of the
+  ;; file ".hotspot_compiler" was this single line:
+
+  ;; exclude leeuwenhoek/maybe_jit_slower$foo2 invokeStatic
+
+  ;; In that run, the time to call function foo2 was always around
+  ;; 3000 millisec, about 10x longer than most runs when I did not use
+  ;; the option.
+
+  ;; A reasonable conclusion to draw from this is that in the runs
+  ;; without that option where I see foo2 elapsed time about 1/10 of
+  ;; that, there is some very useful JIT compilation of function foo2
+  ;; occurring that is dramatically improving its performance.
+  :hotspotfile {:jvm-opts ["-XX:CompileCommandFile=.hotspot_compiler"]}
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
   :gclog {:jvm-opts ["-XX:+PrintGC"
                      "-XX:+PrintGCDetails"
                      ;; Amazon Corretto JDK does not recognize this option
