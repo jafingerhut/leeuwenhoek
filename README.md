@@ -35,6 +35,20 @@ compilation as they were at tier 3.
 $ ./variations.sh
 ```
 
+To run the same code as the `tryme.sh` script does, but also with
+`-XX:+PrintAssembly` JVM option enabled, so that if you have the
+appropriate shared library installed, every time the JIT compiler
+generates native machine code for a method, it will be printed.
+
+On an Ubuntu 16.04 or 18.04 Linux system, I have had some success
+running [`./bin/ubuntu-hsdis-install.sh`](bin/ubuntu-hsdis-install.sh)
+to install the necessary shared library in the proper place for
+several flavors of OpenJDK.
+
+```bash
+$ ./gonative.sh
+```
+
 
 ## License
 
