@@ -18,9 +18,22 @@ fi
 
 sudo apt-get install libhsdis0-fcml
 
+echo ""
 JAVA_ARCH=`clojure -m leeuwenhoek.get-os-arch`
+echo "JAVA_ARCH=${JAVA_ARCH}"
 LINUX_ARCH=`uname -m`
+echo "LINUX_ARCH=${LINUX_ARCH}"
 
-DST_DIR="${JAVA_HOME}/lib/${JAVA_ARCH}"
+# In my testing, for AdoptOpenJDK 8, the hsdis .so file needed to be copied
+# into the arch-specific directory, but for AdoptOpenJDK 11, it only worked
+# if it was in the ${JAVA_HOME}/lib directory.  Rather than trying to figure
+# out which kind of JDK is installed at ${JAVA_HOME}, just copy it into both
+# places and hopefully that will do no harm.
+
+DST_DIR1="${JAVA_HOME}/lib"
+DST_DIR2="${JAVA_HOME}/lib/${JAVA_ARCH}"
 set -x
-cp -p /usr/lib/${LINUX_ARCH}-linux-gnu/libhsdis.so.0.0.0 "${DST_DIR}/hsdis-${JAVA_ARCH}.so"
+mkdir -p "${DST_DIR1}"
+cp -p /usr/lib/${LINUX_ARCH}-linux-gnu/libhsdis.so.0.0.0 "${DST_DIR1}/hsdis-${JAVA_ARCH}.so"
+mkdir -p "${DST_DIR2}"
+cp -p /usr/lib/${LINUX_ARCH}-linux-gnu/libhsdis.so.0.0.0 "${DST_DIR2}/hsdis-${JAVA_ARCH}.so"
