@@ -45,4 +45,4 @@ echo "    * Ubuntu OpenJDK 8, 11"
 echo "    * Amazon Corretto JDK 8, 11"
 echo "    * Azul Zulu JDK 8, 11"
 echo ""
-echo " ./bin/ubuntu-hsdis-install.sh
+echo " ./bin/ubuntu-hsdis-install.sh"
