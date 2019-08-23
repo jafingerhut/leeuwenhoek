@@ -13,6 +13,10 @@
   ;; AdoptOpenJDK 12
   :jitlog {:jvm-opts ["-XX:+PrintCompilation"]}
 
+  ;; Reference: https://wiki.openjdk.java.net/display/HotSpot/PrintAssembly
+  :jitnative {:jvm-opts ["-XX:+UnlockDiagnosticVMOptions"
+                         "-XX:+PrintAssembly"]}
+
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; These JDKs:
   ;; AdoptOpenJDK 8
