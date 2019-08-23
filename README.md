@@ -49,6 +49,15 @@ several flavors of OpenJDK.
 $ ./gonative.sh
 ```
 
+This command runs nearly identical code to the `variations.sh` script
+above, but nearly all of the runs are the 'slow' ones.  What is it
+about this small change to the way these functions are called that
+prevents them from JIT-compiling to the faster versions?
+
+```bash
+$ ./variations2.sh
+```
+
 
 ## License
 
