@@ -32,19 +32,19 @@ LEE=$HOME/clj/leeuwenhoek
 
 
 ```bash
-$ sudo apt-get install mercurial
+$ sudo apt-get install mercurial curl texinfo build-essential
 $ cd $HOME
 $ mkdir -p $HOME/jdks/hsdis
 $ cd jdks
 $ hg clone https://hg.openjdk.java.net/jdk-updates/jdk11u
 $ cd jdk11u/src/utils/hsdis
-$ patch -p1 < $LEE/doc/patches/jdk11u-hsdis-Makefile-for-amd64.patch
+$ patch -p0 < $LEE/doc/patches/jdk11u-hsdis-Makefile-for-amd64.patch
 $ BINUTILS_VER=2.25
 $ curl -O https://ftp.gnu.org/gnu/binutils/binutils-${BINUTILS_VER}.tar.bz2
 $ bzcat binutils-${BINUTILS_VER}.tar.bz2 | tar xkf -
 $ make BINUTILS=binutils-${BINUTILS_VER} clean
 $ make BINUTILS=binutils-${BINUTILS_VER}
-$ cp -p ./build/linux-x86_64/hsdis-x86_64.so $HOME/jdks/hsdis/
+$ cp -p ./build/linux-amd64/hsdis-amd64.so $HOME/jdks/hsdis/
 ```
 
 The above just needs to be done once for JDK 11.  It is possible that
