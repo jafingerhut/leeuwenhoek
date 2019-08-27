@@ -1,0 +1,34 @@
+*** Makefile	2019-08-26 16:53:56.575052588 -0700
+--- Makefile-for-amd64	2019-08-26 22:28:07.362134197 -0700
+***************
+*** 78,84 ****
+  CFLAGS/ppc64	+= -m64
+  CFLAGS/ppc64le  += -m64 -DABI_ELFv2
+  else
+! ARCH=$(ARCH2:amd64=i386)
+  ifneq ($(findstring arm,$(ARCH)),)
+  ARCH=arm
+  endif
+--- 78,84 ----
+  CFLAGS/ppc64	+= -m64
+  CFLAGS/ppc64le  += -m64 -DABI_ELFv2
+  else
+! ARCH=$(ARCH2:amd64=amd64)
+  ifneq ($(findstring arm,$(ARCH)),)
+  ARCH=arm
+  endif
+***************
+*** 197,202 ****
+--- 197,208 ----
+  	if [ ! -f $@ ]; then cd $(TARGET_DIR); make all-opcodes; fi
+  
+  $(TARGET_DIR)/Makefile:
++ 	echo "OS=$(OS)"
++ 	echo "ARCH=$(ARCH)"
++ 	echo "LIBARCH=$(LIBARCH)"
++ 	echo "JDKARCH=$(JDKARCH)"
++ 	echo "LIBRARIES=$(LIBRARIES)"
++ 	echo "TARGET_DIR=$(TARGET_DIR)"
+  	(cd $(TARGET_DIR); CC=$(CC) CFLAGS="$(CFLAGS)" AR="$(AR)" $(BINUTILSDIR)/configure --disable-nls $(CONFIGURE_ARGS))
+  
+  $(TARGET): $(SOURCE) $(LIBS) $(LIBRARIES) $(TARGET_DIR)

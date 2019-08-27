@@ -1,18 +1,44 @@
-# Possible ways to enable printing of x86 assembly listings from Java JIT compiler
+# Enable printing of x86 assembly listings from Java JIT compiler
 
-I have not tried these instructions yet, but they look promising,
-given they were created by the author of the JITwatch tool:
-
-https://www.chrisnewland.com/building-hsdis-on-linux-amd64-on-debian-369
+This tool looks like it may be interesting for analyzing the results
+of the JVM JIT compiler, but I have not tried it yet.  The tool
+probably supports Java fairly well, but would have to try it out on a
+Clojure project to see if it did anything useful there.
 
 JITwatch: https://github.com/AdoptOpenJDK/jitwatch
 
+I believe it was the author of JITwatch who wrote [these
+instructions](https://www.chrisnewland.com/building-hsdis-on-linux-amd64-on-debian-369)
+for building and installing hsdis.
+
+Below are my modifications to those instructions, tested on an Ubuntu
+18.04.3 desktop Linux system, freshly installed starting with no other
+packages than `git` installed.
+
+Note that the `hg clone` command below downloads about 1.7 GBytes of
+data, and can thus take a while to complete.
+
+According to this page: https://jdk.java.net/archive/ `jd11u` is the
+repository containing the code for JDK 11 update builds, I guess as
+opposed to the original release of JDK 11?
+
+This is just an example.  Replace `$HOME/clj/leeuwenhoek` with
+whatever directory you created when you cloned your copy of the
+leeuwenhoek repository.
+
 ```bash
+LEE=$HOME/clj/leeuwenhoek
+```
+
+
+```bash
+$ sudo apt-get install mercurial
 $ cd $HOME
 $ mkdir -p $HOME/jdks/hsdis
 $ cd jdks
 $ hg clone https://hg.openjdk.java.net/jdk-updates/jdk11u
 $ cd jdk11u/src/utils/hsdis
+$ patch -p1 < $LEE/doc/patches/jdk11u-hsdis-Makefile-for-amd64.patch
 $ BINUTILS_VER=2.25
 $ curl -O https://ftp.gnu.org/gnu/binutils/binutils-${BINUTILS_VER}.tar.bz2
 $ bzcat binutils-${BINUTILS_VER}.tar.bz2 | tar xkf -
@@ -21,6 +47,17 @@ $ make BINUTILS=binutils-${BINUTILS_VER}
 $ cp -p ./build/linux-x86_64/hsdis-x86_64.so $HOME/jdks/hsdis/
 ```
 
+The above just needs to be done once for JDK 11.  It is possible that
+the file hsdis-x86_64.so might be useful for multiple JDKs other than
+OpenJDK 11, but that requires further testing to confirm.
+
+Then change to the directory with your copy of the `leeuwenhoek`
+repository:
+
+```bash
+$ cd $LEE
+$ ./bin/ubuntu-hsdis-install2.sh
+```
 
 
 # Trying to analyze the weird performance seen with `tryme.sh`
