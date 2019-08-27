@@ -13,7 +13,13 @@ Leeuwenhoek](https://ucmp.berkeley.edu/history/leeuwenhoek.html)
 Prerequisites:
 * Tested on macOS and Linux systems -- no attempt to test on Windows yet
 * JVM installed as `java` somewhere in your command path
-* `clojure` command installed via instructions [here](https://clojure.org/guides/getting_started)
+* `clojure` command installed via instructions
+  [here](https://clojure.org/guides/getting_started)
+* If you want to see native machine code disassembly listings for JIT
+  compiled methods, then you need to install the hsdis shared library
+  as a file in your JDK's installation directory.  Instructions can be
+  found in the [jdk-hsdis](https://github.com/jafingerhut/jdk-hsdis)
+  and [hsdis](https://github.com/liuzhengyang/hsdis) repositories.
 
 To run some experiments with logging of JIT compilation and GC
 enabled, which I have seen demonstrates an effect where it appears
@@ -40,10 +46,10 @@ To run the same code as the `tryme.sh` script does, but also with
 appropriate shared library installed, every time the JIT compiler
 generates native machine code for a method, it will be printed.
 
-On an Ubuntu 16.04 or 18.04 Linux system, I have had some success
-running [`./bin/ubuntu-hsdis-install.sh`](bin/ubuntu-hsdis-install.sh)
-to install the necessary shared library in the proper place for
-several flavors of OpenJDK.
+See the prerequisites above for links to a couple of repositories that
+may help you with installing the hsdis library, that enables printing
+native machine code disassembly listings for methods compiled by the
+JVM JIT.
 
 ```bash
 $ ./gonative.sh

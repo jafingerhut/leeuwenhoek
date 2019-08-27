@@ -1,5 +1,8 @@
 #! /bin/bash
 
+TMPF=`mktemp gonative-XXXXXX-out.txt`
+TMP2=`mktemp gonative-XXXXXX-hsdis-out.txt`
+
 echo "----------------------------------------------------------------------"
 echo "All JVM output from here until 'Start experiment now'"
 echo "is probably irrelevant."
@@ -18,31 +21,25 @@ then
     GCLOG_ALIAS="gclogjdk8"
 fi
 
-clojure -A:clj:1.10:${GCLOG_ALIAS}:jitlog:jitnative -m leeuwenhoek.maybe-jit-slower | tee tryme-out.txt
+clojure -A:clj:1.10:${GCLOG_ALIAS}:jitlog:jitnative -m leeuwenhoek.maybe-jit-slower | tee "${TMPF}"
 echo ""
 echo ""
 echo "----------------------------------------------------------------------"
 echo "Begin portion of JVM output relevant to JIT compilation of method foo2"
 echo "----------------------------------------------------------------------"
-egrep '(Elapsed time: |foo2::| defn of foo2 )' tryme-out.txt
+egrep '(Elapsed time: |foo2::| defn of foo2 )' "${TMPF}"
 echo "----------------------------------------------------------------------"
 echo "End portion of JVM output relevant to JIT compilation of method foo2"
 echo "----------------------------------------------------------------------"
 
-echo "If you see a line in the output like this ('hsdis' is a good"
-echo "string to search for):"
-echo ""
-echo "    Could not load hsdis-amd64.so; library not loadable; PrintAssembly is disabled"
-echo ""
-echo "and if you are running on an Ubuntu Linux system, try running"
-echo "the shell script below to attempt installing the hsdis shared"
-echo "library, which in my testing has successfully enabled the JVM to"
-echo "print native Intel assembly code for JIT-compiled methods when"
-echo "using these JDKs on an Intel/AMD system:"
-echo ""
-echo "    * AdoptOpenJDK 8, 11, 12"
-echo "    * Ubuntu OpenJDK 8, 11"
-echo "    * Amazon Corretto JDK 8, 11"
-echo "    * Azul Zulu JDK 8, 11"
-echo ""
-echo " ./bin/ubuntu-hsdis-install.sh"
+grep "PrintAssembly is disabled" "${TMPF}" > "${TMP2}"
+if [ -s "${TMP2}" ]
+then
+    echo "The following line in the JVM output indicates that your JDK does not"
+    echo "have an hsdis library.  See the README for instructions on installing"
+    echo "one."
+    echo ""
+    cat "${TMP2}"
+fi
+
+/bin/rm -f "${TMPF}" "${TMP2}"
