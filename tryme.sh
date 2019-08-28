@@ -1,5 +1,7 @@
 #! /bin/bash
 
+TMPF=`mktemp tryme-XXXXXX-out.txt`
+
 echo "----------------------------------------------------------------------"
 echo "All JVM output from here until 'Start experiment now'"
 echo "is probably irrelevant."
@@ -18,13 +20,13 @@ then
     GCLOG_ALIAS="gclogjdk8"
 fi
 
-clojure -A:clj:${GCLOG_ALIAS}:jitlog:1.10 -m leeuwenhoek.maybe-jit-slower | tee tryme-out.txt
+clojure -A:clj:${GCLOG_ALIAS}:jitlog:1.10 -m leeuwenhoek.maybe-jit-slower | tee "${TMPF}"
 echo ""
 echo ""
 echo "----------------------------------------------------------------------"
 echo "Begin portion of JVM output relevant to JIT compilation of method foo2"
 echo "----------------------------------------------------------------------"
-egrep '(Elapsed time: |foo2::| defn of foo2 )' tryme-out.txt
+egrep '(Elapsed time: |foo2::| defn of foo2 )' "${TMPF}"
 echo "----------------------------------------------------------------------"
 echo "End portion of JVM output relevant to JIT compilation of method foo2"
 echo "----------------------------------------------------------------------"
@@ -42,3 +44,5 @@ echo ""
 echo "Info about JVM:"
 echo ""
 clojure -A:clj:1.10 -m leeuwenhoek.collect-jvm-info
+
+/bin/rm -f "${TMPF}"
