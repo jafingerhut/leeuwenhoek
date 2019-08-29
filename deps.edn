@@ -24,7 +24,7 @@
                         "-XX:+LogCompilation"
                         "-XX:+PrintAssembly"]}
 
-  :tieredoff {:jvm-opts ["-XX:-TieredCompilation"]}
+  :tiereddisable {:jvm-opts ["-XX:-TieredCompilation"]}
   :xcomp {:jvm-opts ["-Xcomp"]}
   :tieredmax0 {:jvm-opts ["-XX:TieredStopAtLevel=0"]}
   :tieredmax1 {:jvm-opts ["-XX:TieredStopAtLevel=1"]}
