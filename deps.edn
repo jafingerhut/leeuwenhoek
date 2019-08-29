@@ -12,10 +12,25 @@
   ;; Azul Zulu 11
   ;; AdoptOpenJDK 12
   :jitlog {:jvm-opts ["-XX:+PrintCompilation"]}
+  :jitlog2 {:jvm-opts ["-XX:+UnlockDiagnosticVMOptions"
+                       "-XX:+LogCompilation"]}
 
   ;; Reference: https://wiki.openjdk.java.net/display/HotSpot/PrintAssembly
   :jitnative {:jvm-opts ["-XX:+UnlockDiagnosticVMOptions"
                          "-XX:+PrintAssembly"]}
+
+  :jitwatch {:jvm-opts ["-XX:+UnlockDiagnosticVMOptions"
+                        "-XX:+TraceClassLoading"
+                        "-XX:+LogCompilation"
+                        "-XX:+PrintAssembly"]}
+
+  :tieredoff {:jvm-opts ["-XX:-TieredCompilation"]}
+  :xcomp {:jvm-opts ["-Xcomp"]}
+  :tieredmax0 {:jvm-opts ["-XX:TieredStopAtLevel=0"]}
+  :tieredmax1 {:jvm-opts ["-XX:TieredStopAtLevel=1"]}
+  :tieredmax2 {:jvm-opts ["-XX:TieredStopAtLevel=2"]}
+  :tieredmax3 {:jvm-opts ["-XX:TieredStopAtLevel=3"]}
+  :tieredmax4 {:jvm-opts ["-XX:TieredStopAtLevel=4"]}
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; These JDKs:
