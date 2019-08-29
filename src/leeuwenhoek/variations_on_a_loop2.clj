@@ -1,4 +1,5 @@
-(ns leeuwenhoek.variations-on-a-loop
+(ns leeuwenhoek.variations-on-a-loop2
+  (:require [leeuwenhoek.util :refer [uptime my-time]])
   (:import (java.io PushbackReader StringReader)))
 
 ;; Pointed out by Christophe Grand in Clojurians Slack #clojure-dev
@@ -27,8 +28,8 @@ mismatch is the root of the issue:
 ")
 (defn repeat-f [f m]
   (dotimes [i m]
-    (print (format "Trial %2d %s: " (inc i) fn-name))
-    (time (f 100000000))))
+    (my-time (f 100000000) (str " : Trial " (inc i) " " fn-name ": "))))
+
 (repeat-f foo2-fn-ret-object-loop-ret-prim 10)
 
 (println "
@@ -45,8 +46,7 @@ cgrand:
 ")
 (defn repeat-f [f m]
   (dotimes [i m]
-    (print (format "Trial %2d %s: " (inc i) fn-name))
-    (time (f 100000000))))
+    (my-time (f 100000000) (str " : Trial " (inc i) " " fn-name ": "))))
 (repeat-f foo2-fn-ret-object-loop-ret-prim 10)
 
 (println "
@@ -63,8 +63,7 @@ cgrand:
 ")
 (defn repeat-f [f m]
   (dotimes [i m]
-    (print (format "Trial %2d %s: " (inc i) fn-name))
-    (time (f 100000000))))
+    (my-time (f 100000000) (str " : Trial " (inc i) " " fn-name ": "))))
 (repeat-f foo2-fn-ret-object-loop-ret-prim 10)
 
 (println "
@@ -82,8 +81,7 @@ More experiments:
 ")
 (defn repeat-f [f m]
   (dotimes [i m]
-    (print (format "Trial %2d %s: " (inc i) fn-name))
-    (time (f 100000000))))
+    (my-time (f 100000000) (str " : Trial " (inc i) " " fn-name ": "))))
 (repeat-f foo2-fn-ret-object-loop-ret-prim 10)
 
 (println "
@@ -102,8 +100,7 @@ More experiments:
 ")
 (defn repeat-f [f m]
   (dotimes [i m]
-    (print (format "Trial %2d %s: " (inc i) fn-name))
-    (time (f 100000000))))
+    (my-time (f 100000000) (str " : Trial " (inc i) " " fn-name ": "))))
 (repeat-f foo2-fn-ret-object-loop-ret-prim 10)
 
 (defn -main [& args]

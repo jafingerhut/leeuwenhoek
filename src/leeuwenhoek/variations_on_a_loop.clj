@@ -1,4 +1,5 @@
 (ns leeuwenhoek.variations-on-a-loop
+  (:require [leeuwenhoek.util :refer [uptime my-time]])
   (:import (java.io PushbackReader StringReader)))
 
 ;; Pointed out by Christophe Grand in Clojurians Slack #clojure-dev
@@ -26,8 +27,8 @@ mismatch is the root of the issue:
         i))))
 ")
 (dotimes [i 10]
-  (print (format "Trial %2d %s: " (inc i) fn-name))
-  (time (foo2-fn-ret-object-loop-ret-prim 100000000)))
+  (my-time (foo2-fn-ret-object-loop-ret-prim 100000000)
+           (str " : Trial " (inc i) " " fn-name ": ")))
 
 (println "
 cgrand:
@@ -42,8 +43,8 @@ cgrand:
         :foo))))
 ")
 (dotimes [i 10]
-  (print (format "Trial %2d %s: " (inc i) fn-name))
-  (time (foo2-fn-ret-object-loop-ret-object 100000000)))
+  (my-time (foo2-fn-ret-object-loop-ret-object 100000000)
+           (str " : Trial " (inc i) " " fn-name ": ")))
 
 (println "
 cgrand:
@@ -58,8 +59,8 @@ cgrand:
         i))))
 ")
 (dotimes [i 10]
-  (print (format "Trial %2d %s: " (inc i) fn-name))
-  (time (foo2-fn-ret-prim-loop-ret-prim 100000000)))
+  (my-time (foo2-fn-ret-prim-loop-ret-prim 100000000)
+           (str " : Trial " (inc i) " " fn-name ": ")))
 
 (println "
 cgrand:
@@ -75,8 +76,8 @@ More experiments:
         (Integer/valueOf i)))))
 ")
 (dotimes [i 10]
-  (print (format "Trial %2d %s: " (inc i) fn-name))
-  (time (foo2-fn-ret-object-loop-ret-boxed-prim 100000000)))
+  (my-time (foo2-fn-ret-object-loop-ret-boxed-prim 100000000)
+           (str " : Trial " (inc i) " " fn-name ": ")))
 
 (println "
 cgrand:
@@ -93,8 +94,8 @@ More experiments:
          i)))))
 ")
 (dotimes [i 10]
-  (print (format "Trial %2d %s: " (inc i) fn-name))
-  (time (foo2-fn-ret-object-loop-ret-prim-then-boxed 100000000)))
+  (my-time (foo2-fn-ret-object-loop-ret-prim-then-boxed 100000000)
+           (str " : Trial " (inc i) " " fn-name ": ")))
 
 (defn -main [& args]
   (shutdown-agents))

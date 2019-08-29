@@ -1,47 +1,46 @@
-(ns leeuwenhoek.maybe-jit-slower)
+(ns leeuwenhoek.maybe-jit-slower
+  (:require [leeuwenhoek.util :refer [uptime my-time]]))
 
-(println "Before defn of foo2 #1")
+
+(println (uptime) ": Before defn of foo2 #1")
 (defn foo2 [n]
   (let [n (int n)]
     (loop [i (int 0)]
       (if (< i n)
         (recur (inc i))
         i))))
-(println "After  defn of foo2 #1")
+(println (uptime) ": After  defn of foo2 #1")
 
 (println "
 ----------------------------------------------------------------------
 Start experiment now - foo2 was recently defined above, but below is 1st call
 ----------------------------------------------------------------------")
 (dotimes [i 10]
-  (print (format "\nTrial %2d: " (inc i)))
-  (time (foo2 100000000)))
+  (my-time (foo2 100000000) (str " : Trial " (inc i) " ")))
 
-(println "Before defn of foo2 #2")
+(println (uptime) ": Before defn of foo2 #2")
 (defn foo2 [n]
   (let [n (int n)]
     (loop [i (int 0)]
       (if (< i n)
         (recur (inc i))
         i))))
-(println "After  defn of foo2 #2")
+(println (uptime) ": After  defn of foo2 #2")
 
 (dotimes [i 10]
-  (print (format "\nTrial %2d: " (inc i)))
-  (time (foo2 100000000)))
+  (my-time (foo2 100000000) (str " : Trial " (inc i) " ")))
 
-(println "Before defn of foo2 #3")
+(println (uptime) ": Before defn of foo2 #3")
 (defn foo2 [n]
   (let [n (int n)]
     (loop [i (int 0)]
       (if (< i n)
         (recur (inc i))
         i))))
-(println "After  defn of foo2 #3")
+(println (uptime) ": After  defn of foo2 #3")
 
 (dotimes [i 10]
-  (print (format "\nTrial %2d: " (inc i)))
-  (time (foo2 100000000)))
+  (my-time (foo2 100000000) (str " : Trial " (inc i) " ")))
 
 (println "
 
