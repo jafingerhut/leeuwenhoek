@@ -51,14 +51,18 @@ class JavaVersion4 {
 	long n = 10;
 	long i;
 	long start, end;
+	long start_uptime, end_uptime;
 	Object ret;
 	double elapsed;
 
 	for (i = 0; i < n; i++) {
-	    System.out.print(uptime() + " : Trial " + (i+1));
+	    start_uptime = uptime();
 	    start = System.nanoTime();
 	    ret = ((IFn) afn_obj.getRawRoot()).invoke(Long.valueOf(100000000));
 	    end = System.nanoTime();
+	    end_uptime = uptime();
+	    System.out.print(start_uptime + " - " + end_uptime +
+			     " : Trial " + (i+1));
 	    elapsed = Numbers.divide(Numbers.minus(end, start), 1000000.0);
 	    System.out.println(" Elapsed time: " + elapsed + " msecs");
 	    System.out.println("ret=" + ret);

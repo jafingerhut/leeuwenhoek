@@ -23,26 +23,33 @@ class JavaVersion2_other {
 }
 
 class JavaVersion2 {
-    static RuntimeMXBean mxb;
+    public static RuntimeMXBean mxb;
     public static long uptime() {
 	return mxb.getUptime();
     }
-    public static void main(String[] args) {
-	int i;
+    public static void do10times() {
+	long n = 10;
+	long i;
 	long start, end;
-	Number ret;
+	long start_uptime, end_uptime;
+	Object ret;
 	double elapsed;
 
-	mxb = ManagementFactory.getRuntimeMXBean();
-
-	for (i = 0; i < 10; i++) {
+	for (i = 0; i < n; i++) {
+	    start_uptime = uptime();
 	    start = System.nanoTime();
 	    ret = JavaVersion2_other.foo2(Long.valueOf(100000000));
 	    end = System.nanoTime();
-	    elapsed = ((double) (end - start)) / 1000000.0;
+	    end_uptime = uptime();
+	    System.out.print(start_uptime + " - " + end_uptime +
+			     " : Trial " + (i+1));
+	    elapsed = Numbers.divide(Numbers.minus(end, start), 1000000.0);
+	    System.out.println(" Elapsed time: " + elapsed + " msecs");
 	    System.out.println("ret=" + ret);
-	    System.out.println(uptime() + " : Trial " + (i+1) +
-			       " Elapsed time: " + elapsed + " msecs");
 	}
+    }
+    public static void main(String[] args) {
+	mxb = ManagementFactory.getRuntimeMXBean();
+	do10times();
     }
 }
