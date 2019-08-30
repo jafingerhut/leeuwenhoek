@@ -1,0 +1,2302 @@
+----------------------------------------------------------------------
+All JVM output from here until 'Start experiment now'
+is probably irrelevant.
+----------------------------------------------------------------------
+[0.008s][info][gc,heap] Heap region size: 1M
+[0.012s][info][gc     ] Using G1
+[0.012s][info][gc,heap,coops] Heap address: 0x0000000700000000, size: 4096 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+[0.782s][info][gc,start     ] GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+[0.783s][info][gc,task      ] GC(0) Using 6 workers of 8 for evacuation
+[0.788s][info][gc,phases    ] GC(0)   Pre Evacuate Collection Set: 0.0ms
+[0.788s][info][gc,phases    ] GC(0)   Evacuate Collection Set: 5.2ms
+[0.788s][info][gc,phases    ] GC(0)   Post Evacuate Collection Set: 0.3ms
+[0.788s][info][gc,phases    ] GC(0)   Other: 0.5ms
+[0.788s][info][gc,heap      ] GC(0) Eden regions: 24->0(150)
+[0.788s][info][gc,heap      ] GC(0) Survivor regions: 0->3(3)
+[0.788s][info][gc,heap      ] GC(0) Old regions: 0->1
+[0.788s][info][gc,heap      ] GC(0) Humongous regions: 0->0
+[0.788s][info][gc,metaspace ] GC(0) Metaspace: 13963K->13963K(1060864K)
+[0.788s][info][gc           ] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 24M->3M(256M) 6.121ms
+[0.788s][info][gc,cpu       ] GC(0) User=0.03s Sys=0.01s Real=0.00s
+Hello, world!
+[1.279s][info][gc,heap,exit ] Heap
+[1.279s][info][gc,heap,exit ]  garbage-first heap   total 262144K, used 28928K [0x0000000700000000, 0x0000000800000000)
+[1.279s][info][gc,heap,exit ]   region size 1024K, 29 young (29696K), 3 survivors (3072K)
+[1.279s][info][gc,heap,exit ]  Metaspace       used 18530K, capacity 18878K, committed 19200K, reserved 1064960K
+[1.279s][info][gc,heap,exit ]   class space    used 3064K, capacity 3271K, committed 3328K, reserved 1048576K
+[0.008s][info][gc,heap] Heap region size: 1M
+[0.012s][info][gc     ] Using G1
+[0.012s][info][gc,heap,coops] Heap address: 0x0000000700000000, size: 4096 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+     48    1       3       java.util.concurrent.ConcurrentHashMap::tabAt (22 bytes)
+     48    2       3       jdk.internal.misc.Unsafe::getObjectAcquire (7 bytes)
+     50    3       3       java.lang.Object::<init> (1 bytes)
+     50    4       3       java.lang.StringLatin1::hashCode (42 bytes)
+     50    5       3       java.lang.String::isLatin1 (19 bytes)
+     50    6       3       java.lang.String::hashCode (49 bytes)
+     51    7       3       java.lang.String::coder (15 bytes)
+     51    8       3       java.lang.Math::floorMod (10 bytes)
+     51    9       3       java.util.ImmutableCollections$SetN::probe (56 bytes)
+     52   11       3       java.lang.StringLatin1::equals (36 bytes)
+     52   10       3       java.lang.String::equals (65 bytes)
+     52   12       1       java.util.Collections$EmptySet::hashCode (2 bytes)
+     53   13       3       java.util.ImmutableCollections$SetN::hashCode (46 bytes)
+     53   16       4       java.lang.StringLatin1::hashCode (42 bytes)
+     53   14       3       java.util.Collections::emptySet (4 bytes)
+     53   15       3       java.lang.module.ModuleDescriptor$Exports::<init> (20 bytes)
+     53   17       3       java.util.AbstractCollection::<init> (5 bytes)
+     54   18       3       java.util.ImmutableCollections$AbstractImmutableCollection::<init> (5 bytes)
+     54   19       3       java.util.ImmutableCollections$AbstractImmutableSet::<init> (5 bytes)
+     54   20       3       java.util.Objects::requireNonNull (14 bytes)
+     54   21       1       java.lang.Object::<init> (1 bytes)
+     54    3       3       java.lang.Object::<init> (1 bytes)   made not entrant
+     54   22       3       java.util.Set::of (66 bytes)
+     55   23       1       java.lang.module.ModuleDescriptor::name (5 bytes)
+     56   24       1       java.lang.module.ModuleReference::descriptor (5 bytes)
+     57    4       3       java.lang.StringLatin1::hashCode (42 bytes)   made not entrant
+     59   25       3       java.lang.String::charAt (25 bytes)
+     60   26       3       java.lang.StringLatin1::charAt (28 bytes)
+     61   27       3       java.lang.String::length (11 bytes)
+     62   28       3       java.util.ImmutableCollections$SetN$SetNIterator::hasNext (13 bytes)
+     62   30       3       java.util.ImmutableCollections$SetN$SetNIterator::next (47 bytes)
+     62   29       3       java.util.ImmutableCollections$SetN$SetNIterator::nextIndex (56 bytes)
+     63   31       1       java.util.KeyValueHolder::getKey (5 bytes)
+     63   33       3       java.util.ImmutableCollections$MapN::probe (60 bytes)
+     64   35       3       java.util.Objects::equals (23 bytes)
+     64   34       3       java.util.KeyValueHolder::<init> (21 bytes)
+     64   32       1       java.util.KeyValueHolder::getValue (5 bytes)
+     64   36       3       java.util.HashMap::hash (20 bytes)
+     64   38   !   3       java.util.concurrent.ConcurrentHashMap::putVal (432 bytes)
+     65   41     n 0       jdk.internal.misc.Unsafe::compareAndSetLong (native)   
+     65   42     n 0       jdk.internal.misc.Unsafe::compareAndSetObject (native)   
+     66   39       3       java.util.concurrent.ConcurrentHashMap::addCount (289 bytes)
+     68   44       3       java.util.concurrent.ConcurrentHashMap$Node::<init> (20 bytes)
+     68   40       3       java.util.concurrent.ConcurrentHashMap::spread (10 bytes)
+     68   45       3       java.util.concurrent.ConcurrentHashMap::casTabAt (21 bytes)
+     68   43       3       java.util.concurrent.ConcurrentHashMap::putIfAbsent (8 bytes)
+     68   37       1       java.lang.module.ResolvedModule::reference (5 bytes)
+     68   46       1       java.util.ImmutableCollections$SetN::size (5 bytes)
+     68   47       3       java.lang.Math::min (11 bytes)
+     69   48     n 0       java.lang.System::arraycopy (native)   (static)
+     69   49       3       java.util.HashMap::get (23 bytes)
+     69   51       3       java.util.HashMap::getNode (148 bytes)
+     70   53       3       java.util.HashMap::putVal (300 bytes)
+     70   58     n 0       java.lang.Object::hashCode (native)   
+     71   52       3       java.util.HashMap::put (13 bytes)
+     71   54       3       java.util.HashMap$Node::<init> (26 bytes)
+     72   55       3       java.util.HashMap::newNode (13 bytes)
+     72   56       3       java.util.HashMap::afterNodeInsertion (1 bytes)
+     72   61       3       java.util.ImmutableCollections$Set12$1::hasNext (13 bytes)
+     72   57       1       java.lang.module.ModuleDescriptor$Exports::source (5 bytes)
+     72   59       1       java.util.Collections$EmptySet::isEmpty (2 bytes)
+     72   50       3       java.lang.module.ResolvedModule::name (11 bytes)
+     72   60       1       java.lang.module.ModuleDescriptor::isAutomatic (5 bytes)
+     72   62       1       java.lang.module.ResolvedModule::configuration (5 bytes)
+     73   63       3       java.util.Map::entry (10 bytes)
+     74   64       3       java.util.ImmutableCollections$Set12$1::next (92 bytes)
+     74   65       1       java.lang.module.ModuleDescriptor::isOpen (5 bytes)
+     74   66       4       java.lang.String::hashCode (49 bytes)
+     75   67       3       java.util.ImmutableCollections$MapN::get (35 bytes)
+     75   70       3       java.util.HashMap::resize (356 bytes)
+     75   72     n 0       java.lang.Module::addExportsToAllUnnamed0 (native)   (static)
+     76   73       1       java.util.HashMap::afterNodeInsertion (1 bytes)
+     76   56       3       java.util.HashMap::afterNodeInsertion (1 bytes)   made not entrant
+     76   68       3       jdk.internal.module.ModuleBootstrap$2::hasNext (30 bytes)
+     76   69       3       jdk.internal.module.ModuleBootstrap$2::next (52 bytes)
+     77   71       3       java.util.HashMap::putIfAbsent (13 bytes)
+     77   76       3       java.util.ImmutableCollections$Set12::size (13 bytes)
+     77   75       1       java.lang.Module::getDescriptor (5 bytes)
+     79    6       3       java.lang.String::hashCode (49 bytes)   made not entrant
+     79   74       4       java.util.ImmutableCollections$SetN$SetNIterator::hasNext (13 bytes)
+     80   28       3       java.util.ImmutableCollections$SetN$SetNIterator::hasNext (13 bytes)   made not entrant
+     80   66       4       java.lang.String::hashCode (49 bytes)   made not entrant
+     82   77       3       java.lang.String::hashCode (49 bytes)
+     83   78       3       java.lang.StringLatin1::canEncode (13 bytes)
+     87   79       3       java.lang.StringLatin1::indexOf (61 bytes)
+     98   80       3       java.util.zip.ZipUtils::SH (21 bytes)
+     98   81       3       java.util.zip.ZipFile$Source::hashN (26 bytes)
+     99   82       4       java.util.zip.ZipUtils::SH (21 bytes)
+     99   83       3       java.util.zip.ZipUtils::LG (22 bytes)
+     99   84       3       java.util.zip.ZipUtils::CENSIG (8 bytes)
+     99   85       3       java.util.zip.ZipUtils::CENHOW (9 bytes)
+     99   86       3       java.util.zip.ZipUtils::CENNAM (9 bytes)
+     99   87       3       java.util.zip.ZipUtils::CENEXT (9 bytes)
+     99   80       3       java.util.zip.ZipUtils::SH (21 bytes)   made not entrant
+    100   92       4       java.util.zip.ZipFile$Source::hashN (26 bytes)
+    100   88       3       java.util.zip.ZipUtils::CENCOM (9 bytes)
+    100   89       3       java.util.zip.ZipUtils::CENFLG (9 bytes)
+    100   90       3       java.util.zip.ZipFile$Source::addEntry (33 bytes)
+    100   91       3       java.util.zip.ZipFile$Source::isMetaName (141 bytes)
+    101   81       3       java.util.zip.ZipFile$Source::hashN (26 bytes)   made not entrant
+    101   93       4       java.util.zip.ZipFile$Source::addEntry (33 bytes)
+    102   90       3       java.util.zip.ZipFile$Source::addEntry (33 bytes)   made not entrant
+    104   94       3       java.util.HashSet::add (20 bytes)
+    105   95       3       java.lang.AbstractStringBuilder::ensureCapacityInternal (39 bytes)
+    108   96       3       java.lang.String::indexOf (29 bytes)
+    110   97       3       java.lang.String::indexOf (7 bytes)
+    110   98       4       java.lang.String::coder (15 bytes)
+    110    7       3       java.lang.String::coder (15 bytes)   made not entrant
+    110   99       3       java.lang.String::<init> (15 bytes)
+    110  100       3       java.lang.StringLatin1::lastIndexOf (40 bytes)
+    111  101       3       java.lang.StringBuilder::append (8 bytes)
+    111  102       3       java.lang.String::startsWith (138 bytes)
+    112  105       4       java.lang.String::isLatin1 (19 bytes)
+    112  103       3       java.lang.CharacterData::of (120 bytes)
+    112    5       3       java.lang.String::isLatin1 (19 bytes)   made not entrant
+    112  104       3       java.util.Arrays::copyOfRange (63 bytes)
+    116  107       3       java.lang.AbstractStringBuilder::putStringAt (29 bytes)
+    116  108       3       java.lang.AbstractStringBuilder::getCoder (15 bytes)
+    116  109       3       java.lang.String::getBytes (44 bytes)
+    116  110       3       java.lang.AbstractStringBuilder::append (45 bytes)
+    117  106       3       java.lang.System::getSecurityManager (4 bytes)
+    117  111       1       java.util.zip.Inflater$InflaterZStreamRef::address (5 bytes)
+    117  112       3       java.util.concurrent.ConcurrentHashMap::get (162 bytes)
+    117  113     n 0       java.lang.Object::getClass (native)   
+    118  116       3       java.lang.CharacterDataLatin1::getProperties (11 bytes)
+    118  115       3       java.lang.StringLatin1::newString (17 bytes)
+    118  114       3       java.lang.String::lastIndexOf (29 bytes)
+    119  118       3       java.lang.String::substring (58 bytes)
+    119  117       1       java.net.URL::getProtocol (5 bytes)
+    119  119       3       jdk.internal.misc.Unsafe::putObjectRelease (9 bytes)
+    120  120       1       java.net.URL::getHost (5 bytes)
+    120  121       3       java.lang.StringLatin1::indexOf (121 bytes)
+    120  122       4       java.lang.String::charAt (25 bytes)
+    120  123       3       java.lang.AbstractStringBuilder::newCapacity (55 bytes)
+    121  124       3       java.lang.AbstractStringBuilder::isLatin1 (19 bytes)
+    121   25       3       java.lang.String::charAt (25 bytes)   made not entrant
+    122  125       3       java.lang.Character::toLowerCase (9 bytes)
+    122  126       3       java.lang.CharacterDataLatin1::toLowerCase (39 bytes)
+    124  127       3       java.lang.String::lastIndexOf (12 bytes)
+    125  128       3       java.util.concurrent.ConcurrentHashMap::setTabAt (20 bytes)
+    126  129       3       java.lang.String::checkBoundsBeginEnd (60 bytes)
+    126  130       3       java.lang.ClassLoader::checkName (37 bytes)
+    127  132       3       java.lang.AbstractStringBuilder::<init> (39 bytes)
+    128  131       3       java.lang.StringBuilder::<init> (7 bytes)
+    128  133       3       java.lang.String::startsWith (7 bytes)
+    129  134       1       java.net.URL::getFile (5 bytes)
+    129  135       3       java.util.Objects::requireNonNull (15 bytes)
+    129  136       1       java.net.URL::getUserInfo (5 bytes)
+    130  137       1       java.security.ProtectionDomain::getCodeSource (5 bytes)
+    131  138       4       java.lang.StringLatin1::indexOf (61 bytes)
+    131  139       3       java.lang.Class::getName (18 bytes)
+    132  140       3       java.lang.Character::toLowerCase (6 bytes)
+    132  141       1       java.net.URL::getPath (5 bytes)
+    132  142       1       java.net.URL::getPort (5 bytes)
+    133  143       1       java.net.URL::getAuthority (5 bytes)
+    133  144       1       java.net.URL::getQuery (5 bytes)
+    133  145       1       java.net.URL::getRef (5 bytes)
+    133  146       1       jdk.internal.loader.URLClassPath$Loader::getBaseURL (5 bytes)
+    134  147       1       java.security.CodeSource::getLocationNoFragString (5 bytes)
+    134  148       3       java.lang.StringBuilder::toString (35 bytes)
+    134   79       3       java.lang.StringLatin1::indexOf (61 bytes)   made not entrant
+    136  149       4       java.lang.String::length (11 bytes)
+    136   27       3       java.lang.String::length (11 bytes)   made not entrant
+    136  150       3       java.lang.String::replace (42 bytes)
+    137  151       1       java.util.ArrayList::size (5 bytes)
+    138  152       3       java.lang.Integer::rotateLeft (9 bytes)
+    138  153       3       clojure.lang.Murmur3::mixK1 (19 bytes)
+    138  154       3       clojure.lang.Murmur3::mixH1 (20 bytes)
+    138  156       3       java.lang.Integer::bitCount (49 bytes)
+    138  155       1       java.util.concurrent.atomic.AtomicReference::get (5 bytes)
+    141  157       3       java.lang.String::endsWith (15 bytes)
+    141  158   !   3       java.lang.ref.ReferenceQueue::poll (28 bytes)
+    142  159       3       sun.net.www.ParseUtil::firstEncodeIndex (86 bytes)
+    143  160       3       java.lang.String::regionMatches (150 bytes)
+    143  162       3       java.lang.Character::toUpperCase (6 bytes)
+    144  163       3       java.lang.Character::toUpperCase (9 bytes)
+    144  164       3       java.lang.CharacterDataLatin1::toUpperCase (53 bytes)
+    144  161       3       java.net.URL::isBuiltinStreamHandler (12 bytes)
+    144  165       1       java.security.CodeSource::getLocation (5 bytes)
+    144  166       1       java.lang.NamedPackage::module (5 bytes)
+    145  167       3       java.lang.ref.Reference::<init> (25 bytes)
+    145  168     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLL)I (native)   (static)
+    145  169   !   3       jdk.internal.loader.BuiltinClassLoader::loadClassOrNull (143 bytes)
+    146  172       4       java.lang.StringLatin1::lastIndexOf (40 bytes)
+    146  171       3       java.util.Arrays::copyOf (19 bytes)
+    146  173       3       java.lang.StringLatin1::replace (196 bytes)
+    147  170       3       java.lang.ClassLoader::getClassLoadingLock (35 bytes)
+    148  100       3       java.lang.StringLatin1::lastIndexOf (40 bytes)   made not entrant
+    153  174       3       java.util.WeakHashMap::maskNull (12 bytes)
+    154  175       3       java.util.WeakHashMap::hash (28 bytes)
+    155  176       3       clojure.lang.PersistentHashMap::mask (7 bytes)
+    155  177       3       clojure.lang.PersistentHashMap::access$200 (6 bytes)
+    156  178       3       clojure.lang.PersistentHashMap::bitpos (8 bytes)
+    156  179       3       clojure.lang.PersistentHashMap::hash (5 bytes)
+    157  180       3       java.util.zip.ZipUtils::CENLEN (9 bytes)
+    157  182     n 0       java.util.zip.Inflater::inflateBytesBytes (native)   
+    157  181   !   3       java.util.zip.Inflater::inflate (418 bytes)
+    158  184   !   3       java.net.URL::<init> (543 bytes)
+    163  186       3       java.lang.String::indexOf (65 bytes)
+    163  187       3       java.lang.StringLatin1::indexOf (25 bytes)
+    164  183       3       java.net.URL::<init> (8 bytes)
+    164  185       3       java.lang.StringBuilder::append (8 bytes)
+    164  188       3       java.lang.String::concat (116 bytes)
+    165  189       1       java.lang.Class::getModule (5 bytes)
+    166  190       1       java.util.jar.Attributes$Name::hashCode (5 bytes)
+    167  191       3       java.io.UnixFileSystem::normalize (75 bytes)
+    167  192       4       java.lang.Math::min (11 bytes)
+    167   47       3       java.lang.Math::min (11 bytes)   made not entrant
+    167  194     n 0       java.io.RandomAccessFile::readBytes (native)   
+    167  193       3       java.io.RandomAccessFile::read (8 bytes)
+    168  195       3       sun.net.util.IPAddressUtil::checkHostString (53 bytes)
+    168  197       3       java.lang.StringLatin1::regionMatchesCI (92 bytes)
+    169  196       3       sun.net.util.IPAddressUtil::scan (92 bytes)
+    170  198       3       java.lang.StringCoding::hasNegatives (25 bytes)
+    170  199       3       java.util.zip.Inflater::ensureOpen (47 bytes)
+    171  200       3       clojure.lang.Symbol::hasheq (33 bytes)
+    172  201       3       java.util.zip.ZipFile$Source::getEntryPos (206 bytes)
+    172  202       4       java.lang.StringLatin1::equals (36 bytes)
+    172  203       3       java.lang.AbstractStringBuilder::append (77 bytes)
+    173  204       3       jdk.internal.ref.CleanerImpl::getCleanerImpl (13 bytes)
+    174  205   !   3       java.util.zip.InflaterInputStream::read (138 bytes)
+    175  206       3       java.util.zip.InflaterInputStream::ensureOpen (18 bytes)
+    175  208       3       java.util.WeakHashMap::getTable (9 bytes)
+    175   11       3       java.lang.StringLatin1::equals (36 bytes)   made not entrant
+    175  209   !   3       java.util.WeakHashMap::expungeStaleEntries (139 bytes)
+    176  210       3       java.util.WeakHashMap::indexFor (6 bytes)
+    176  207       3       java.lang.String::substring (68 bytes)
+    176  211       3       clojure.lang.AFn::<init> (5 bytes)
+    176  215       4       java.util.concurrent.ConcurrentHashMap::tabAt (22 bytes)
+    176  214       3       clojure.lang.Util::dohasheq (7 bytes)
+    176  216       3       clojure.lang.Util::hasheq (56 bytes)
+    177    1       3       java.util.concurrent.ConcurrentHashMap::tabAt (22 bytes)   made not entrant
+    177  218     n 0       java.lang.ClassLoader::findLoadedClass0 (native)   
+    177  213       1       clojure.lang.PersistentHashMap::meta (5 bytes)
+    177  212       1       clojure.lang.Keyword::hasheq (5 bytes)
+    177  217       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::index (12 bytes)
+    177  220       3       java.util.zip.ZipFile::ensureOpen (38 bytes)
+    177  219       1       java.lang.String::value (5 bytes)
+    178  221       1       java.nio.HeapByteBuffer::isDirect (2 bytes)
+    178  222       1       java.net.URLStreamHandler::getDefaultPort (2 bytes)
+    178  223       1       java.util.zip.ZipEntry::getSize (5 bytes)
+    178  224       3       sun.net.www.protocol.file.Handler::parseURL (18 bytes)
+    178  226       3       java.net.URLStreamHandler::setURL (73 bytes)
+    179  227   !   3       java.net.URL::set (114 bytes)
+    180  225       3       java.net.URLStreamHandler::parseURL (1201 bytes)
+    186  232     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLLL)L (native)   (static)
+    188  234     n 0       java.lang.invoke.MethodHandle::linkToStatic(IIL)I (native)   (static)
+    190  235     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLLLL)L (native)   
+    190  236     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLLLLL)L (native)   (static)
+    194  239     n 0       java.lang.invoke.MethodHandle::linkToStatic(IL)L (native)   (static)
+    194  240     n 0       java.lang.invoke.MethodHandle::invokeBasic(I)L (native)   
+    194  241     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LIL)L (native)   (static)
+    196  233       1       java.lang.Enum::ordinal (5 bytes)
+    196  230       3       java.util.regex.Pattern::isSupplementary (20 bytes)
+    196  231       3       java.lang.Character::isSurrogate (18 bytes)
+    197  243     n 0       java.lang.invoke.MethodHandle::linkToStatic(LIL)I (native)   (static)
+    197  238       1       java.lang.invoke.MethodType$ConcurrentWeakInternSet$WeakEntry::hashCode (5 bytes)
+    197  237       1       java.lang.Class::getClassLoader0 (5 bytes)
+    197  242       1       java.lang.invoke.MethodType::returnType (5 bytes)
+    197  228       1       java.util.jar.Manifest::getEntries (5 bytes)
+    197  244     n 0       java.lang.invoke.MethodHandle::linkToStatic(LL)L (native)   (static)
+    197  229       1       java.util.jar.Manifest::getMainAttributes (5 bytes)
+    197  245     n 0       java.lang.invoke.MethodHandle::invokeBasic(L)L (native)   
+    197  246     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLL)L (native)   (static)
+    197  247     n 0       java.lang.Class::isPrimitive (native)   
+    198  249       3       java.lang.invoke.MethodType::checkPtype (19 bytes)
+    198  250     n 0       java.lang.invoke.MethodHandle::linkToStatic(IL)I (native)   (static)
+    198  248       3       java.lang.invoke.MemberName::testFlags (16 bytes)
+    199  251     n 0       java.lang.Class::isArray (native)   
+    199  252       3       java.lang.ref.WeakReference::<init> (7 bytes)
+    200  253       1       java.lang.invoke.MethodType::ptypes (5 bytes)
+    200  254     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLL)L (native)   (static)
+    201  256     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLL)L (native)   (static)
+    201  255       3       java.lang.invoke.MethodType::hashCode (53 bytes)
+    201  257       3       java.lang.invoke.MethodType$ConcurrentWeakInternSet::expungeStaleElements (27 bytes)
+    201  258     n 0       java.lang.Object::clone (native)   
+    202  259       1       java.lang.invoke.MemberName::getDeclaringClass (5 bytes)
+    203  260     n 0       java.lang.invoke.MethodHandle::invokeBasic()L (native)   
+    203  261       3       java.lang.invoke.MemberName::isInvocable (7 bytes)
+    203  263     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LL)L (native)   (static)
+    203  264     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LIL)I (native)   (static)
+    204  262       3       java.lang.invoke.MemberName::testAnyFlags (15 bytes)
+    204  265       3       jdk.internal.org.objectweb.asm.ByteVector::putUTF8 (142 bytes)
+    205  270     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLIL)I (native)   (static)
+    205  267       3       jdk.internal.org.objectweb.asm.ClassWriter::get (49 bytes)
+    205  271     n 0       java.lang.invoke.MethodHandle::invokeBasic(LL)L (native)   
+    205  269       3       java.lang.invoke.MethodTypeForm::canonicalize (233 bytes)
+    205  272     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLL)L (native)   (static)
+    206  273       3       java.util.regex.Pattern::has (15 bytes)
+    206  276     n 0       java.lang.invoke.MethodHandle::linkToStatic(IIIL)I (native)   (static)
+    206  266       3       jdk.internal.org.objectweb.asm.Item::set (219 bytes)
+    207  277     n 0       java.lang.invoke.MethodHandle::linkToStatic(IIL)L (native)   (static)
+    207  274       3       jdk.internal.org.objectweb.asm.ByteVector::putShort (52 bytes)
+    207  278     n 0       java.lang.invoke.MethodHandle::invokeBasic(II)L (native)   
+    207  279     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LIIL)L (native)   (static)
+    207  275       3       java.lang.String::codePointAt (50 bytes)
+    207  268       1       java.lang.invoke.MethodType::form (5 bytes)
+    207  280       3       java.util.regex.Pattern::peek (26 bytes)
+    208  281       3       jdk.internal.org.objectweb.asm.ByteVector::putByte (39 bytes)
+    208  282       3       java.util.regex.Pattern::next (33 bytes)
+    209  283       4       java.lang.String::startsWith (138 bytes)
+    209  284       3       java.lang.ref.Reference::reachabilityFence (1 bytes)
+    212  286       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (552 bytes)
+    213  102       3       java.lang.String::startsWith (138 bytes)   made not entrant
+    213  285       4       java.lang.StringLatin1::indexOf (121 bytes)
+    214  287       3       clojure.lang.PersistentHashMap$TransientHashMap::ensureEditable (21 bytes)
+    218  288       3       sun.nio.fs.UnixPath::checkNotNul (16 bytes)
+    220  121       3       java.lang.StringLatin1::indexOf (121 bytes)   made not entrant
+    221  289       1       java.nio.Buffer::position (5 bytes)
+    222  291       3       java.nio.Buffer::hasRemaining (17 bytes)
+    222  290       1       java.nio.Buffer::limit (5 bytes)
+    222  292   !   3       java.nio.DirectByteBuffer::get (28 bytes)
+    222  296     n 0       jdk.internal.misc.Unsafe::getByte (native)   
+    222  293       3       java.nio.Buffer::nextGetIndex (31 bytes)
+    222  294       3       java.nio.DirectByteBuffer::ix (10 bytes)
+    223  298       1       java.util.concurrent.ConcurrentHashMap::spread (10 bytes)
+    223   40       3       java.util.concurrent.ConcurrentHashMap::spread (10 bytes)   made not entrant
+    223  295       3       jdk.internal.misc.Unsafe::getByte (7 bytes)
+    223  297       3       jdk.internal.module.ModuleReferenceImpl::hashCode (56 bytes)
+    223  299       3       jdk.internal.jimage.ImageStringsReader::unmaskedHashCode (173 bytes)
+    224  285       4       java.lang.StringLatin1::indexOf (121 bytes)   made not entrant
+    224  300       3       java.nio.Buffer::position (55 bytes)
+    224  302       3       java.nio.ByteBuffer::position (8 bytes)
+    224  304       4       java.lang.StringLatin1::indexOf (121 bytes)
+    224  301       3       java.util.Optional::orElse (16 bytes)
+    225  303       1       java.nio.DirectByteBuffer::address (5 bytes)
+    225   21       1       java.lang.Object::<init> (1 bytes)   made not entrant
+    228  305       1       java.lang.Object::<init> (1 bytes)
+    231  306       3       java.io.BufferedInputStream::getBufIfOpen (21 bytes)
+    231  307       3       java.lang.StringUTF16::compress (50 bytes)
+    231  308  s    3       java.io.BufferedInputStream::read (49 bytes)
+    231  311       3       java.io.DataInputStream::readUTF (501 bytes)
+    233  316       3       java.io.DataInputStream::readFully (63 bytes)
+    233  317  s    3       java.io.BufferedInputStream::read (113 bytes)
+    234  318       3       java.io.DataInputStream::readShort (40 bytes)
+    234  315       3       java.io.BufferedInputStream::read1 (108 bytes)
+    235  309       3       java.lang.String::<init> (74 bytes)
+    235  310       3       java.lang.StringUTF16::compress (20 bytes)
+    235  312       3       java.lang.String::checkBoundsOffCount (61 bytes)
+    236  313       3       java.io.DataInputStream::readUTF (5 bytes)
+    236  325  s    4       java.io.BufferedInputStream::read (49 bytes)
+    236  314       3       java.io.DataInputStream::readUnsignedShort (39 bytes)
+    236  321       3       java.util.zip.Checksum::update (11 bytes)
+    236  322       3       java.util.zip.CRC32::update (51 bytes)
+    237  323       3       java.util.zip.CRC32::updateBytes (14 bytes)
+    237  324       3       java.util.zip.CRC32::updateBytesCheck (55 bytes)
+    237  327       3       java.io.DataInputStream::readFully (9 bytes)
+    237  328       3       java.util.concurrent.ConcurrentHashMap::put (8 bytes)
+    237  319  s    3       java.io.ByteArrayInputStream::read (36 bytes)
+    237  330       3       java.util.Arrays$ArrayItr::next (36 bytes)
+    238  329       3       java.util.Arrays$ArrayItr::hasNext (18 bytes)
+    238  333       3       java.util.HashMap$HashIterator::nextNode (100 bytes)
+    238  331       3       java.util.HashMap$KeyIterator::next (8 bytes)
+    238  308  s    3       java.io.BufferedInputStream::read (49 bytes)   made not entrant
+    238  326       4       java.lang.StringUTF16::compress (50 bytes)
+    238  332       3       java.util.HashMap$HashIterator::hasNext (13 bytes)
+    238  335       3       java.util.concurrent.ConcurrentHashMap$Traverser::advance (188 bytes)
+    239  334       3       java.util.concurrent.ConcurrentHashMap$BaseIterator::hasNext (13 bytes)
+    239  337       3       java.util.concurrent.ConcurrentHashMap$KeyIterator::next (34 bytes)
+    239  320       3       java.io.DataInputStream::readByte (23 bytes)
+    242  338     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLL)V (native)   (static)
+    243  339       3       java.lang.invoke.MethodType::parameterCount (6 bytes)
+    243  340       1       java.util.concurrent.CopyOnWriteArrayList::setArray (6 bytes)
+    243  341       1       java.lang.module.ModuleDescriptor::provides (5 bytes)
+    243  307       3       java.lang.StringUTF16::compress (50 bytes)   made not entrant
+    244  336       4       java.lang.String::hashCode (49 bytes)
+    244  342       3       java.nio.Buffer::limit (74 bytes)
+    244  344       3       java.nio.ByteBuffer::limit (8 bytes)
+    244  304       4       java.lang.StringLatin1::indexOf (121 bytes)   made not entrant
+    244  345       3       java.nio.MappedByteBuffer::limit (8 bytes)
+    244  346       3       java.nio.MappedByteBuffer::position (8 bytes)
+    245  347       3       java.nio.Buffer::<init> (99 bytes)
+    245  350     n 0       jdk.internal.misc.Unsafe::getInt (native)   
+    245  343       1       jdk.internal.jimage.ImageHeader::getTableLength (5 bytes)
+    245  349       3       java.nio.ByteBuffer::<init> (45 bytes)
+    246  351       3       java.lang.Number::<init> (5 bytes)
+    246  352       3       java.lang.ref.Cleaner$1::apply (9 bytes)
+    246  353       3       java.lang.ref.Cleaner$1::apply (5 bytes)
+    247  354       1       java.lang.Integer::intValue (5 bytes)
+    247  355       3       java.lang.Integer::<init> (10 bytes)
+    247   77       3       java.lang.String::hashCode (49 bytes)   made not entrant
+    247  348       4       java.nio.Buffer::hasRemaining (17 bytes)
+    247  291       3       java.nio.Buffer::hasRemaining (17 bytes)   made not entrant
+    248  356       1       java.time.temporal.ValueRange::getMinimum (5 bytes)
+    248  357       1       java.time.temporal.ValueRange::getMaximum (5 bytes)
+    248  358       1       java.time.temporal.ChronoField::range (5 bytes)
+    248  359       1       java.time.ZoneOffset::getTotalSeconds (5 bytes)
+    248  360       3       java.time.temporal.ValueRange::isValidValue (24 bytes)
+    248  364       3       java.lang.Math::floorDiv (31 bytes)
+    248  365       3       java.time.temporal.ValueRange::checkValidValue (24 bytes)
+    249  361       3       java.time.temporal.ChronoField::checkValidValue (10 bytes)
+    249  367     n 0       java.lang.invoke.MethodHandle::linkToStatic(ILL)L (native)   (static)
+    249  362       1       java.time.zone.ZoneOffsetTransition::getOffsetAfter (5 bytes)
+    249  363       1       java.time.zone.ZoneOffsetTransition::getOffsetBefore (5 bytes)
+    249  366       3       java.util.ArrayList::add (25 bytes)
+    250  368       1       sun.invoke.util.Wrapper::basicTypeChar (5 bytes)
+    250  369       3       java.lang.Math::floorDiv (7 bytes)
+    250  371       3       java.time.LocalTime::ofNanoOfDay (68 bytes)
+    251  370       1       java.time.zone.ZoneOffsetTransition::getDateTimeBefore (5 bytes)
+    251  372       3       java.lang.StringLatin1::indexOf (121 bytes)
+    251  373     n 0       java.lang.Thread::currentThread (native)   (static)
+    254  374       3       java.util.jar.JarFile::maybeInstantiateVerifier (112 bytes)
+    289  375       3       clojure.lang.Symbol::<init> (20 bytes)
+    290  376       3       clojure.lang.Util::hash (11 bytes)
+    290  377       3       clojure.lang.Util::hashCombine (18 bytes)
+    290  378       3       clojure.lang.APersistentMap::<init> (5 bytes)
+    291  379       3       java.lang.Integer::valueOf (32 bytes)
+    291  380       3       clojure.lang.PersistentArrayMap::equalKey (24 bytes)
+    291  381       3       clojure.lang.Symbol::intern (10 bytes)
+    291  382       3       clojure.lang.Symbol::hashCode (18 bytes)
+    292  383       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (477 bytes)
+    293  388       4       java.lang.Integer::bitCount (49 bytes)
+    293  156       3       java.lang.Integer::bitCount (49 bytes)   made not entrant
+    293  386       3       clojure.lang.Symbol::equals (55 bytes)
+    294  387       3       clojure.lang.Util::equals (25 bytes)
+    294  385       3       clojure.lang.Keyword::intern (107 bytes)
+    295  389       3       clojure.lang.RT::keyword (9 bytes)
+    295  390       3       clojure.lang.Box::<init> (10 bytes)
+    295  384       3       clojure.lang.PersistentHashMap::assoc (153 bytes)
+    296  392       1       clojure.lang.PersistentHashMap::mask (7 bytes)
+    296  176       3       clojure.lang.PersistentHashMap::mask (7 bytes)   made not entrant
+    296  391       3       clojure.lang.PersistentHashMap::<init> (32 bytes)
+    296  393       3       java.lang.Long::<init> (10 bytes)
+    297  395     n 0       java.io.RandomAccessFile::seek0 (native)   
+    297  394       3       java.io.RandomAccessFile::seek (22 bytes)
+    298  396       4       java.lang.AbstractStringBuilder::ensureCapacityInternal (39 bytes)
+    299  397       3       java.io.InputStream::<init> (5 bytes)
+    300  399       3       java.lang.StringLatin1::toLowerCase (180 bytes)
+    301  398       3       java.lang.String::toLowerCase (29 bytes)
+    301  401       3       clojure.lang.Murmur3::fmix (37 bytes)
+    301  400       3       java.lang.Class::getPackageName (81 bytes)
+    301  404     n 0       java.lang.Class::isInstance (native)   
+    302   95       3       java.lang.AbstractStringBuilder::ensureCapacityInternal (39 bytes)   made not entrant
+    302  402       3       java.lang.Class::cast (27 bytes)
+    302  405       4       java.util.Objects::requireNonNull (14 bytes)
+    302  403       1       clojure.lang.Obj::meta (5 bytes)
+    302   20       3       java.util.Objects::requireNonNull (14 bytes)   made not entrant
+    302  406       3       clojure.lang.Murmur3::hashUnencodedChars (101 bytes)
+    303  407       3       java.util.AbstractList$ListItr::hasPrevious (13 bytes)
+    305  408       3       clojure.lang.APersistentVector::<init> (5 bytes)
+    305  409       3       java.util.Arrays$ArrayList::size (6 bytes)
+    305  410       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::find (90 bytes)
+    306  411       3       clojure.lang.Obj::<init> (10 bytes)
+    306  412       3       clojure.lang.ASeq::<init> (6 bytes)
+    306  413       3       clojure.lang.PersistentList::<init> (22 bytes)
+    306  414       3       clojure.lang.Namespace::getMappings (11 bytes)
+    306  415       3       clojure.lang.PersistentHashMap::valAt (7 bytes)
+    307  416       3       clojure.lang.PersistentHashMap::valAt (48 bytes)
+    307  417       3       clojure.lang.PersistentHashMap$ArrayNode::find (39 bytes)
+    307  418       3       clojure.lang.PersistentArrayMap::createWithCheck (80 bytes)
+    307  419       4       java.lang.String::equals (65 bytes)
+    308  420   !   3       java.util.AbstractList$ListItr::previous (45 bytes)
+    308  421       3       java.util.AbstractList$Itr::checkForComodification (23 bytes)
+    308   10       3       java.lang.String::equals (65 bytes)   made not entrant
+    309  423       3       clojure.lang.Util::equiv (65 bytes)
+    309  422       3       clojure.lang.PersistentVector::<init> (31 bytes)
+    309  424       3       java.util.AbstractList::<init> (10 bytes)
+    310  425       3       clojure.lang.Namespace::intern (161 bytes)
+    312  426       3       clojure.lang.PersistentHashMap$ArrayNode::assoc (111 bytes)
+    313  427       3       clojure.lang.PersistentHashMap::access$000 (7 bytes)
+    313  428       3       java.util.ArrayList::get (15 bytes)
+    314  429       3       java.util.Objects::checkIndex (7 bytes)
+    314  431       3       java.util.Arrays$ArrayList::get (7 bytes)
+    314  430       3       jdk.internal.util.Preconditions::checkIndex (18 bytes)
+    314  432       4       clojure.lang.AFn::<init> (5 bytes)
+    314  211       3       clojure.lang.AFn::<init> (5 bytes)   made not entrant
+    315  433       3       clojure.lang.RT::vector (5 bytes)
+    315  434       3       clojure.lang.LazilyPersistentVector::createOwning (27 bytes)
+    315  435       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::ensureEditable (62 bytes)
+    316  436       3       clojure.lang.RT::map (30 bytes)
+    317  437       3       java.util.concurrent.atomic.AtomicBoolean::<init> (18 bytes)
+    317  438       3       clojure.lang.Var::setMeta (31 bytes)
+    317  439  s    3       clojure.lang.AReference::resetMeta (7 bytes)
+    317  441       3       clojure.lang.AReference::<init> (10 bytes)
+    317  442       3       clojure.lang.ARef::<init> (17 bytes)
+    318  440       1       clojure.lang.Symbol::meta (5 bytes)
+    319  443       3       clojure.lang.Var::<init> (51 bytes)
+    321  444       3       clojure.lang.Namespace::findOrCreate (48 bytes)
+    321  445       3       clojure.lang.Var::intern (6 bytes)
+    321  446       3       clojure.lang.RT::var (17 bytes)
+    322  447       3       java.util.Arrays::asList (9 bytes)
+    322  449       3       clojure.lang.PersistentList::create (47 bytes)
+    322  448       3       java.util.Arrays$ArrayList::<init> (16 bytes)
+    323  450       3       java.util.AbstractList::listIterator (15 bytes)
+    323  451       3       java.util.AbstractList::rangeCheckForAdd (26 bytes)
+    323  452       3       java.util.AbstractList$ListItr::<init> (16 bytes)
+    325  453       3       clojure.lang.Tuple::create (12 bytes)
+    327  454       4       java.util.concurrent.ConcurrentHashMap::get (162 bytes)
+    329  455       3       clojure.lang.PersistentList$EmptyList::cons (6 bytes)
+    329  456       3       clojure.lang.PersistentList$EmptyList::cons (15 bytes)
+    331  112       3       java.util.concurrent.ConcurrentHashMap::get (162 bytes)   made not entrant
+    333  457       3       java.util.ArrayDeque::inc (12 bytes)
+    338  459   !   3       java.util.jar.JarFile::checkForSpecialAttributes (163 bytes)
+    339  458       3       java.util.zip.ZipUtils::CENSIZ (9 bytes)
+    339  460       3       java.lang.String::toLowerCase (8 bytes)
+    339  461       3       java.util.Locale::getDefault (4 bytes)
+    339  464       3       java.util.WeakHashMap::remove (133 bytes)
+    340  463       3       java.util.Collections$SetFromMap::remove (19 bytes)
+    340  466  s!   3       jdk.internal.loader.URLClassPath::getLoader (194 bytes)
+    342  468       1       java.lang.System::getSecurityManager (4 bytes)
+    342  106       3       java.lang.System::getSecurityManager (4 bytes)   made not entrant
+    342  465   !   3       java.util.zip.ZipFile$ZipFileInputStream::close (59 bytes)
+    342  469       3       jdk.internal.misc.SharedSecrets::javaUtilJarAccess (18 bytes)
+    342  462   !   3       java.util.jar.JarFile::isMultiRelease (33 bytes)
+    343  467       3       sun.net.www.ParseUtil::encodePath (41 bytes)
+    343  470       3       java.lang.String::indexOf (113 bytes)
+    343  471     n 0       java.lang.Class::initClassName (native)   
+    344  472       3       clojure.lang.ATransientMap::assoc (11 bytes)
+    344  473       3       clojure.lang.PersistentHashMap$TransientHashMap::doAssoc (122 bytes)
+    344  474       3       java.io.RandomAccessFile::readFully (45 bytes)
+    345  476       1       java.lang.ref.Reference::reachabilityFence (1 bytes)
+    345  284       3       java.lang.ref.Reference::reachabilityFence (1 bytes)   made not entrant
+    345  475       3       java.util.LinkedHashMap::get (33 bytes)
+    347  477       3       sun.net.www.ParseUtil::match (50 bytes)
+    348  478       3       java.lang.String::equalsIgnoreCase (45 bytes)
+    350  479       3       java.lang.ref.SoftReference::get (29 bytes)
+    351  480       3       java.io.UnixFileSystem::prefixLength (25 bytes)
+    351  481       3       java.lang.ref.PhantomReference::<init> (7 bytes)
+    351  482       3       jdk.internal.ref.PhantomCleanable::<init> (49 bytes)
+    352  483   !   3       jdk.internal.ref.PhantomCleanable::insert (53 bytes)
+    352  484       3       jdk.internal.ref.CleanerFactory::cleaner (4 bytes)
+    352  485       3       java.io.File::isInvalid (47 bytes)
+    353  486       3       java.lang.ref.Cleaner::register (25 bytes)
+    354  488       4       java.lang.AbstractStringBuilder::append (45 bytes)
+    354  487       3       jdk.internal.ref.CleanerImpl$PhantomCleanableRef::<init> (12 bytes)
+    356  489   !   3       java.util.zip.Inflater::needsInput (55 bytes)
+    356  491       3       java.io.File::getName (42 bytes)
+    356  495     n 0       java.lang.ClassLoader::findBootstrapClass (native)   
+    356  492       3       jdk.internal.loader.ClassLoaders$BootClassLoader::loadClassOrNull (11 bytes)
+    356  493       3       java.lang.System$2::findBootstrapClassOrNull (6 bytes)
+    357  494       3       java.lang.ClassLoader::findBootstrapClassOrNull (16 bytes)
+    357  496       3       java.lang.ClassLoader::loadClass (7 bytes)
+    357  497       3       jdk.internal.loader.ClassLoaders$AppClassLoader::loadClass (40 bytes)
+    358  498       3       jdk.internal.loader.BuiltinClassLoader::loadClass (22 bytes)
+    358  499       3       java.util.zip.ZipCoder$UTF8::getBytes (10 bytes)
+    358  500       3       java.util.Collections$SetFromMap::add (22 bytes)
+    358  501       3       clojure.lang.ASeq::<init> (5 bytes)
+    359  502       3       clojure.lang.Obj::<init> (10 bytes)
+    359  503       3       java.util.WeakHashMap::put (162 bytes)
+    360  504       3       java.util.WeakHashMap$Entry::<init> (24 bytes)
+    360  110       3       java.lang.AbstractStringBuilder::append (45 bytes)   made not entrant
+    360  490       4       java.lang.String::getBytes (44 bytes)
+    360  505       3       java.util.jar.JarFile::getEntry (22 bytes)
+    360  506       3       java.util.ArrayDeque::add (7 bytes)
+    361  508       3       java.util.zip.ZipUtils::LOCSIG (6 bytes)
+    361  507       1       clojure.lang.PersistentArrayMap::meta (5 bytes)
+    361  509   !   3       java.util.zip.ZipFile::getInputStream (327 bytes)
+    361  109       3       java.lang.String::getBytes (44 bytes)   made not entrant
+    362  510       3       java.util.zip.ZipFile$ZipFileInputStream::<init> (96 bytes)
+    363  511       3       java.util.zip.ZipFile$ZipFileInflaterInputStream::<init> (41 bytes)
+    363  514  s    3       jdk.internal.loader.Resource::cachedInputStream (20 bytes)
+    364  515       3       java.security.CodeSource::getCertificates (98 bytes)
+    364  512       3       java.net.URL::toString (5 bytes)
+    364  513       3       jdk.internal.loader.BuiltinClassLoader::loadClassOrNull (7 bytes)
+    365  516       3       java.lang.ClassLoader::definePackage (84 bytes)
+    366  517       3       java.lang.Package::isSealed (26 bytes)
+    366  518       3       java.lang.ClassLoader::compareCerts (201 bytes)
+    366  520 %     4       java.util.zip.ZipFile$Source::hashN @ 2 (26 bytes)
+    366  519       1       clojure.lang.Cons::first (5 bytes)
+    369  521       1       clojure.lang.PersistentList::first (5 bytes)
+    371  522       4       java.lang.StringBuilder::append (8 bytes)
+    374  523       1       clojure.lang.ARef::getValidator (5 bytes)
+    377  101       3       java.lang.StringBuilder::append (8 bytes)   made not entrant
+    377  524       4       java.lang.StringLatin1::indexOf (121 bytes)
+    377  525       1       clojure.lang.PersistentHashMap::count (5 bytes)
+    383  527     n 0       java.lang.String::intern (native)   
+    384  372       3       java.lang.StringLatin1::indexOf (121 bytes)   made not entrant
+    384  526       4       java.util.Arrays::copyOfRange (63 bytes)
+    385  528       3       java.util.jar.Attributes::getValue (9 bytes)
+    385  529       3       java.util.jar.Attributes::get (11 bytes)
+    385  530       3       java.io.FilterInputStream::<init> (10 bytes)
+    386  104       3       java.util.Arrays::copyOfRange (63 bytes)   made not entrant
+    386  531       4       java.lang.CharacterData::of (120 bytes)
+    386  103       3       java.lang.CharacterData::of (120 bytes)   made not entrant
+    386  532       3       java.util.ArrayDeque::pollFirst (36 bytes)
+    387  533       3       sun.net.util.URLUtil::urlNoFragString (114 bytes)
+    388  534   !   3       java.util.concurrent.ConcurrentHashMap::computeIfAbsent (576 bytes)
+    390  536       3       clojure.lang.PersistentArrayMap::indexOf (44 bytes)
+    390  535       3       clojure.lang.PersistentArrayMap::<init> (15 bytes)
+    391  538   !   3       jdk.internal.loader.BuiltinClassLoader::findClassOnClassPathOrNull (64 bytes)
+    391  537       1       java.util.concurrent.atomic.AtomicReference::set (6 bytes)
+    392  539       4       java.lang.StringLatin1::replace (196 bytes)
+    400  540       3       clojure.lang.ASeq::seq (2 bytes)
+    400  541       3       clojure.lang.Cons::next (10 bytes)
+    400  542       3       clojure.lang.Cons::more (16 bytes)
+    401  173       3       java.lang.StringLatin1::replace (196 bytes)   made not entrant
+    402  543       3       clojure.lang.PersistentArrayMap::assoc (133 bytes)
+    402  544       4       clojure.lang.Util::hasheq (56 bytes)
+    405  546       3       java.util.zip.ZipFile$ZipFileInflaterInputStream::fill (80 bytes)
+    405  547   !   3       java.util.zip.ZipFile$ZipFileInputStream::read (135 bytes)
+    406  552   !   3       java.util.zip.ZipFile$Source::readFullyAt (74 bytes)
+    406  548       3       java.util.zip.ZipFile::ensureOpenOrZipException (18 bytes)
+    407  549       3       java.util.zip.ZipFile$ZipFileInputStream::initDataOffset (109 bytes)
+    407  550   !   3       java.util.zip.ZipFile$Source::readAt (39 bytes)
+    407  551   !   3       java.util.zip.Inflater::setInput (69 bytes)
+    408  553       3       java.lang.StringCoding::encodeUTF8 (132 bytes)
+    408  554       3       java.io.File::exists (43 bytes)
+    409  555   !   3       jdk.internal.loader.URLClassPath$JarLoader::ensureOpen (36 bytes)
+    409  558   !   3       java.util.zip.ZipFile::getEntry (73 bytes)
+    409  556       3       java.io.UnixFileSystem::resolve (103 bytes)
+    411  557       3       java.util.zip.ZipFile::getZipEntry (308 bytes)
+    412  216       3       clojure.lang.Util::hasheq (56 bytes)   made not entrant
+    412  545       4       clojure.lang.Symbol::intern (10 bytes)
+    412  563       3       jdk.internal.loader.URLClassPath$JarLoader$2::getCodeSourceURL (8 bytes)
+    412  562   !   3       jdk.internal.loader.URLClassPath$FileLoader::getResource (164 bytes)
+    414  559       3       java.util.ArrayDeque::poll (5 bytes)
+    414  560   !   3       java.util.zip.ZipFile$CleanableResource::getInflater (47 bytes)
+    414  561   !   3       jdk.internal.loader.URLClassPath$JarLoader::getResource (65 bytes)
+    414  381       3       clojure.lang.Symbol::intern (10 bytes)   made not entrant
+    415  564       3       jdk.internal.loader.BuiltinClassLoader::isSealed (70 bytes)
+    415  565       3       clojure.lang.PersistentHashMap::createNode (96 bytes)
+    420  566       3       clojure.lang.Cons::<init> (15 bytes)
+    422  567       4       java.lang.String::substring (58 bytes)
+    425  569       3       clojure.lang.PersistentList::<init> (20 bytes)
+    425  570  s    3       clojure.lang.AReference::alterMeta (30 bytes)
+    426  571       3       clojure.lang.AFn::applyTo (12 bytes)
+    427  118       3       java.lang.String::substring (58 bytes)   made not entrant
+    427  573       3       clojure.lang.AFunction::<init> (5 bytes)
+    427  572       4       sun.net.www.ParseUtil::firstEncodeIndex (86 bytes)
+    431  574   !   3       clojure.lang.ARef::validate (46 bytes)
+    432  159       3       sun.net.www.ParseUtil::firstEncodeIndex (86 bytes)   made not entrant
+    432  568       4       java.lang.String::checkBoundsBeginEnd (60 bytes)
+    433  575       3       clojure.lang.RT::list (9 bytes)
+    433  129       3       java.lang.String::checkBoundsBeginEnd (60 bytes)   made not entrant
+    434  576  s    3       clojure.lang.Var::bindRoot (51 bytes)
+    434  577       3       clojure.lang.Var$3::invoke (6 bytes)
+    435  578       3       jdk.internal.loader.URLClassPath::getResource (74 bytes)
+    435  579       3       jdk.internal.loader.BuiltinClassLoader::defineClass (121 bytes)
+    443  580       4       java.lang.String::startsWith (7 bytes)
+    446  133       3       java.lang.String::startsWith (7 bytes)   made not entrant
+    447  581     n 0       java.io.UnixFileSystem::getBooleanAttributes0 (native)   
+    448  582       3       java.util.jar.JarFile$1::apply (9 bytes)
+    449  583       3       java.util.jar.JarFile$1::apply (13 bytes)
+    449  588       3       java.io.UnixFileSystem::getBooleanAttributes (49 bytes)
+    449  584       3       java.util.jar.JarFile$JarFileEntry::<init> (16 bytes)
+    450  585       3       java.util.jar.JarEntry::<init> (6 bytes)
+    450  586       3       java.util.zip.ZipEntry::<init> (74 bytes)
+    450  589   !   3       jdk.internal.ref.PhantomCleanable::remove (60 bytes)
+    450  590       3       java.lang.ref.Reference::clear (6 bytes)
+    451  587       3       java.util.ArrayDeque::addLast (51 bytes)
+    451  591   !   3       java.util.zip.ZipFile$ZipFileInflaterInputStream::close (67 bytes)
+    451  592       3       java.util.zip.InflaterInputStream::close (34 bytes)
+    452  593       3       jdk.internal.ref.PhantomCleanable::clean (16 bytes)
+    452  599       3       java.util.zip.InflaterInputStream::<init> (79 bytes)
+    452  594       3       sun.net.www.protocol.jar.Handler::parseURL (190 bytes)
+    453  595       3       sun.net.www.protocol.jar.Handler::parseContextSpec (150 bytes)
+    454  201       3       java.util.zip.ZipFile$Source::getEntryPos (206 bytes)   made not entrant
+    455  605       3       java.util.zip.ZipFile$Source::getEntryPos (206 bytes)
+    456  604       3       java.io.File::<init> (113 bytes)
+    457  603       3       java.net.URLStreamHandler::toExternalForm (156 bytes)
+    457  607       4       java.lang.CharacterDataLatin1::toLowerCase (39 bytes)
+    458  126       3       java.lang.CharacterDataLatin1::toLowerCase (39 bytes)   made not entrant
+    458  596       3       sun.net.www.protocol.jar.Handler::indexOfBangSlash (52 bytes)
+    459  597       3       sun.net.www.ParseUtil::canonizeString (38 bytes)
+    459  598       3       java.net.URLStreamHandler::setURL (159 bytes)
+    461  600       3       jdk.internal.loader.URLClassPath$JarLoader$2::getManifest (26 bytes)
+    461  601   !   3       java.util.jar.JarFile$JarFileEntry::getCodeSigners (81 bytes)
+    462  606       3       java.util.jar.Manifest::getTrustedAttributes (57 bytes)
+    462  602       3       java.security.SecureClassLoader$CodeSourceKey::equals (56 bytes)
+    463  608       3       clojure.lang.RT::boundedLength (28 bytes)
+    463  609       3       clojure.lang.PersistentList::next (18 bytes)
+    464  610       3       clojure.lang.Util::ret1 (2 bytes)
+    464  611       3       clojure.lang.AFn::applyToHelper (3238 bytes)
+    466  612       4       java.util.Arrays::copyOf (19 bytes)
+    467  171       3       java.util.Arrays::copyOf (19 bytes)   made not entrant
+    476  613   !   3       jdk.internal.loader.Resource::getBytes (242 bytes)
+    477  614       3       java.security.CodeSource::<init> (52 bytes)
+    477  615       3       java.security.SecureClassLoader::getProtectionDomain (38 bytes)
+    478  616       3       java.lang.ClassLoader::defineClass (43 bytes)
+    479  617       3       clojure.lang.RT::dissoc (17 bytes)
+    479  618       3       clojure.lang.ARef::notifyWatches (87 bytes)
+    487  619       3       java.util.concurrent.ConcurrentHashMap$Node::<init> (14 bytes)
+    487  620       4       java.util.concurrent.ConcurrentHashMap::setTabAt (20 bytes)
+    488  128       3       java.util.concurrent.ConcurrentHashMap::setTabAt (20 bytes)   made not entrant
+    491  621       3       jdk.internal.ref.CleanerImpl$PhantomCleanableRef::performCleanup (10 bytes)
+    491  622       3       java.util.zip.ZipFile$InflaterCleanupAction::run (12 bytes)
+    491  623   !   3       java.util.zip.ZipFile$CleanableResource::releaseInflater (53 bytes)
+    492  624   !   3       java.util.zip.Inflater::reset (64 bytes)
+    492  625     n 0       java.util.zip.Inflater::reset (native)   (static)
+    493  626       3       jdk.internal.loader.URLClassPath$JarLoader$2::<init> (26 bytes)
+    494  627       3       jdk.internal.loader.Resource::<init> (5 bytes)
+    494  628  s    3       java.util.jar.JarFile::getInputStream (72 bytes)
+    494  637     n 0       java.lang.Thread::isInterrupted (native)   
+    494  629  s!   3       java.util.jar.JarFile::ensureInitialization (41 bytes)
+    495  630       3       java.util.jar.JarFile::getManifest (5 bytes)
+    495  631       3       java.util.jar.JarFile::getManifestFromReference (117 bytes)
+    495  632       3       jdk.internal.loader.ClassLoaders$AppClassLoader::defineOrCheckPackage (8 bytes)
+    496  633   !   3       jdk.internal.loader.BuiltinClassLoader::defineOrCheckPackage (93 bytes)
+    496  642       3       java.lang.ClassLoader::addClass (9 bytes)
+    497  634       3       jdk.internal.loader.BuiltinClassLoader::getAndVerifyPackage (109 bytes)
+    498  635       3       java.lang.ClassLoader::getDefinedPackage (35 bytes)
+    499  636       3       jdk.internal.loader.URLClassPath$JarLoader$2::getInputStream (15 bytes)
+    499  638       3       jdk.internal.loader.URLClassPath$JarLoader$2::getContentLength (9 bytes)
+    499  639       3       jdk.internal.loader.URLClassPath$JarLoader$2::getCodeSigners (8 bytes)
+    499  644       4       java.lang.String::lastIndexOf (29 bytes)
+    499  643   !   3       jdk.internal.loader.URLClassPath$JarLoader::checkResource (78 bytes)
+    500  640       3       java.security.SecureClassLoader$CodeSourceKey::hashCode (21 bytes)
+    500  641       3       java.lang.ClassLoader::preDefineClass (116 bytes)
+    502  114       3       java.lang.String::lastIndexOf (29 bytes)   made not entrant
+    507  645       3       java.util.concurrent.atomic.AtomicReference::<init> (10 bytes)
+    507  646       3       clojure.lang.PersistentHashMap::<init> (31 bytes)
+    507  647       3       clojure.lang.PersistentHashMap::asTransient (9 bytes)
+    507  648       3       clojure.lang.PersistentHashMap$TransientHashMap::<init> (31 bytes)
+    508  649       3       clojure.lang.PersistentHashMap$TransientHashMap::<init> (44 bytes)
+    508  650       3       clojure.lang.ATransientMap::<init> (5 bytes)
+    508  651       3       clojure.lang.ATransientMap::persistent (9 bytes)
+    510  652       3       clojure.lang.PersistentHashMap::create (46 bytes)
+    511  653       3       clojure.lang.PersistentHashMap::withMeta (35 bytes)
+    511  654       3       java.lang.Object::equals (11 bytes)
+    516  655       4       java.lang.AbstractStringBuilder::<init> (39 bytes)
+    518  132       3       java.lang.AbstractStringBuilder::<init> (39 bytes)   made not entrant
+    530  656       3       clojure.lang.PersistentHashMap::without (101 bytes)
+    531  657       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::without (198 bytes)
+    533  658     n 0       jdk.internal.misc.Unsafe::compareAndSetInt (native)   
+    533  659   !   3       java.lang.ClassLoader::checkCerts (195 bytes)
+    533  660     n 0       java.lang.ClassLoader::defineClass1 (native)   (static)
+    534  664       1       java.util.Arrays$ArrayList::size (6 bytes)
+    535  409       3       java.util.Arrays$ArrayList::size (6 bytes)   made not entrant
+    535  661       3       java.lang.ClassLoader::postDefineClass (39 bytes)
+    535  662       3       java.lang.ClassLoader::getNamedPackage (73 bytes)
+    535  663       3       java.security.CodeSource::matchCerts (254 bytes)
+    545  665       4       java.lang.StringLatin1::charAt (28 bytes)
+    545   26       3       java.lang.StringLatin1::charAt (28 bytes)   made not entrant
+    548  666       1       clojure.lang.ASeq::seq (2 bytes)
+    549  540       3       clojure.lang.ASeq::seq (2 bytes)   made not entrant
+    558  667       4       java.io.UnixFileSystem::normalize (75 bytes)
+    561  668       3       java.nio.MappedByteBuffer::<init> (15 bytes)
+    561  669       3       java.nio.ByteBuffer::<init> (12 bytes)
+    561  672       3       java.nio.Buffer::checkIndex (22 bytes)
+    562  673   !   3       java.nio.DirectIntBufferU::get (29 bytes)
+    562  191       3       java.io.UnixFileSystem::normalize (75 bytes)   made not entrant
+    562  671   !   4       java.nio.DirectByteBuffer::get (28 bytes)
+    562  670       3       java.nio.DirectByteBuffer::<init> (35 bytes)
+    562  674       3       java.nio.DirectIntBufferU::ix (10 bytes)
+    562  675       3       jdk.internal.misc.Unsafe::getInt (7 bytes)
+    562  676       3       java.nio.MappedByteBuffer::limit (6 bytes)
+    562  292   !   3       java.nio.DirectByteBuffer::get (28 bytes)   made not entrant
+    563  677       3       java.nio.MappedByteBuffer::position (6 bytes)
+    563  678   !   3       jdk.internal.jimage.BasicImageReader::slice (32 bytes)
+    564  679       4       clojure.lang.Symbol::equals (55 bytes)
+    565  386       3       clojure.lang.Symbol::equals (55 bytes)   made not entrant
+    569  680       4       java.util.zip.ZipFile$Source::getEntryPos (206 bytes)
+    570  681       1       clojure.lang.Var::getRawRoot (5 bytes)
+    570  682       3       jdk.internal.jimage.ImageStringsReader::hashCode (31 bytes)
+    570  683       3       jdk.internal.jimage.ImageLocation::decompress (153 bytes)
+    571  685       3       java.util.concurrent.ConcurrentHashMap$ValueIterator::next (34 bytes)
+    571  686       3       java.util.Optional::empty (6 bytes)
+    572  687       3       jdk.internal.loader.BuiltinClassLoader::moduleReaderFor (45 bytes)
+    572  690       3       java.nio.MappedByteBuffer::limit (6 bytes)
+    572  691       3       java.nio.MappedByteBuffer::position (6 bytes)
+    572  692       3       java.nio.DirectByteBufferR::<init> (19 bytes)
+    572  688       3       jdk.internal.module.SystemModuleFinders$SystemModuleReader::find (54 bytes)
+    573  693       3       java.util.concurrent.atomic.AtomicBoolean::get (13 bytes)
+    573  689       3       jdk.internal.module.SystemModuleFinders$SystemModuleReader::findImageLocation (42 bytes)
+    574  694       1       java.lang.Boolean::booleanValue (5 bytes)
+    574  695       1       clojure.lang.MapEntry::val (5 bytes)
+    576  696       3       java.lang.invoke.MethodType::parameterType (7 bytes)
+    576  697     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLIIL)I (native)   (static)
+    578  544       4       clojure.lang.Util::hasheq (56 bytes)   made not entrant
+    581  698       3       clojure.lang.PersistentHashMap$TransientHashMap::doPersistent (32 bytes)
+    582  699       2       clojure.lang.Util::hasheq (56 bytes)
+    582  700       3       clojure.lang.RT::seq (32 bytes)
+    582  702       3       clojure.core$seq__5402::invokeStatic (7 bytes)
+    582  701       3       clojure.lang.Var::getThreadBinding (45 bytes)
+    583  703       1       clojure.lang.MapEntry::key (5 bytes)
+    583  704       3       clojure.lang.RT::seqFrom (133 bytes)
+    583  605       3       java.util.zip.ZipFile$Source::getEntryPos (206 bytes)   made not entrant
+    583  684       4       jdk.internal.jimage.ImageStringsReader::unmaskedHashCode (173 bytes)
+    584  705       3       clojure.lang.PersistentHashMap$NodeSeq::create (94 bytes)
+    584  706       1       java.util.concurrent.locks.AbstractQueuedSynchronizer::getState (5 bytes)
+    584  707       1       java.util.concurrent.locks.ReentrantReadWriteLock::writeLock (5 bytes)
+    586  709       3       java.lang.invoke.VarForm::getMemberName (21 bytes)
+    587  710       3       clojure.lang.APersistentSet::<init> (10 bytes)
+    587  711       3       clojure.lang.PersistentHashSet::<init> (11 bytes)
+    587  712       3       clojure.lang.PersistentHashSet::asTransient (18 bytes)
+    587  713       1       java.util.concurrent.locks.AbstractQueuedSynchronizer::setState (6 bytes)
+    588  714       1       java.util.concurrent.locks.AbstractOwnableSynchronizer::getExclusiveOwnerThread (5 bytes)
+    588  299       3       jdk.internal.jimage.ImageStringsReader::unmaskedHashCode (173 bytes)   made not entrant
+    588  708       4       java.lang.CharacterDataLatin1::toUpperCase (53 bytes)
+    588  164       3       java.lang.CharacterDataLatin1::toUpperCase (53 bytes)   made not entrant
+    589  715       3       clojure.lang.PersistentArrayMap::valAt (7 bytes)
+    589  716       3       clojure.lang.PersistentArrayMap::valAt (21 bytes)
+    589  717       3       clojure.core$reduce1::invokeStatic (109 bytes)
+    590  718       3       clojure.lang.Var::deref (19 bytes)
+    590  719       3       java.util.concurrent.locks.ReentrantReadWriteLock$Sync::exclusiveCount (5 bytes)
+    592  720       1       java.util.concurrent.locks.AbstractOwnableSynchronizer::setExclusiveOwnerThread (6 bytes)
+    594  721       1       clojure.lang.MultiFn::getMethodTable (5 bytes)
+    597  722       3       java.nio.DirectByteBufferR::slice (81 bytes)
+    597  724       3       jdk.internal.jimage.ImageStringsReader::charsFromByteBufferLength (47 bytes)
+    598  725       3       jdk.internal.jimage.ImageStringsReader::charsFromByteBuffer (186 bytes)
+    599  723       3       jdk.internal.jimage.ImageStringsReader::hashCode (8 bytes)
+    599  726       3       clojure.lang.Tuple::create (16 bytes)
+    599  727       3       java.lang.ThreadLocal::getMap (5 bytes)
+    604  728       3       java.lang.ThreadLocal$ThreadLocalMap::getEntry (42 bytes)
+    605  729  s    3       jdk.internal.jimage.BasicImageReader::findLocation (115 bytes)
+    606  730       3       java.lang.String::<init> (10 bytes)
+    606  731       3       jdk.internal.jimage.ImageStringsReader::get (9 bytes)
+    606  732       3       jdk.internal.jimage.BasicImageReader::getString (48 bytes)
+    606  733       3       jdk.internal.jimage.ImageStringsReader::stringFromByteBuffer (28 bytes)
+    607  734       3       java.nio.MappedByteBuffer::rewind (5 bytes)
+    611  735       4       clojure.lang.Murmur3::fmix (37 bytes)
+    611  401       3       clojure.lang.Murmur3::fmix (37 bytes)   made not entrant
+    613  736       3       clojure.lang.PersistentArrayMap::without (70 bytes)
+    623  737       3       clojure.lang.MapEntry::create (10 bytes)
+    623  739       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (552 bytes)
+    623  738       3       clojure.lang.MapEntry::<init> (15 bytes)
+    623  741       3       clojure.lang.PersistentHashMap$ArrayNode$Seq::first (10 bytes)
+    623  742       3       clojure.lang.PersistentHashMap$NodeSeq::first (41 bytes)
+    624  745       3       clojure.core$first__5384::invokeStatic (7 bytes)
+    624  744       3       clojure.lang.RT::first (35 bytes)
+    624  743       3       clojure.lang.RT::booleanCast (25 bytes)
+    624  746       3       clojure.lang.MapEntry::getValue (5 bytes)
+    624  749       3       clojure.lang.PersistentHashMap$ArrayNode$Seq::create (73 bytes)
+    625  750       3       clojure.lang.PersistentHashMap$ArrayNode$Seq::<init> (22 bytes)
+    625  747       3       clojure.core$val::invokeStatic (12 bytes)
+    625  751       3       clojure.lang.PersistentHashMap$ArrayNode$Seq::next (22 bytes)
+    625  752       3       clojure.lang.PersistentHashMap$NodeSeq::next (43 bytes)
+    625  748  s    1       clojure.lang.AReference::meta (5 bytes)
+    626  753       3       clojure.lang.Var::isPublic (24 bytes)
+    626  754       3       clojure.lang.RT::next (35 bytes)
+    626  755       3       clojure.core$key::invokeStatic (12 bytes)
+    626  756       3       clojure.lang.MapEntry::getKey (5 bytes)
+    626  760       3       clojure.core$next__5386::invokeStatic (7 bytes)
+    626  757       3       clojure.lang.RT::assoc (36 bytes)
+    627  761       3       clojure.core$val::invoke (7 bytes)
+    627  758       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::nodeSeq (8 bytes)
+    627  759       3       clojure.lang.PersistentHashMap$NodeSeq::create (7 bytes)
+    627  763       3       clojure.lang.PersistentHashMap::assoc (7 bytes)
+    627  765       3       clojure.core$ns_publics$fn__6189::invoke (84 bytes)
+    628  764       3       clojure.core$assoc__5416::invokeStatic (13 bytes)
+    630  766       3       java.lang.ThreadLocal::get (38 bytes)
+    631  768       3       clojure.lang.Util::equivPred (59 bytes)
+    631  769       3       clojure.lang.PersistentArrayMap::indexOfObject (42 bytes)
+    631  773       3       java.lang.invoke.VarHandleObjects$FieldInstanceReadWrite::compareAndSet (38 bytes)
+    632  762       4       clojure.lang.Util::hasheq (56 bytes)
+    632  771       3       java.util.concurrent.atomic.AtomicReference::compareAndSet (10 bytes)
+    633  772       3       java.lang.invoke.VarHandleGuards::guard_LLL_Z (70 bytes)
+    633  780     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLL)I (native)   
+    634  775       3       clojure.lang.APersistentMap::invoke (6 bytes)
+    634  770       3       clojure.lang.APersistentMap$KeySeq::<init> (15 bytes)
+    634  779       3       clojure.lang.APersistentMap$KeySeq::first (18 bytes)
+    634  776       3       clojure.lang.APersistentMap$KeySeq::next (13 bytes)
+    635  777       3       clojure.lang.APersistentMap$KeySeq::create (16 bytes)
+    635  781       3       clojure.core$chunked_seq_QMARK_::invokeStatic (19 bytes)
+    635  788       3       clojure.lang.Namespace::reference (110 bytes)
+    637  782       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::find (91 bytes)
+    638  783       3       clojure.lang.PersistentHashMap::entryAt (51 bytes)
+    638  784       3       clojure.lang.Var::get (20 bytes)
+    638  787       3       clojure.lang.Namespace::refer (10 bytes)
+    638  785       3       clojure.lang.APersistentSet::invoke (6 bytes)
+    639  786       3       clojure.lang.APersistentSet::get (11 bytes)
+    640  789       3       java.lang.Thread::interrupted (8 bytes)
+    643  699       2       clojure.lang.Util::hasheq (56 bytes)   made not entrant
+    643  778       4       clojure.lang.PersistentHashMap::access$200 (6 bytes)
+    643  177       3       clojure.lang.PersistentHashMap::access$200 (6 bytes)   made not entrant
+    643  774       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::index (12 bytes)
+    644  217       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::index (12 bytes)   made not entrant
+    644  767       4       clojure.lang.PersistentHashMap::hash (5 bytes)
+    649  790       1       java.lang.Long::longValue (5 bytes)
+    649  791       3       clojure.lang.ArraySeq::<init> (21 bytes)
+    650  792       3       clojure.lang.ArraySeq::next (41 bytes)
+    653  179       3       clojure.lang.PersistentHashMap::hash (5 bytes)   made not entrant
+    653  740       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::ensureEditable (62 bytes)
+    655  793       3       clojure.lang.Var::hasRoot (16 bytes)
+    655  794       3       jdk.internal.jimage.BasicImageReader::getAttributes (48 bytes)
+    655  286       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (552 bytes)   made not entrant
+    655  795       3       jdk.internal.jimage.ImageLocation::verify (50 bytes)
+    657  435       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::ensureEditable (62 bytes)   made not entrant
+    663  796   !   4       java.net.URL::<init> (543 bytes)
+    667  797       4       clojure.lang.Symbol::hashCode (18 bytes)
+    667  799       3       java.lang.String::checkIndex (46 bytes)
+    668  798       3       java.lang.Character::charCount (12 bytes)
+    668  800       3       java.util.regex.Pattern$Node::<init> (12 bytes)
+    672  382       3       clojure.lang.Symbol::hashCode (18 bytes)   made not entrant
+    672  803       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (477 bytes)
+    677  805       1       java.lang.ThreadLocal::getMap (5 bytes)
+    677  727       3       java.lang.ThreadLocal::getMap (5 bytes)   made not entrant
+    691  808       3       java.lang.Thread::getContextClassLoader (32 bytes)
+    694  809       3       clojure.lang.RT::baseLoader (45 bytes)
+    695  810       3       clojure.lang.Var::isBound (44 bytes)
+    708  813       3       clojure.lang.RT::cons (46 bytes)
+    709  802       4       clojure.lang.PersistentHashMap$ArrayNode$Seq::first (10 bytes)
+    709  814       3       clojure.lang.KeywordLookupSite$1::get (34 bytes)
+    714  815       3       clojure.lang.ArraySeq::first (19 bytes)
+    715  741       3       clojure.lang.PersistentHashMap$ArrayNode$Seq::first (10 bytes)   made not entrant
+    715  804       4       clojure.lang.Util::equiv (65 bytes)
+    716  423       3       clojure.lang.Util::equiv (65 bytes)   made not entrant
+    716  806       4       clojure.lang.PersistentHashMap::valAt (48 bytes)
+    717  816     n 0       java.lang.Class::forName0 (native)   (static)
+    718  817       3       java.lang.Class::forName (47 bytes)
+    718  818   !   3       clojure.lang.RT::classForName (33 bytes)
+    719  819       3       clojure.lang.DynamicClassLoader::findInMemoryClass (40 bytes)
+    719  820       3       clojure.lang.Symbol::intern (52 bytes)
+    730  825  s    3       clojure.lang.LazySeq::sval (42 bytes)
+    731  826  s    3       clojure.lang.LazySeq::seq (53 bytes)
+    731  827       1       java.time.LocalDateTime::toLocalDate (5 bytes)
+    733  828       3       clojure.lang.Symbol::withMeta (27 bytes)
+    733  829       3       clojure.lang.Symbol::<init> (20 bytes)
+    734  830       3       clojure.lang.Util$2::equiv (6 bytes)
+    738  184   !   3       java.net.URL::<init> (543 bytes)   made not entrant
+    738  821       4       clojure.lang.PersistentHashMap$NodeSeq::create (94 bytes)
+    749  416       3       clojure.lang.PersistentHashMap::valAt (48 bytes)   made not entrant
+    749  824       4       clojure.lang.PersistentHashMap$ArrayNode$Seq::create (73 bytes)
+    755  833       3       clojure.lang.RT::classForName (9 bytes)
+    758  834       3       clojure.lang.Numbers::ops (89 bytes)
+    760  705       3       clojure.lang.PersistentHashMap$NodeSeq::create (94 bytes)   made not entrant
+    760  812       4       clojure.lang.PersistentHashMap$ArrayNode::find (39 bytes)
+    765  835       3       java.lang.Long::valueOf (40 bytes)
+    767  836       1       clojure.lang.AMapEntry::count (2 bytes)
+    767  837       3       clojure.lang.PersistentArrayMap::assoc (7 bytes)
+    769  838       3       clojure.lang.RT::intCast (40 bytes)
+    770  839       3       clojure.lang.PersistentArrayMap$Seq::<init> (15 bytes)
+    770  840       3       clojure.lang.PersistentArrayMap$Seq::first (24 bytes)
+    770  841       3       clojure.lang.RT::nth (28 bytes)
+    772  417       3       clojure.lang.PersistentHashMap$ArrayNode::find (39 bytes)   made not entrant
+    772  831       4       clojure.lang.PersistentHashMap$ArrayNode$Seq::next (22 bytes)
+    773  842       3       clojure.lang.Numbers::isPos (14 bytes)
+    773  843       3       clojure.lang.Numbers$LongOps::isPos (15 bytes)
+    774  762       4       clojure.lang.Util::hasheq (56 bytes)   made not entrant
+    776  804       4       clojure.lang.Util::equiv (65 bytes)   made not entrant
+    776  767       4       clojure.lang.PersistentHashMap::hash (5 bytes)   made not entrant
+    780  679       4       clojure.lang.Symbol::equals (55 bytes)   made not entrant
+[0.781s][info][gc,start     ] GC(0) Pause Young (Normal) (G1 Evacuation Pause)
+[0.781s][info][gc,task      ] GC(0) Using 6 workers of 8 for evacuation
+[0.786s][info][gc,phases    ] GC(0)   Pre Evacuate Collection Set: 0.0ms
+[0.786s][info][gc,phases    ] GC(0)   Evacuate Collection Set: 4.7ms
+[0.786s][info][gc,phases    ] GC(0)   Post Evacuate Collection Set: 0.3ms
+[0.786s][info][gc,phases    ] GC(0)   Other: 0.5ms
+[0.786s][info][gc,heap      ] GC(0) Eden regions: 24->0(150)
+[0.786s][info][gc,heap      ] GC(0) Survivor regions: 0->3(3)
+[0.786s][info][gc,heap      ] GC(0) Old regions: 0->1
+[0.786s][info][gc,heap      ] GC(0) Humongous regions: 0->0
+[0.786s][info][gc,metaspace ] GC(0) Metaspace: 13962K->13962K(1060864K)
+[0.786s][info][gc           ] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 24M->3M(256M) 5.531ms
+[0.786s][info][gc,cpu       ] GC(0) User=0.03s Sys=0.00s Real=0.00s
+    786  383       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (477 bytes)   made not entrant
+    786  823       4       clojure.lang.RT::first (35 bytes)
+    787  749       3       clojure.lang.PersistentHashMap$ArrayNode$Seq::create (73 bytes)   made not entrant
+    787  807       4       clojure.lang.PersistentHashMap::valAt (7 bytes)
+    787  844       2       clojure.lang.Util::hasheq (56 bytes)
+    787  744       3       clojure.lang.RT::first (35 bytes)   made not entrant
+    787  822       4       clojure.core$first__5384::invokeStatic (7 bytes)
+    787  415       3       clojure.lang.PersistentHashMap::valAt (7 bytes)   made not entrant
+    787  801       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::find (90 bytes)
+    788  745       3       clojure.core$first__5384::invokeStatic (7 bytes)   made not entrant
+    788  811       4       clojure.lang.PersistentHashMap$NodeSeq::first (41 bytes)
+    791  845     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLL)I (native)   (static)
+    792  846       3       java.lang.invoke.MemberName::testAllFlags (7 bytes)
+    792  848     n 0       java.lang.invoke.MethodHandle::linkToStatic(LL)I (native)   (static)
+    792  847       3       java.lang.invoke.MethodType::checkSlotCount (33 bytes)
+    792  742       3       clojure.lang.PersistentHashMap$NodeSeq::first (41 bytes)   made not entrant
+    792  832       4       clojure.lang.AMapEntry::<init> (5 bytes)
+    793  852     n 0       java.lang.invoke.MethodHandle::invokeBasic(LL)I (native)   
+    793  853     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLL)I (native)   (static)
+    793  849       3       jdk.internal.org.objectweb.asm.Item::<init> (66 bytes)
+    793  850       3       jdk.internal.org.objectweb.asm.ClassWriter::put (152 bytes)
+    793  855     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLL)L (native)   (static)
+    794  854       3       jdk.internal.org.objectweb.asm.ClassWriter::newUTF8 (70 bytes)
+    794  856     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLL)L (native)   
+    794  851       1       java.lang.invoke.MethodTypeForm::erasedType (5 bytes)
+    794  410       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::find (90 bytes)   made not entrant
+    794  857       3       jdk.internal.org.objectweb.asm.ByteVector::put12 (64 bytes)
+    794  859       3       java.lang.ref.WeakReference::<init> (6 bytes)
+    795  860     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLL)L (native)   (static)
+    795  861       3       java.lang.invoke.MethodType::<init> (15 bytes)
+    795  858       3       java.lang.reflect.Modifier::isStatic (13 bytes)
+    795  865     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLLL)L (native)   
+    795  862       3       java.lang.invoke.MethodType::makeImpl (108 bytes)
+    796  863       3       java.lang.invoke.MethodType$ConcurrentWeakInternSet::get (54 bytes)
+    796  208       3       java.util.WeakHashMap::getTable (9 bytes)   made not entrant
+    796  464       3       java.util.WeakHashMap::remove (133 bytes)   made not entrant
+    796  503       3       java.util.WeakHashMap::put (162 bytes)   made not entrant
+    797  864       3       java.lang.invoke.MethodType$ConcurrentWeakInternSet$WeakEntry::<init> (14 bytes)
+    797  867     n 0       java.lang.invoke.MethodHandle::linkToStatic(LIL)L (native)   (static)
+    797  868       3       sun.invoke.util.VerifyAccess::isTypeVisible (118 bytes)
+    797  869     n 0       java.lang.invoke.MethodHandle::invokeBasic(LI)L (native)   
+    797  870     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLIL)L (native)   (static)
+    797  872     n 0       java.lang.invoke.MethodHandle::linkToStatic(LILL)V (native)   (static)
+    797  873     n 0       java.lang.invoke.MethodHandle::invokeBasic(LIL)V (native)   
+    798  874     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLILL)V (native)   (static)
+    798  876     n 0       java.lang.invoke.MethodHandle::invokeBasic(L)I (native)   
+    798  871       3       java.lang.invoke.LambdaForm::argument (27 bytes)
+    799  866       1       java.lang.reflect.Method::getName (5 bytes)
+    799  875       1       java.lang.invoke.MethodHandle::type (5 bytes)
+    799  877       3       java.lang.invoke.MethodType$ConcurrentWeakInternSet$WeakEntry::equals (49 bytes)
+    799  878       1       java.lang.invoke.LambdaForm$Name::index (5 bytes)
+    799  879       3       java.lang.invoke.MemberName::isStatic (8 bytes)
+    799  880       3       java.lang.invoke.MemberName::isConstructor (7 bytes)
+    800  751       3       clojure.lang.PersistentHashMap$ArrayNode$Seq::next (22 bytes)   made not entrant
+    800  882     n 0       java.lang.invoke.MethodHandle::invokeBasic(LI)I (native)   
+    800  881       3       java.util.Arrays::copyOf (40 bytes)
+    801  883       3       sun.invoke.util.Wrapper::hashPrim (30 bytes)
+    801  884     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLIL)L (native)   (static)
+    801  887     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLLI)L (native)   
+    801  885       3       java.lang.ref.Reference::<init> (7 bytes)
+    802  886       3       java.lang.invoke.LambdaForm$BasicType::basicType (19 bytes)
+    802  889       3       jdk.internal.org.objectweb.asm.Item::isEqualTo (354 bytes)
+    802  888       3       jdk.internal.org.objectweb.asm.Frame::execute (2264 bytes)
+    806  896     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LL)V (native)   (static)
+    806  897       4       java.util.concurrent.ConcurrentHashMap::addCount (289 bytes)
+    806  898     n 0       java.lang.invoke.MethodHandle::linkToInterface(LLL)I (native)   (static)
+    807  899       4       java.lang.String::indexOf (7 bytes)
+    808  894       3       java.util.Arrays::equals (57 bytes)
+    808  890       1       java.lang.reflect.Method::getReturnType (5 bytes)
+    809  891       1       java.lang.reflect.Method::getDeclaringClass (5 bytes)
+    809  892       1       java.lang.reflect.Method::getSharedParameterTypes (5 bytes)
+    809  900       3       java.lang.invoke.MethodType::checkPtypes (61 bytes)
+    809  895       3       java.lang.Class::getClassLoader (28 bytes)
+    809  904     n 0       java.lang.invoke.MethodHandle::linkToVirtual(LL)L (native)   (static)
+    809   39       3       java.util.concurrent.ConcurrentHashMap::addCount (289 bytes)   made not entrant
+    810  902       3       java.lang.invoke.MethodType::equals (29 bytes)
+    810  903   !   3       java.lang.invoke.MemberName::getMethodType (203 bytes)
+    810   97       3       java.lang.String::indexOf (7 bytes)   made not entrant
+    811  905     n 0       java.lang.System::identityHashCode (native)   (static)
+    811  908       3       java.util.Arrays::hashCode (56 bytes)
+    812  906       3       java.lang.PublicMethods$Key::hashCode (19 bytes)
+    812  907       3       jdk.internal.reflect.ReflectionFactory::langReflectAccess (15 bytes)
+    812  893       1       java.util.LinkedHashMap::removeEldestEntry (2 bytes)
+    812  901       1       java.lang.invoke.LambdaForm$BasicType::basicTypeClass (5 bytes)
+    813  909       3       java.util.WeakHashMap::eq (19 bytes)
+    814  910       3       java.util.WeakHashMap::remove (133 bytes)
+    814  911       4       clojure.lang.PersistentHashMap$TransientHashMap::ensureEditable (21 bytes)
+    815  287       3       clojure.lang.PersistentHashMap$TransientHashMap::ensureEditable (21 bytes)   made not entrant
+    817  912       4       java.lang.String::indexOf (65 bytes)
+    818  913 %     4       java.lang.StringCoding::hasNegatives @ 2 (25 bytes)
+    818  186       3       java.lang.String::indexOf (65 bytes)   made not entrant
+    819  914       4       clojure.lang.PersistentArrayMap::indexOf (44 bytes)
+    820  915       3       clojure.lang.Symbol::equals (55 bytes)
+    821  916       4       java.util.concurrent.ConcurrentHashMap::casTabAt (21 bytes)
+    822   45       3       java.util.concurrent.ConcurrentHashMap::casTabAt (21 bytes)   made not entrant
+    825  536       3       clojure.lang.PersistentArrayMap::indexOf (44 bytes)   made not entrant
+    829  917       3       java.util.WeakHashMap::put (162 bytes)
+    831  918       3       clojure.lang.LazySeq::<init> (10 bytes)
+    832  914       4       clojure.lang.PersistentArrayMap::indexOf (44 bytes)   made not entrant
+    833  919       3       clojure.lang.Numbers::num (5 bytes)
+    833  920       3       clojure.core$rest__5388::invokeStatic (7 bytes)
+    833  921       3       clojure.lang.RT::more (37 bytes)
+    837  922       3       clojure.lang.Util::equiv (65 bytes)
+    837  923       4       clojure.lang.PersistentArrayMap::indexOf (44 bytes)
+    837  924       4       clojure.lang.RT::next (35 bytes)
+    837  925       4       clojure.lang.MapEntry::getValue (5 bytes)
+    838  746       3       clojure.lang.MapEntry::getValue (5 bytes)   made not entrant
+    838  927       4       clojure.core$val::invokeStatic (12 bytes)
+    839  747       3       clojure.core$val::invokeStatic (12 bytes)   made not entrant
+    839  926       4       clojure.lang.Symbol::hasheq (33 bytes)
+    841  932       3       jdk.internal.misc.VM::initLevel (4 bytes)
+    841  933       3       jdk.internal.misc.VM::isModuleSystemInited (13 bytes)
+    843  934       3       clojure.lang.PersistentHashMap$ArrayNode::nodeSeq (8 bytes)
+    844  935       3       clojure.lang.PersistentHashMap$ArrayNode$Seq::create (8 bytes)
+    846  931       4       clojure.lang.Util::hasheq (56 bytes)
+    848  844       2       clojure.lang.Util::hasheq (56 bytes)   made not entrant
+    848  938       4       clojure.lang.PersistentHashMap::hash (5 bytes)
+    848  200       3       clojure.lang.Symbol::hasheq (33 bytes)   made not entrant
+    848  937       4       clojure.lang.APersistentMap::invoke (6 bytes)
+    851  929       4       clojure.core$next__5386::invokeStatic (7 bytes)
+    855  739       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (552 bytes)   made not entrant
+    856  940       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (552 bytes)
+    860  943       3       clojure.lang.RT::get (24 bytes)
+    860  944   !   3       jdk.internal.loader.BuiltinClassLoader$2::run (114 bytes)
+    861  945       3       java.lang.Character::toUpperCaseEx (30 bytes)
+    861  946       3       java.lang.CharacterDataLatin1::toUpperCaseEx (71 bytes)
+    862  775       3       clojure.lang.APersistentMap::invoke (6 bytes)   made not entrant
+    862  939       4       jdk.internal.jimage.ImageLocation::decompress (153 bytes)
+    868  683       3       jdk.internal.jimage.ImageLocation::decompress (153 bytes)   made not entrant
+    868  928       4       clojure.lang.PersistentHashMap::assoc (153 bytes)
+    878  947       1       java.util.Arrays$ArrayList::get (7 bytes)
+    878  431       3       java.util.Arrays$ArrayList::get (7 bytes)   made not entrant
+    878  948       1       clojure.lang.PersistentVector::count (5 bytes)
+    879  949       3       clojure.lang.PersistentList::cons (6 bytes)
+    879  950       3       clojure.lang.PersistentList::cons (20 bytes)
+    883  953       3       clojure.lang.PersistentVector::tailoff (22 bytes)
+    883  954       3       java.lang.String::toString (2 bytes)
+    883  955       3       clojure.lang.ArraySeq::create (21 bytes)
+    884  956       1       java.net.URLConnection::getUseCaches (5 bytes)
+    885  957       3       clojure.lang.PersistentHashMap::seq (49 bytes)
+    890  960       3       clojure.lang.PersistentHashMap::containsKey (50 bytes)
+    891  961       3       java.lang.Math::floorMod (10 bytes)
+    891  962       1       jdk.internal.loader.URLClassPath$JarLoader$2::getCodeSourceURL (8 bytes)
+    891  563       3       jdk.internal.loader.URLClassPath$JarLoader$2::getCodeSourceURL (8 bytes)   made not entrant
+    909  963       3       clojure.lang.RestFn::<init> (5 bytes)
+    910  553       3       java.lang.StringCoding::encodeUTF8 (132 bytes)   made not entrant
+    910  964       3       java.lang.StringCoding::encodeUTF8 (132 bytes)
+    917  754       3       clojure.lang.RT::next (35 bytes)   made not entrant
+    917  958       4       clojure.lang.Util::equiv (65 bytes)
+    918  384       3       clojure.lang.PersistentHashMap::assoc (153 bytes)   made not entrant
+    918  930       4       clojure.lang.MapEntry::getKey (5 bytes)
+    918  922       3       clojure.lang.Util::equiv (65 bytes)   made not entrant
+    918  951       4       clojure.core$val::invoke (7 bytes)
+    919  756       3       clojure.lang.MapEntry::getKey (5 bytes)   made not entrant
+    919  952       4       clojure.core$ns_publics$fn__6189::invoke (84 bytes)
+    919  761       3       clojure.core$val::invoke (7 bytes)   made not entrant
+    919  942       4       clojure.lang.RT::seq (32 bytes)
+    930  760       3       clojure.core$next__5386::invokeStatic (7 bytes)   made not entrant
+    930  959       4       java.lang.StringBuilder::toString (35 bytes)
+    932  765       3       clojure.core$ns_publics$fn__6189::invoke (84 bytes)   made not entrant
+    932  941       4       clojure.lang.PersistentArrayMap::valAt (7 bytes)
+    934  148       3       java.lang.StringBuilder::toString (35 bytes)   made not entrant
+    934  936       4       clojure.lang.PersistentHashMap$ArrayNode::assoc (111 bytes)
+    940  715       3       clojure.lang.PersistentArrayMap::valAt (7 bytes)   made not entrant
+    940  966       4       java.lang.StringCoding::hasNegatives (25 bytes)
+    943  198       3       java.lang.StringCoding::hasNegatives (25 bytes)   made not entrant
+    943  965 % !   4       java.util.concurrent.ConcurrentHashMap::transfer @ 96 (828 bytes)
+    947  967       3       clojure.lang.PersistentVector::arrayFor (73 bytes)
+    947  968       3       java.lang.StringLatin1::getChar (9 bytes)
+    959  971       3       clojure.core$symbol_QMARK_::invokeStatic (19 bytes)
+    960  426       3       clojure.lang.PersistentHashMap$ArrayNode::assoc (111 bytes)   made not entrant
+    960  969       4       java.lang.String::replace (42 bytes)
+    962  972       3       clojure.core$cons__5376::invokeStatic (10 bytes)
+    974  150       3       java.lang.String::replace (42 bytes)   made not entrant
+    974  973       4       clojure.lang.Symbol::equals (55 bytes)
+    976  915       3       clojure.lang.Symbol::equals (55 bytes)   made not entrant
+    976  974       4       clojure.lang.Keyword::intern (107 bytes)
+    979  970       4       java.nio.ByteBuffer::position (8 bytes)
+    980  302       3       java.nio.ByteBuffer::position (8 bytes)   made not entrant
+    981  975       3       java.util.zip.ZipFile$Source::hash_append (7 bytes)
+    988  700       3       clojure.lang.RT::seq (32 bytes)   made not entrant
+    997  385       3       clojure.lang.Keyword::intern (107 bytes)   made not entrant
+    997  976       4       java.util.zip.Inflater::ensureOpen (47 bytes)
+    998  199       3       java.util.zip.Inflater::ensureOpen (47 bytes)   made not entrant
+   1002  977       4       clojure.lang.RT::keyword (9 bytes)
+   1005  389       3       clojure.lang.RT::keyword (9 bytes)   made not entrant
+   1015  978       4       java.lang.String::regionMatches (150 bytes)
+   1016  979       1       java.lang.Character::charValue (5 bytes)
+   1024  160       3       java.lang.String::regionMatches (150 bytes)   made not entrant
+   1025  980       4       java.lang.ClassLoader::checkName (37 bytes)
+   1026  981       3       clojure.lang.PersistentHashSet$TransientHashSet::persistent (18 bytes)
+   1027  982       4       sun.net.util.IPAddressUtil::checkHostString (53 bytes)
+   1027  195       3       sun.net.util.IPAddressUtil::checkHostString (53 bytes)   made not entrant
+   1030  130       3       java.lang.ClassLoader::checkName (37 bytes)   made not entrant
+   1034  983       4       java.net.URLStreamHandler::setURL (73 bytes)
+   1034  984   !   4       java.util.concurrent.ConcurrentHashMap::putVal (432 bytes)
+   1035  985   !   4       java.net.URL::set (114 bytes)
+   1035  823       4       clojure.lang.RT::first (35 bytes)   made not entrant
+   1036  986       3       clojure.lang.RT::longCast (197 bytes)
+   1036  958       4       clojure.lang.Util::equiv (65 bytes)   made not entrant
+   1037  931       4       clojure.lang.Util::hasheq (56 bytes)   made not entrant
+   1037  989       3       clojure.lang.Util::equiv (65 bytes)
+   1038  990       3       clojure.lang.RT::first (35 bytes)
+   1038  988       3       clojure.lang.Numbers::bitOpsCast (61 bytes)
+   1039  993       3       java.lang.Math::max (11 bytes)
+   1040  992       3       clojure.lang.Util::ret1 (2 bytes)
+   1040  987       1       clojure.core$distinct_QMARK_::getRequiredArity (2 bytes)
+   1040  994       1       java.util.concurrent.ConcurrentHashMap$MapEntry::getKey (5 bytes)
+   1040  996       3       java.util.regex.Pattern$BmpCharProperty::match (55 bytes)
+   1040  937       4       clojure.lang.APersistentMap::invoke (6 bytes)   made not entrant
+   1040  941       4       clojure.lang.PersistentArrayMap::valAt (7 bytes)   made not entrant
+   1040  997       3       java.util.regex.Pattern$$Lambda$1/0x0000000800065840::is (9 bytes)
+   1041  998       3       java.util.regex.Pattern::lambda$Single$8 (11 bytes)
+   1041  995       1       java.util.concurrent.ConcurrentHashMap$MapEntry::getValue (5 bytes)
+   1042  999       3       clojure.lang.PersistentHashMap::createNode (87 bytes)
+   1044  227   !   3       java.net.URL::set (114 bytes)   made not entrant
+   1044 1000       1       java.lang.CharacterDataLatin1::getProperties (11 bytes)
+   1044  991       4       clojure.core$seq__5402::invokeStatic (7 bytes)
+   1044  116       3       java.lang.CharacterDataLatin1::getProperties (11 bytes)   made not entrant
+   1044  702       3       clojure.core$seq__5402::invokeStatic (7 bytes)   made not entrant
+   1044 1001       3       clojure.lang.Util::hasheq (56 bytes)
+   1045 1003       4       java.nio.Buffer::limit (74 bytes)
+   1045 1002       3       java.lang.String::indexOf (18 bytes)
+   1045  342       3       java.nio.Buffer::limit (74 bytes)   made not entrant
+   1046 1004       4       jdk.internal.jimage.ImageStringsReader::charsFromByteBufferLength (47 bytes)
+   1046 1006       1       java.util.Collections$EmptyList::isEmpty (2 bytes)
+   1046 1007       3       clojure.lang.PersistentArrayMap$Seq::next (34 bytes)
+   1046 1008       3       jdk.internal.loader.BuiltinClassLoader::hasClassPath (13 bytes)
+   1047 1009       3       java.lang.Character::codePointAt (51 bytes)
+   1048 1010       3       java.lang.Character::isHighSurrogate (18 bytes)
+   1048  724       3       jdk.internal.jimage.ImageStringsReader::charsFromByteBufferLength (47 bytes)   made not entrant
+   1048 1005       4       jdk.internal.jimage.ImageStringsReader::charsFromByteBuffer (186 bytes)
+   1049  973       4       clojure.lang.Symbol::equals (55 bytes)   made not entrant
+   1049 1011       3       java.lang.Enum::<init> (15 bytes)
+   1052  725       3       jdk.internal.jimage.ImageStringsReader::charsFromByteBuffer (186 bytes)   made not entrant
+   1053  226       3       java.net.URLStreamHandler::setURL (73 bytes)   made not entrant
+   1054 1012       3       clojure.lang.PersistentArrayMap::valAt (7 bytes)
+   1061 1013       3       java.util.regex.Matcher::search (154 bytes)
+   1067 1014       3       java.lang.ClassLoader::findLoadedClass (16 bytes)
+   1067 1015       3       java.util.AbstractMap::<init> (5 bytes)
+   1068 1016       4       java.lang.StringBuilder::append (8 bytes)
+   1068 1017       3       java.util.concurrent.atomic.AtomicBoolean::set (14 bytes)
+   1068 1018       3       clojure.lang.Var$TBox::<init> (15 bytes)
+   1069 1019       3       java.lang.PublicMethods$MethodList::<init> (10 bytes)
+   1070 1021       4       java.util.HashMap::getNode (148 bytes)
+   1070 1020       3       java.util.LinkedHashMap$LinkedHashIterator::hasNext (13 bytes)
+   1070 1022       3       java.util.LinkedHashMap$LinkedValueIterator::next (8 bytes)
+   1071 1023       3       java.lang.reflect.Executable::<init> (5 bytes)
+   1071 1024       3       java.lang.reflect.AccessibleObject::<init> (5 bytes)
+   1071 1025       3       jdk.internal.reflect.ReflectionFactory::copyMethod (10 bytes)
+   1072   38   !   3       java.util.concurrent.ConcurrentHashMap::putVal (432 bytes)   made not entrant
+   1072  928       4       clojure.lang.PersistentHashMap::assoc (153 bytes)   made not entrant
+   1072 1026       3       java.lang.ThreadLocal$ThreadLocalMap::set (136 bytes)
+   1073 1028       3       clojure.asm.SymbolTable::get (13 bytes)
+   1073  185       3       java.lang.StringBuilder::append (8 bytes)   made not entrant
+   1073 1027       1       java.lang.AbstractStringBuilder::length (5 bytes)
+   1073   51       3       java.util.HashMap::getNode (148 bytes)   made not entrant
+   1074 1030       1       clojure.lang.Util::ret1 (2 bytes)
+   1074  610       3       clojure.lang.Util::ret1 (2 bytes)   made not entrant
+   1074 1029       1       clojure.lang.PersistentList$EmptyList::seq (2 bytes)
+   1074  806       4       clojure.lang.PersistentHashMap::valAt (48 bytes)   made not entrant
+   1075 1031       4       clojure.lang.PersistentHashMap::assoc (153 bytes)
+   1075 1032       3       clojure.lang.PersistentHashMap$ArrayNode::find (36 bytes)
+   1076 1033       3       java.util.AbstractSet::<init> (5 bytes)
+   1076 1034       3       java.lang.Class::reflectionData (43 bytes)
+   1076 1041       4       java.lang.Class::getName (18 bytes)
+   1076 1035       3       java.util.LinkedHashMap::newNode (23 bytes)
+   1076 1036       3       java.util.LinkedHashMap$Entry::<init> (10 bytes)
+   1077  139       3       java.lang.Class::getName (18 bytes)   made not entrant
+   1077 1037       3       java.util.LinkedHashMap::linkNodeLast (33 bytes)
+   1077 1042       1       java.util.HashMap$Node::getKey (5 bytes)
+   1077 1043       3       java.util.LinkedHashMap$LinkedHashIterator::nextNode (54 bytes)
+   1077 1038       3       java.util.LinkedHashMap::afterNodeInsertion (40 bytes)
+   1077 1044       4       java.lang.ThreadLocal::get (38 bytes)
+   1078 1040       1       java.lang.reflect.Field::getName (5 bytes)
+   1078 1039       1       java.lang.reflect.Field::getDeclaringClass (5 bytes)
+   1078 1045       4       clojure.lang.PersistentHashMap::valAt (48 bytes)
+   1078 1046       1       java.lang.reflect.Method::getModifiers (5 bytes)
+   1078 1047       3       java.lang.Character::valueOf (21 bytes)
+   1078 1053       3       java.lang.PublicMethods$MethodList::length (24 bytes)
+   1079 1048       3       jdk.internal.reflect.ReflectionFactory::getExecutableSharedParameterTypes (10 bytes)
+   1079 1054     n 0       java.lang.Class::isInterface (native)   
+   1079 1049       3       java.lang.reflect.ReflectAccess::getExecutableSharedParameterTypes (5 bytes)
+   1079 1050       3       java.lang.PublicMethods::merge (81 bytes)
+   1080  766       3       java.lang.ThreadLocal::get (38 bytes)   made not entrant
+   1080 1058       4       java.lang.ThreadLocal$ThreadLocalMap::getEntry (42 bytes)
+   1080 1060       3       clojure.lang.Symbol::equals (55 bytes)
+   1081 1055       3       java.lang.reflect.Method::<init> (68 bytes)
+   1081  938       4       clojure.lang.PersistentHashMap::hash (5 bytes)   made not entrant
+   1081 1056       3       java.lang.reflect.Method::copy (84 bytes)
+   1082 1051       3       java.lang.PublicMethods$Key::<init> (24 bytes)
+   1082  728       3       java.lang.ThreadLocal$ThreadLocalMap::getEntry (42 bytes)   made not entrant
+   1082 1062       4       java.lang.StringLatin1::canEncode (13 bytes)
+   1082   78       3       java.lang.StringLatin1::canEncode (13 bytes)   made not entrant
+   1082 1057       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::find (91 bytes)
+   1082 1052       3       java.lang.PublicMethods$MethodList::merge (192 bytes)
+   1083 1063       3       clojure.lang.PersistentVector::nth (13 bytes)
+   1083 1064       3       clojure.asm.SymbolTable::hash (10 bytes)
+   1083 1061       1       java.util.Formatter$Flags::valueOf (5 bytes)
+   1084 1065       3       clojure.lang.PersistentHashMap::hash (5 bytes)
+   1085 1071       3       clojure.lang.APersistentMap::invoke (6 bytes)
+   1087 1074       3       java.lang.Character::hashCode (8 bytes)
+   1087 1067       4       clojure.lang.Box::<init> (10 bytes)
+   1087 1075       3       java.lang.Character::hashCode (2 bytes)
+   1087  782       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::find (91 bytes)   made not entrant
+   1087 1066       4       clojure.lang.RT::assoc (36 bytes)
+   1088 1069       4       clojure.core$key::invokeStatic (12 bytes)
+   1088  390       3       clojure.lang.Box::<init> (10 bytes)   made not entrant
+   1088 1073       4       clojure.lang.Var::getThreadBinding (45 bytes)
+   1089  755       3       clojure.core$key::invokeStatic (12 bytes)   made not entrant
+   1089 1070       4       clojure.core$assoc__5416::invokeStatic (13 bytes)
+   1089 1076       3       clojure.asm.SymbolTable$Entry::<init> (17 bytes)
+   1090 1077       3       clojure.asm.ByteVector::putUTF8 (142 bytes)
+   1091 1078       3       clojure.asm.SymbolTable::put (150 bytes)
+   1091 1079       3       clojure.asm.ByteVector::putByte (39 bytes)
+   1092  757       3       clojure.lang.RT::assoc (36 bytes)   made not entrant
+   1092 1080       4       java.lang.StringBuilder::<init> (7 bytes)
+   1092 1081       3       clojure.asm.ByteVector::putShort (52 bytes)
+   1092  764       3       clojure.core$assoc__5416::invokeStatic (13 bytes)   made not entrant
+   1092 1059       4       clojure.lang.PersistentHashMap::entryAt (51 bytes)
+   1092 1082       3       clojure.asm.Symbol::<init> (38 bytes)
+   1093 1086     n 0       java.lang.Class::isAssignableFrom (native)   
+   1093 1084       3       clojure.asm.Type::appendDescriptor (234 bytes)
+   1094  131       3       java.lang.StringBuilder::<init> (7 bytes)   made not entrant
+   1094 1072       4       clojure.lang.PersistentHashMap::<init> (32 bytes)
+   1094 1085       3       clojure.asm.SymbolTable::addConstantUtf8 (98 bytes)
+   1095 1083       3       java.util.ArrayList::<init> (12 bytes)
+   1095 1087       3       java.io.FilterReader::read (8 bytes)
+   1096 1088       3       clojure.core$transient::invokeStatic (12 bytes)
+   1097  391       3       clojure.lang.PersistentHashMap::<init> (32 bytes)   made not entrant
+   1097 1068       4       clojure.lang.PersistentHashMap::assoc (7 bytes)
+   1097 1089       3       clojure.core$persistent_BANG_::invokeStatic (12 bytes)
+   1097 1091       3       java.lang.Integer::longValue (6 bytes)
+   1097 1096       3       clojure.core$map$fn__5866::invoke (209 bytes)
+   1097  929       4       clojure.core$next__5386::invokeStatic (7 bytes)   made not entrant
+   1097  763       3       clojure.lang.PersistentHashMap::assoc (7 bytes)   made not entrant
+   1097  924       4       clojure.lang.RT::next (35 bytes)   made not entrant
+   1097  701       3       clojure.lang.Var::getThreadBinding (45 bytes)   made not entrant
+   1098 1095       4       clojure.lang.Murmur3::mixH1 (20 bytes)
+   1098  154       3       clojure.lang.Murmur3::mixH1 (20 bytes)   made not entrant
+   1099 1093       3       clojure.core$map::invokeStatic (24 bytes)
+   1099 1094       3       clojure.core$map$fn__5866::<init> (15 bytes)
+   1099 1098       4       clojure.lang.APersistentVector::<init> (5 bytes)
+   1100 1097       3       clojure.lang.PersistentVector::nth (20 bytes)
+   1100  408       3       clojure.lang.APersistentVector::<init> (5 bytes)   made not entrant
+   1100 1092       1       clojure.lang.PersistentHashMap$TransientHashMap::doCount (5 bytes)
+   1100 1090       3       clojure.lang.PersistentArrayMap::seq (23 bytes)
+   1100 1099       1       clojure.lang.PersistentVector::meta (5 bytes)
+   1100 1100       4       java.lang.AbstractStringBuilder::isLatin1 (19 bytes)
+   1101  124       3       java.lang.AbstractStringBuilder::isLatin1 (19 bytes)   made not entrant
+   1101 1101       3       java.lang.ThreadLocal::set (30 bytes)
+   1102 1102       3       java.util.regex.Pattern$$Lambda$3/0x0000000800065040::is (9 bytes)
+   1102 1106       3       java.io.PushbackReader::ensureOpen (18 bytes)
+   1103 1107   !   3       clojure.lang.LispReader::read1 (11 bytes)
+   1103 1108       3       clojure.lang.LineNumberingPushbackReader::read (76 bytes)
+   1103 1103       3       java.util.regex.Pattern::lambda$clazz$1 (22 bytes)
+   1103 1109       4       clojure.lang.RT::next (35 bytes)
+   1103 1104       3       java.util.regex.Pattern$CharPredicate$$Lambda$5/0x0000000800064040::is (9 bytes)
+   1103 1105       3       clojure.lang.Util::clearCache (87 bytes)
+   1104  783       3       clojure.lang.PersistentHashMap::entryAt (51 bytes)   made not entrant
+   1104 1118       4       clojure.lang.Murmur3::mixK1 (19 bytes)
+   1104 1119       4       clojure.lang.Cons::next (10 bytes)
+   1104 1112       3       clojure.core$shift_mask::invokeStatic (19 bytes)
+   1104  153       3       clojure.lang.Murmur3::mixK1 (19 bytes)   made not entrant
+   1105 1120       4       clojure.core$next__5386::invokeStatic (7 bytes)
+   1105  541       3       clojure.lang.Cons::next (10 bytes)   made not entrant
+   1105 1113       3       clojure.lang.Numbers::shiftRight (12 bytes)
+   1105 1115       3       clojure.lang.Numbers::and (9 bytes)
+   1105 1116       3       clojure.lang.Numbers::and (4 bytes)
+   1105 1117       3       clojure.core$maybe_min_hash$fn__6909$fn__6913::invoke (17 bytes)
+   1106 1114       3       clojure.lang.Numbers::shiftRight (5 bytes)
+   1106 1110       3       clojure.lang.ATransientSet::conj (6 bytes)
+   1106 1111       3       clojure.lang.ATransientSet::conj (27 bytes)
+   1110 1121       3       java.lang.String::<init> (14 bytes)
+   1110 1122       3       java.lang.String::rangeCheck (9 bytes)
+   1110  283       4       java.lang.String::startsWith (138 bytes)   made not entrant
+   1110 1123       3       java.lang.String::startsWith (138 bytes)
+   1113 1124   !   4       java.util.concurrent.ConcurrentHashMap::transfer (828 bytes)
+   1114 1021       4       java.util.HashMap::getNode (148 bytes)   made not entrant
+   1114 1126       4       java.util.HashMap::getNode (148 bytes)
+   1114 1125       3       java.lang.StringLatin1::toUpperCase (180 bytes)
+   1115 1127       1       java.util.HashMap$Node::getValue (5 bytes)
+   1118 1128       3       java.util.regex.Pattern$$Lambda$7/0x0000000800063840::is (5 bytes)
+   1118 1129       3       java.util.regex.Pattern::lambda$DOT$5 (34 bytes)
+   1118 1137   !   3       java.io.PushbackReader::read (54 bytes)
+   1119 1134       3       clojure.lang.LispReader::isWhitespace (19 bytes)
+   1119 1135       3       java.lang.Character::isWhitespace (9 bytes)
+   1119 1136       3       java.lang.CharacterDataLatin1::isWhitespace (23 bytes)
+   1119 1131   !   3       java.io.LineNumberReader::read (93 bytes)
+   1119 1132   !   3       java.io.BufferedReader::read (104 bytes)
+   1120 1133       3       java.io.BufferedReader::ensureOpen (18 bytes)
+   1120 1141       4       clojure.lang.Var::deref (19 bytes)
+   1120 1139       3       clojure.lang.ASeq::more (15 bytes)
+   1120 1130       3       clojure.lang.RT::conj (21 bytes)
+   1121 1138       1       clojure.lang.PersistentHashSet::meta (5 bytes)
+   1121 1140       1       clojure.lang.PersistentList$Primordial::getRequiredArity (2 bytes)
+   1121 1142       3       clojure.lang.RT::keys (23 bytes)
+   1121 1143       3       clojure.lang.APersistentMap$KeySeq::createFromMap (29 bytes)
+   1122 1145       3       clojure.lang.RT::meta (19 bytes)
+   1122 1144       3       clojure.core$keyword_QMARK_::invokeStatic (19 bytes)
+   1122 1146       4       java.util.jar.JarFile::maybeInstantiateVerifier (112 bytes)
+   1123 1148       3       java.lang.Character::isLowSurrogate (18 bytes)
+   1123 1150       3       java.lang.Character::codePointBefore (48 bytes)
+   1123 1151       3       java.util.regex.Matcher::groupCount (10 bytes)
+   1124 1149       1       java.util.LinkedList::size (5 bytes)
+   1124 1153       3       clojure.lang.RT::count (28 bytes)
+   1124  718       3       clojure.lang.Var::deref (19 bytes)   made not entrant
+   1124 1147       4       clojure.lang.ASeq::<init> (5 bytes)
+   1124 1152       1       clojure.lang.PersistentList::count (5 bytes)
+   1124 1155       3       java.util.regex.Pattern$GroupHead::match (47 bytes)
+   1125 1156       3       clojure.asm.ByteVector::put12 (64 bytes)
+   1125  501       3       clojure.lang.ASeq::<init> (5 bytes)   made not entrant
+   1125 1154       4       java.lang.AbstractStringBuilder::append (77 bytes)
+   1125 1157       1       clojure.asm.commons.Method::getDescriptor (5 bytes)
+   1125 1158       1       clojure.asm.commons.Method::getName (5 bytes)
+   1129 1159       3       clojure.lang.Var$Frame::<init> (15 bytes)
+   1129  203       3       java.lang.AbstractStringBuilder::append (77 bytes)   made not entrant
+   1130 1160       3       clojure.lang.Var::pushThreadBindings (168 bytes)
+   1131 1161       3       java.util.regex.Pattern$Branch::match (66 bytes)
+   1132 1162       3       clojure.asm.Frame::push (109 bytes)
+   1132 1163       3       clojure.lang.LispReader::isTerminatingMacro (31 bytes)
+   1132 1164       3       clojure.lang.LispReader::isMacro (22 bytes)
+   1133 1165       3       java.util.AbstractCollection::isEmpty (13 bytes)
+   1133 1166       3       clojure.lang.PersistentVector$ChunkedSeq::next (45 bytes)
+   1133 1168       3       clojure.lang.Util::identical (11 bytes)
+   1133 1169       3       clojure.lang.RT::getFrom (120 bytes)
+   1133 1170       4       clojure.core$chunked_seq_QMARK_::invokeStatic (19 bytes)
+   1134 1174       3       clojure.lang.Murmur3::hashLong (54 bytes)
+   1134  781       3       clojure.core$chunked_seq_QMARK_::invokeStatic (19 bytes)   made not entrant
+   1134 1179       4       clojure.lang.Util::hasheq (56 bytes)
+   1134  374       3       java.util.jar.JarFile::maybeInstantiateVerifier (112 bytes)   made not entrant
+   1134 1177  s    4       clojure.lang.LazySeq::sval (42 bytes)
+   1134 1171       3       clojure.core$chunk_append::invokeStatic (14 bytes)
+   1135 1172       3       clojure.lang.ChunkBuffer::add (18 bytes)
+   1135 1175       3       clojure.lang.Numbers::hasheq (53 bytes)
+   1135  923       4       clojure.lang.PersistentArrayMap::indexOf (44 bytes)   made not entrant
+   1135 1176       3       clojure.lang.RestFn::applyTo (3076 bytes)
+   1138 1001       3       clojure.lang.Util::hasheq (56 bytes)   made not entrant
+   1138  825  s    3       clojure.lang.LazySeq::sval (42 bytes)   made not entrant
+   1138 1178       4       clojure.lang.Cons::more (16 bytes)
+   1138  542       3       clojure.lang.Cons::more (16 bytes)   made not entrant
+   1139 1183   !   4       java.util.zip.Inflater::inflate (418 bytes)
+   1145 1186       4       clojure.lang.AFunction::<init> (5 bytes)
+   1145 1185       3       clojure.lang.PersistentArrayMap::indexOf (44 bytes)
+   1145 1182       1       clojure.asm.SymbolTable::get (13 bytes)
+   1145 1028       3       clojure.asm.SymbolTable::get (13 bytes)   made not entrant
+   1145  573       3       clojure.lang.AFunction::<init> (5 bytes)   made not entrant
+   1145 1181       3       java.util.regex.Matcher::reset (128 bytes)
+   1145  181   !   3       java.util.zip.Inflater::inflate (418 bytes)   made not entrant
+   1146 1180       3       clojure.lang.APersistentSet::contains (11 bytes)
+   1146 1173       3       clojure.lang.ArrayChunk::nth (12 bytes)
+   1146 1184       3       java.util.HashMap::<init> (11 bytes)
+   1146 1187       1       clojure.asm.SymbolTable::getMajorVersion (5 bytes)
+   1146 1167       3       java.util.LinkedList$ListItr::hasPrevious (13 bytes)
+   1146 1188       3       java.util.ArrayList$Itr::hasNext (20 bytes)
+   1146 1189       3       java.lang.StringBuilder::append (10 bytes)
+   1146 1191       3       clojure.asm.commons.Method::getDescriptor (157 bytes)
+   1148 1193       3       clojure.lang.PersistentVector::<init> (32 bytes)
+   1148 1192       3       clojure.lang.Compiler::analyze (7 bytes)
+   1148 1190       3       java.lang.AbstractStringBuilder::append (43 bytes)
+   1149 1194       3       java.util.regex.ASCII::isDigit (18 bytes)
+   1149 1195       3       clojure.lang.RT::mapUniqueKeys (29 bytes)
+   1149 1196       4       clojure.lang.RT::first (35 bytes)
+   1149 1197       3       clojure.lang.Compiler::currentNS (10 bytes)
+   1149 1059       4       clojure.lang.PersistentHashMap::entryAt (51 bytes)   made not entrant
+   1149 1198       3       clojure.lang.PersistentVector::cons (210 bytes)
+   1151 1201       3       clojure.lang.PersistentHashMap::entryAt (51 bytes)
+   1151 1203       3       clojure.lang.PersistentList$Primordial::doInvoke (102 bytes)
+   1152 1199       3       java.util.regex.Matcher::match (154 bytes)
+   1152 1204       3       java.util.Formatter$Flags::contains (22 bytes)
+   1152 1202       3       clojure.core$symbol_QMARK_::invoke (7 bytes)
+   1152 1200       3       java.util.ArrayList$Itr::checkForComodification (23 bytes)
+   1153 1206       3       clojure.core$concat$cat__5495::invoke (25 bytes)
+   1153 1207       3       clojure.core$concat$cat__5495$fn__5496::<init> (20 bytes)
+   1153 1208       3       clojure.core$concat$cat__5495$fn__5496::invoke (171 bytes)
+   1154 1209       3       clojure.asm.Type::<init> (26 bytes)
+   1154 1205       3       clojure.lang.RestFn::invoke (73 bytes)
+   1155 1212       3       clojure.lang.RT::countFrom (165 bytes)
+   1156 1210       3       clojure.asm.Frame::execute (2305 bytes)
+   1158  803       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (477 bytes)   made not entrant
+   1158 1031       4       clojure.lang.PersistentHashMap::assoc (153 bytes)   made not entrant
+   1159 1218       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::<init> (20 bytes)
+   1159  990       3       clojure.lang.RT::first (35 bytes)   made not entrant
+   1161 1215       3       clojure.asm.Type::getType (199 bytes)
+   1161 1219       3       clojure.lang.PersistentHashMap::assoc (153 bytes)
+   1162 1220       4       java.lang.String::<init> (15 bytes)
+   1162 1221       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (477 bytes)
+   1163   99       3       java.lang.String::<init> (15 bytes)   made not entrant
+   1164 1213       3       clojure.core$concat::invokeStatic (24 bytes)
+   1164 1214       3       clojure.core$concat$fn__5493::<init> (15 bytes)
+   1164 1216       3       clojure.core$concat$fn__5493::invoke (110 bytes)
+   1165 1211       3       clojure.lang.Var::popThreadBindings (51 bytes)
+   1165 1217       1       java.io.LineNumberReader::getLineNumber (5 bytes)
+   1166 1222       3       java.util.regex.Pattern$BranchConn::match (11 bytes)
+   1166 1223       3       java.util.regex.Pattern$CharPropertyGreedy::match (122 bytes)
+   1166 1226       3       clojure.walk$postwalk::invokeStatic (20 bytes)
+   1166 1229       3       clojure.lang.Namespace::getAliases (11 bytes)
+   1167 1227       3       clojure.core$partial::invokeStatic (14 bytes)
+   1167 1228       3       clojure.core$partial$fn__5839::<init> (15 bytes)
+   1167 1224       3       clojure.core$the_ns::invokeStatic (75 bytes)
+   1167 1236       4       clojure.lang.RT::booleanCast (25 bytes)
+   1168  743       3       clojure.lang.RT::booleanCast (25 bytes)   made not entrant
+   1168 1233       3       clojure.lang.Compiler::namespaceFor (25 bytes)
+   1168 1234       3       clojure.lang.Namespace::lookupAlias (16 bytes)
+   1169 1232       3       clojure.lang.Var::isMacro (16 bytes)
+   1169 1235   !   3       clojure.lang.Compiler::analyze (368 bytes)
+   1169 1239       4       clojure.lang.Var::isPublic (24 bytes)
+   1171 1244  s    4       clojure.lang.LazySeq::seq (53 bytes)
+   1171 1238       3       clojure.core$seq_QMARK___5406::invokeStatic (19 bytes)
+   1171 1243       3       clojure.walk$walk::invokeStatic (260 bytes)
+   1173 1247       3       clojure.core$str::invokeStatic (21 bytes)
+   1173 1241       3       java.util.regex.CharPredicates$$Lambda$4/0x0000000800065440::is (5 bytes)
+   1173 1242       3       java.util.regex.CharPredicates::lambda$ASCII_DIGIT$15 (20 bytes)
+   1174 1231       3       clojure.lang.Compiler::lookupVar (208 bytes)
+   1177 1250       3       clojure.spec.alpha$res$fn__1896::invoke (52 bytes)
+   1177 1255       4       clojure.lang.PersistentArrayMap::createWithCheck (80 bytes)
+   1177 1230       3       clojure.lang.Compiler::lineDeref (13 bytes)
+   1177 1252       3       clojure.lang.Compiler::referenceLocal (58 bytes)
+   1178 1253       3       clojure.lang.Namespace::findInternedVar (46 bytes)
+   1178 1245       3       clojure.lang.PersistentHashSet::cons (6 bytes)
+   1179  753       3       clojure.lang.Var::isPublic (24 bytes)   made not entrant
+   1179 1254       3       clojure.lang.PersistentVector$ChunkedSeq::first (10 bytes)
+   1179 1249       3       clojure.walk$postwalk::invoke (10 bytes)
+   1179 1251       3       clojure.core$partial$fn__5839::invoke (22 bytes)
+   1180 1237       3       clojure.core$contains_QMARK_::invokeStatic (10 bytes)
+   1180 1258       1       java.util.regex.Matcher::groupCount (10 bytes)
+   1180 1151       3       java.util.regex.Matcher::groupCount (10 bytes)   made not entrant
+   1180 1225   !   3       clojure.lang.Compiler::analyzeSeq (380 bytes)
+   1181  826  s    3       clojure.lang.LazySeq::seq (53 bytes)   made not entrant
+   1181 1259       4       clojure.lang.Symbol::equals (55 bytes)
+   1183 1060       3       clojure.lang.Symbol::equals (55 bytes)   made not entrant
+   1184 1256       3       clojure.lang.Symbol::toString (63 bytes)
+   1185 1257   !   3       clojure.lang.Compiler::macroexpand1 (515 bytes)
+   1185  418       3       clojure.lang.PersistentArrayMap::createWithCheck (80 bytes)   made not entrant
+   1190 1265       3       clojure.lang.Compiler::tagOf (41 bytes)
+   1190 1267       4       java.lang.String::indexOf (29 bytes)
+   1190 1263       3       clojure.core$str::invoke (7 bytes)
+   1190 1266       3       clojure.lang.Compiler::columnDeref (13 bytes)
+   1191 1260       3       clojure.core$seq__5402::invoke (7 bytes)
+   1191 1264       3       clojure.lang.Util::classOf (11 bytes)
+   1191 1262       1       clojure.lang.Compiler$FnExpr::supportsMeta (5 bytes)
+   1191 1240       1       clojure.lang.Compiler$ConstantExpr::val (5 bytes)
+   1191 1261       1       clojure.lang.Compiler$KeywordExpr::eval (5 bytes)
+   1191 1248       1       clojure.core$concat::getRequiredArity (2 bytes)
+   1191 1269       3       java.lang.AbstractStringBuilder::appendChars (133 bytes)
+   1192  801       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::find (90 bytes)   made not entrant
+   1192 1270       3       clojure.asm.SymbolTable::addType (81 bytes)
+   1192 1271       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::find (90 bytes)
+   1193 1273       3       clojure.asm.Type::getArgumentsAndReturnSizes (138 bytes)
+   1193   96       3       java.lang.String::indexOf (29 bytes)   made not entrant
+   1194 1276       3       clojure.asm.SymbolTable::addConstantUtf8Reference (101 bytes)
+   1195 1278       3       java.lang.StringLatin1::trim (76 bytes)
+   1195 1272       3       clojure.asm.Type::getInternalName (16 bytes)
+   1195 1275       3       java.lang.reflect.Modifier::isPublic (12 bytes)
+   1196 1277       3       java.lang.String::trim (35 bytes)
+   1196 1274       3       clojure.asm.Frame::merge (317 bytes)
+   1196 1280       3       java.util.LinkedList::linkLast (59 bytes)
+   1197 1281       3       clojure.spec.alpha$res::invoke (7 bytes)
+   1197 1283       3       clojure.lang.PersistentVector$ChunkedSeq::<init> (29 bytes)
+   1197 1286       3       clojure.asm.Type::getArgumentTypes (152 bytes)
+   1198 1288       4       clojure.lang.PersistentArrayMap::indexOf (44 bytes)
+   1199 1294       4       clojure.lang.PersistentArrayMap::valAt (7 bytes)
+   1200 1293       3       clojure.core$keyword_QMARK_::invoke (7 bytes)
+   1200 1285       3       clojure.lang.Compiler::registerVar (50 bytes)
+   1200 1282       3       clojure.spec.alpha$res::invokeStatic (201 bytes)
+   1201 1289       3       java.util.regex.Matcher::group (112 bytes)
+   1202 1287       3       clojure.lang.Compiler::access$600 (5 bytes)
+   1202 1279       3       clojure.lang.Compiler::lookupVar (7 bytes)
+   1202 1290       3       java.util.regex.Pattern$CharProperty::match (61 bytes)
+   1203 1268       3       java.lang.AbstractStringBuilder::checkRange (60 bytes)
+   1203 1298       4       clojure.lang.PersistentHashMap$NodeSeq::next (43 bytes)
+   1203 1297       3       clojure.asm.Type::getType (10 bytes)
+   1203 1291       3       java.util.regex.Pattern$CharPredicate$$Lambda$6/0x0000000800064440::is (13 bytes)
+   1204 1292       3       java.util.regex.Pattern$CharPredicate::lambda$and$0 (26 bytes)
+   1204 1295       3       clojure.lang.Cons::count (10 bytes)
+   1204 1296       3       java.util.regex.Pattern$LastNode::match (45 bytes)
+   1204 1246       1       clojure.lang.LineNumberingPushbackReader::getColumnNumber (5 bytes)
+   1204 1301       3       clojure.asm.SymbolTable::addConstantClass (8 bytes)
+   1204 1300       3       clojure.asm.Type::getType (122 bytes)
+   1205  752       3       clojure.lang.PersistentHashMap$NodeSeq::next (43 bytes)   made not entrant
+   1205 1305       1       java.lang.Integer::longValue (6 bytes)
+   1206 1091       3       java.lang.Integer::longValue (6 bytes)   made not entrant
+   1206 1306       3       clojure.asm.SymbolTable::addConstantMemberReference (147 bytes)
+   1206 1310       4       clojure.asm.ByteVector::putUTF8 (142 bytes)
+   1207 1307       3       clojure.asm.SymbolTable::hash (20 bytes)
+   1207 1302       3       clojure.asm.Type::getDescriptor (18 bytes)
+   1208 1308       3       clojure.asm.Frame::pop (44 bytes)
+   1208 1304       3       clojure.asm.Frame::pop (42 bytes)
+   1208 1309       3       clojure.asm.Frame::getAbstractTypeFromDescriptor (415 bytes)
+   1209 1311     n 0       java.lang.System::nanoTime (native)   (static)
+   1210 1303       3       java.lang.Integer::getChars (131 bytes)
+   1211 1314       3       java.util.regex.Pattern$GroupTail::match (111 bytes)
+   1211 1312       3       clojure.lang.PersistentVector::seq (5 bytes)
+   1211 1313       3       clojure.lang.PersistentVector::chunkedSeq (20 bytes)
+   1212 1316       3       clojure.lang.RT::isReduced (5 bytes)
+   1212 1317       3       clojure.core$conj_BANG_::invokeStatic (15 bytes)
+   1212 1318       3       java.util.LinkedList$ListItr::previous (70 bytes)
+   1213 1319       3       java.util.LinkedList$ListItr::checkForComodification (23 bytes)
+   1213 1077       3       clojure.asm.ByteVector::putUTF8 (142 bytes)   made not entrant
+   1213 1315       3       java.util.ArrayList$ListItr::hasPrevious (13 bytes)
+   1213 1323   !   3       clojure.lang.LispReader::read (294 bytes)
+   1215 1328       4       clojure.lang.PersistentArrayMap::valAt (21 bytes)
+   1215 1185       3       clojure.lang.PersistentArrayMap::indexOf (44 bytes)   made not entrant
+   1216 1329       4       java.lang.Character::codePointAt (51 bytes)
+   1216 1331       1       java.lang.String::toString (2 bytes)
+   1216  954       3       java.lang.String::toString (2 bytes)   made not entrant
+   1216 1324       3       clojure.lang.LispReader::installPlatformFeature (76 bytes)
+   1217 1325       3       java.lang.Character::isDigit (9 bytes)
+   1217 1009       3       java.lang.Character::codePointAt (51 bytes)   made not entrant
+   1217 1333       4       clojure.lang.Var::get (20 bytes)
+   1217 1327       3       java.lang.String::subSequence (7 bytes)
+   1217 1320       3       clojure.lang.Compiler::isMacro (121 bytes)
+   1218 1012       3       clojure.lang.PersistentArrayMap::valAt (7 bytes)   made not entrant
+   1218 1330       4       java.lang.String::endsWith (15 bytes)
+   1220 1337       3       clojure.lang.Var::set (83 bytes)
+   1221 1336       3       clojure.asm.ByteVector::put122 (93 bytes)
+   1221 1299       3       clojure.asm.ByteVector::putInt (74 bytes)
+   1222 1322       3       clojure.lang.Compiler::isInline (168 bytes)
+   1222  157       3       java.lang.String::endsWith (15 bytes)   made not entrant
+   1224 1343     n 0       java.lang.Class::getModifiers (native)   
+   1224 1341       3       clojure.asm.Label::resolve (219 bytes)
+   1224 1342       3       clojure.asm.MethodWriter::visitInsn (115 bytes)
+   1225 1339       3       java.util.regex.Matcher::start (65 bytes)
+   1225 1321       3       clojure.lang.PersistentVector::cons (6 bytes)
+   1225 1344       4       clojure.lang.LineNumberingPushbackReader::read (76 bytes)
+   1225 1326       3       clojure.lang.RT::contains (278 bytes)
+   1227 1348       3       java.lang.Integer::reverseBytes (26 bytes)
+   1227 1347       3       clojure.core$first__5384::invoke (7 bytes)
+   1227 1332       3       clojure.lang.Numbers::dec (17 bytes)
+   1228 1335       3       clojure.lang.RT::second (8 bytes)
+   1228 1345   !   3       java.util.regex.Pattern::matcher (44 bytes)
+   1229 1334       3       clojure.core$resolve::invoke (7 bytes)
+   1229 1340       3       clojure.asm.Label::<init> (5 bytes)
+   1229 1284       1       clojure.lang.Symbol::getName (5 bytes)
+   1230 1338       1       clojure.asm.MethodWriter::hasAsmInstructions (5 bytes)
+   1230 1349       3       java.lang.CharacterDataLatin1::isDigit (18 bytes)
+   1230 1350       3       clojure.lang.Compiler::getCompilerOption (11 bytes)
+   1231 1351       3       clojure.lang.PersistentVector$TransientVector::ensureEditable (24 bytes)
+   1231 1352       3       clojure.lang.PersistentVector$TransientVector::tailoff (22 bytes)
+   1231 1354       3       clojure.lang.LineNumberingPushbackReader::unread (48 bytes)
+   1232 1355   !   3       java.io.PushbackReader::unread (57 bytes)
+   1232 1356       3       clojure.asm.Frame::<init> (10 bytes)
+   1232 1357       3       clojure.asm.Type::getDescriptor (98 bytes)
+   1233 1360       3       clojure.lang.Compiler$LiteralExpr::<init> (5 bytes)
+   1233 1359       3       clojure.core$concat::invoke (10 bytes)
+   1233  784       3       clojure.lang.Var::get (20 bytes)   made not entrant
+   1234 1346       4       clojure.lang.RT::cons (46 bytes)
+   1234  716       3       clojure.lang.PersistentArrayMap::valAt (21 bytes)   made not entrant
+   1234 1358       3       clojure.lang.Numbers::hasheqFrom (112 bytes)
+   1235 1363       4       clojure.lang.RT::get (24 bytes)
+   1235 1362       3       clojure.lang.PersistentVector$ChunkedSeq::chunkedNext (45 bytes)
+   1235 1361       3       clojure.asm.Frame::getInputStackSize (6 bytes)
+   1235 1353       1       clojure.lang.Compiler$KeywordExpr::val (5 bytes)
+   1236 1364   !   3       clojure.lang.LispReader::unread (20 bytes)
+   1236 1108       3       clojure.lang.LineNumberingPushbackReader::read (76 bytes)   made not entrant
+   1236 1365       3       clojure.core$symbol::invokeStatic (16 bytes)
+   1236 1366       3       java.util.regex.Pattern$BmpCharPropertyGreedy::match (89 bytes)
+   1237 1368       3       java.util.regex.Matcher::end (67 bytes)
+   1238 1375   !   4       clojure.lang.LispReader::read1 (11 bytes)
+   1238  943       3       clojure.lang.RT::get (24 bytes)   made not entrant
+   1238 1371       3       clojure.asm.Frame::push (63 bytes)
+   1238 1376       4       clojure.lang.PersistentList::next (18 bytes)
+   1239  609       3       clojure.lang.PersistentList::next (18 bytes)   made not entrant
+   1239  813       3       clojure.lang.RT::cons (46 bytes)   made not entrant
+   1239 1377       3       clojure.lang.LispReader::readToken (58 bytes)
+   1239 1107   !   3       clojure.lang.LispReader::read1 (11 bytes)   made not entrant
+   1241 1378       3       clojure.lang.LispReader::interpretToken (74 bytes)
+   1241 1379       3       clojure.asm.Frame::pop (53 bytes)
+   1242 1381       4       java.lang.ClassLoader::findLoadedClass (16 bytes)
+   1242 1374       3       clojure.core$symbol::invoke (10 bytes)
+   1242 1372       3       clojure.asm.MethodWriter::visitMethodInsn (191 bytes)
+   1242 1045       4       clojure.lang.PersistentHashMap::valAt (48 bytes)   made not entrant
+   1243 1382       4       clojure.lang.PersistentHashMap::valAt (48 bytes)
+   1243 1373       3       clojure.asm.SymbolTable::addConstantMethodref (24 bytes)
+   1243 1367       3       java.util.regex.Pattern$BmpCharPredicate$$Lambda$9/0x0000000800063040::is (13 bytes)
+   1243 1380       3       clojure.asm.commons.GeneratorAdapter::invokeInsn (43 bytes)
+   1243 1384       3       java.lang.StringLatin1::inflate (34 bytes)
+   1244 1383       3       clojure.asm.Type::appendDescriptor (94 bytes)
+   1244 1387       3       clojure.asm.Handler::getExceptionTableLength (21 bytes)
+   1244 1385       3       clojure.asm.SymbolTable::addType (85 bytes)
+   1245 1389       3       java.util.regex.Matcher::matches (10 bytes)
+   1245 1386       3       clojure.asm.MethodWriter::visitLabel (328 bytes)
+   1245 1391       4       java.lang.CharacterDataLatin1::isWhitespace (23 bytes)
+   1246 1136       3       java.lang.CharacterDataLatin1::isWhitespace (23 bytes)   made not entrant
+   1246 1393       4       java.lang.String::indexOf (18 bytes)
+   1246 1394       3       clojure.lang.SeqIterator::hasNext (64 bytes)
+   1247 1014       3       java.lang.ClassLoader::findLoadedClass (16 bytes)   made not entrant
+   1247 1395   !   4       clojure.lang.ARef::validate (46 bytes)
+   1247 1390       3       java.util.regex.Pattern$Ques::match (196 bytes)
+   1248  574   !   3       clojure.lang.ARef::validate (46 bytes)   made not entrant
+   1248 1400       4       java.util.regex.Pattern$BmpCharProperty::match (55 bytes)
+   1248 1397       3       clojure.lang.PersistentVector$TransientVector::conj (6 bytes)
+   1248 1398       3       clojure.core$ns_resolve::invokeStatic (41 bytes)
+   1248 1399   !   3       clojure.lang.Compiler::maybeResolveIn (136 bytes)
+   1248 1002       3       java.lang.String::indexOf (18 bytes)   made not entrant
+   1249 1405       4       clojure.lang.RT::more (37 bytes)
+   1249  921       3       clojure.lang.RT::more (37 bytes)   made not entrant
+   1250 1406       3       java.lang.StringBuilder::length (5 bytes)
+   1250 1401       3       clojure.spec.alpha$__GT_sym::invoke (7 bytes)
+   1250  996       3       java.util.regex.Pattern$BmpCharProperty::match (55 bytes)   made not entrant
+   1250 1402       3       clojure.spec.alpha$__GT_sym::invokeStatic (101 bytes)
+   1251 1403       3       clojure.core$var_QMARK_::invoke (7 bytes)
+   1251 1408       4       clojure.lang.PersistentVector::arrayFor (73 bytes)
+   1251 1404       3       clojure.core$var_QMARK_::invokeStatic (19 bytes)
+   1251 1409       3       java.lang.Integer::stringSize (47 bytes)
+   1251 1410       4       clojure.lang.PersistentHashMap::containsKey (50 bytes)
+   1252 1392       3       java.util.regex.Matcher::<init> (95 bytes)
+   1252 1412       3       clojure.lang.Compiler$ObjExpr::constantType (119 bytes)
+   1252  967       3       clojure.lang.PersistentVector::arrayFor (73 bytes)   made not entrant
+   1253 1413       3       java.lang.StringBuilder::append (8 bytes)
+   1253 1414       3       java.lang.AbstractStringBuilder::append (55 bytes)
+   1253 1415       3       clojure.asm.commons.Method::<init> (15 bytes)
+   1253 1416       3       clojure.asm.ByteVector::put11 (52 bytes)
+   1254 1411       3       clojure.asm.SymbolTable::hash (15 bytes)
+   1254 1369       1       java.util.Formatter$FormatSpecifier::index (5 bytes)
+   1254 1370       1       java.util.Formatter$FixedString::index (3 bytes)
+   1254 1407       3       java.util.regex.Matcher::start (22 bytes)
+   1254 1417  s    3       clojure.lang.DynamicClassLoader::loadClass (37 bytes)
+   1254 1419       4       clojure.lang.PersistentHashMap$TransientHashMap::doAssoc (122 bytes)
+   1255 1418   !   3       java.lang.ClassLoader::loadClass (122 bytes)
+   1256 1423       4       java.util.regex.Pattern$CharPredicate$$Lambda$5/0x0000000800064040::is (9 bytes)
+   1257 1421       3       clojure.lang.Numbers::dec (14 bytes)
+   1257 1422       3       clojure.lang.Numbers$LongOps::dec (13 bytes)
+   1257 1259       4       clojure.lang.Symbol::equals (55 bytes)   made not entrant
+   1257 1420       3       java.util.ArrayList$ListItr::previous (59 bytes)
+   1258 1388       3       clojure.lang.Compiler::access$800 (5 bytes)
+   1258 1104       3       java.util.regex.Pattern$CharPredicate$$Lambda$5/0x0000000800064040::is (9 bytes)   made not entrant
+   1258 1424       4       java.util.regex.Pattern$$Lambda$1/0x0000000800065840::is (9 bytes)
+   1258 1396       1       clojure.lang.Symbol::getNamespace (5 bytes)
+   1258 1425       3       clojure.core$string_QMARK___5410::invokeStatic (19 bytes)
+   1258  997       3       java.util.regex.Pattern$$Lambda$1/0x0000000800065840::is (9 bytes)   made not entrant
+   1259 1346       4       clojure.lang.RT::cons (46 bytes)   made not entrant
+   1259 1426       4       clojure.core$cons__5376::invokeStatic (10 bytes)
+   1260 1427       3       java.util.ArrayList::newCapacity (65 bytes)
+   1260 1428       3       clojure.lang.Symbol::equals (55 bytes)
+   1261 1430       3       clojure.lang.Compiler::resolve (9 bytes)
+   1261 1431       3       clojure.lang.Compiler::resolveIn (281 bytes)
+   1263  960       3       clojure.lang.PersistentHashMap::containsKey (50 bytes)   made not entrant
+   1263 1436       4       clojure.asm.Type::appendDescriptor (234 bytes)
+   1265  473       3       clojure.lang.PersistentHashMap$TransientHashMap::doAssoc (122 bytes)   made not entrant
+   1265 1440       4       java.util.regex.Matcher::reset (128 bytes)
+   1267 1441       3       clojure.lang.RT::cons (46 bytes)
+   1267  972       3       clojure.core$cons__5376::invokeStatic (10 bytes)   made not entrant
+   1267 1442       4       java.util.regex.Pattern$$Lambda$3/0x0000000800065040::is (9 bytes)
+   1268 1344       4       clojure.lang.LineNumberingPushbackReader::read (76 bytes)   made not entrant
+   1268  531       4       java.lang.CharacterData::of (120 bytes)   made not entrant
+   1268  796   !   4       java.net.URL::<init> (543 bytes)   made not entrant
+   1268  978       4       java.lang.String::regionMatches (150 bytes)   made not entrant
+   1268 1102       3       java.util.regex.Pattern$$Lambda$3/0x0000000800065040::is (9 bytes)   made not entrant
+   1268 1435       3       clojure.asm.SymbolTable$Entry::<init> (18 bytes)
+   1268 1437       3       clojure.asm.MethodWriter::visitLdcInsn (183 bytes)
+   1269 1438       3       clojure.asm.SymbolTable::addConstant (329 bytes)
+   1271 1444       3       clojure.core$class::invokeStatic (22 bytes)
+   1271 1446       3       clojure.lang.PersistentVector$TransientVector::conj (190 bytes)
+   1272 1181       3       java.util.regex.Matcher::reset (128 bytes)   made not entrant
+   1273 1445       3       clojure.lang.MethodImplCache::fnFor (28 bytes)
+   1273 1447       3       clojure.lang.Compiler::registerConstant (79 bytes)
+   1274 1450       1       clojure.lang.PersistentVector$ChunkedSeq::first (10 bytes)
+   1274 1254       3       clojure.lang.PersistentVector$ChunkedSeq::first (10 bytes)   made not entrant
+   1274 1432       3       clojure.lang.Compiler$VarExpr::<init> (26 bytes)
+   1274 1382       4       clojure.lang.PersistentHashMap::valAt (48 bytes)   made not entrant
+   1275 1433       3       clojure.lang.Var::getTag (13 bytes)
+   1275 1451       3       clojure.core$seq_QMARK___5406::invoke (7 bytes)
+   1275 1439       3       clojure.asm.SymbolTable::addConstantString (8 bytes)
+   1275 1434       3       clojure.asm.MethodVisitor::<init> (47 bytes)
+   1275 1449       1       clojure.lang.Compiler$NilExpr::val (2 bytes)
+   1276 1443       3       clojure.lang.LispReader::matchSymbol (259 bytes)
+   1278 1458       3       clojure.lang.PersistentHashMap::valAt (48 bytes)
+   1278 1456       3       java.util.regex.Pattern$Slice::match (79 bytes)
+   1278 1457       3       clojure.core$not::invokeStatic (24 bytes)
+   1279 1452       3       clojure.core$conj_BANG_::invoke (10 bytes)
+   1279 1453       3       clojure.core$take::invokeStatic (24 bytes)
+   1279 1460       3       clojure.core$next__5386::invoke (7 bytes)
+   1279 1461       3       clojure.lang.APersistentSet::seq (8 bytes)
+   1280 1454       3       clojure.core$take$fn__5909::<init> (15 bytes)
+   1280 1455       3       clojure.core$take$fn__5909::invoke (79 bytes)
+   1280 1466       4       clojure.core$rest__5388::invokeStatic (7 bytes)
+   1280 1463       3       clojure.core$apply::invokeStatic (21 bytes)
+   1281 1462       3       clojure.lang.LongRange$LongChunk::nth (16 bytes)
+   1281 1464       3       clojure.lang.Numbers::category (79 bytes)
+   1281  920       3       clojure.core$rest__5388::invokeStatic (7 bytes)   made not entrant
+   1281 1467       3       clojure.core$ident_QMARK_::invoke (7 bytes)
+   1281 1468       3       clojure.core$ident_QMARK_::invokeStatic (30 bytes)
+   1282 1465       3       clojure.lang.ATransientMap::count (9 bytes)
+   1282 1459       3       clojure.asm.commons.GeneratorAdapter::push (24 bytes)
+   1282 1469       3       jdk.internal.reflect.ReflectionFactory::copyField (10 bytes)
+   1282 1470       3       java.lang.reflect.ReflectAccess::copyField (5 bytes)
+   1282 1471       3       java.lang.reflect.Field::copy (76 bytes)
+   1283 1472       3       java.util.regex.Pattern$Start::match (90 bytes)
+   1283 1473       3       clojure.asm.SymbolTable::addConstantNameAndType (137 bytes)
+   1283 1474       3       clojure.asm.Label::getCanonicalInstance (19 bytes)
+   1284 1429       3       java.lang.String::contains (19 bytes)
+   1284 1448       1       clojure.spec.alpha$cat::getRequiredArity (2 bytes)
+   1284 1475       4       clojure.lang.APersistentSet::invoke (6 bytes)
+   1284 1476       4       clojure.lang.Namespace::reference (110 bytes)
+   1286 1084       3       clojure.asm.Type::appendDescriptor (234 bytes)   made not entrant
+   1286 1477       4       clojure.lang.Namespace::refer (10 bytes)
+   1287 1479       3       java.lang.CharacterData::of (120 bytes)
+   1287 1481       3       clojure.lang.PersistentList$Primordial::invokeStatic (92 bytes)
+   1288 1482       3       clojure.spec.alpha$reg_resolve_BANG_::invoke (7 bytes)
+   1289 1483       3       clojure.spec.alpha$reg_resolve_BANG_::invokeStatic (100 bytes)
+   1289 1485       3       clojure.core$every_QMARK_::invokeStatic (81 bytes)
+   1290 1486       3       java.lang.reflect.Field::<init> (44 bytes)
+   1290 1489       3       clojure.asm.Frame::merge (621 bytes)
+   1292 1487       3       clojure.asm.commons.GeneratorAdapter::mark (18 bytes)
+   1292 1488       3       clojure.asm.Edge::<init> (20 bytes)
+   1293 1484       3       clojure.core$sequential_QMARK_::invoke (7 bytes)
+   1294 1493       3       clojure.spec.alpha$accept_nil_QMARK_::invoke (7 bytes)
+   1294 1497       3       clojure.core$filter::invokeStatic (24 bytes)
+   1295 1500       3       clojure.lang.RT::nthFrom (268 bytes)
+   1297 1506       3       clojure.lang.LineNumberingPushbackReader::read (76 bytes)
+   1298 1504       3       clojure.asm.commons.Method::getMethod (193 bytes)
+   1299 1499       3       clojure.lang.Keyword::hashCode (11 bytes)
+   1300  785       3       clojure.lang.APersistentSet::invoke (6 bytes)   made not entrant
+   1300 1494       3       clojure.spec.alpha$accept_nil_QMARK_::invokeStatic (575 bytes)
+   1300 1490       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (477 bytes)
+   1301 1423       4       java.util.regex.Pattern$CharPredicate$$Lambda$5/0x0000000800064040::is (9 bytes)   made not entrant
+   1301 1400       4       java.util.regex.Pattern$BmpCharProperty::match (55 bytes)   made not entrant
+   1302  419       4       java.lang.String::equals (65 bytes)   made not entrant
+   1303 1509       3       java.util.regex.Pattern$BmpCharProperty::match (55 bytes)
+   1303 1510       3       java.util.regex.Pattern$CharPredicate$$Lambda$5/0x0000000800064040::is (9 bytes)
+   1303 1511       3       java.util.regex.Pattern$CharPredicate::lambda$negate$3 (16 bytes)
+   1303 1512       3       clojure.lang.Compiler::isSpecial (10 bytes)
+   1303 1507       3       clojure.lang.LineNumberingPushbackReader::getLineNumber (13 bytes)
+   1304 1501       3       clojure.lang.Compiler$ObjExpr::constantName (21 bytes)
+   1304 1513       3       clojure.lang.ATransientSet::count (10 bytes)
+   1304 1498       3       clojure.core$filter$fn__5893::<init> (15 bytes)
+   1304 1505       3       clojure.asm.ByteVector::putByteArray (49 bytes)
+   1305 1502       3       clojure.asm.ByteVector::<init> (13 bytes)
+   1305 1514       3       clojure.lang.Numbers$LongOps::combine (8 bytes)
+   1305 1495       3       clojure.core$every_QMARK_::invoke (10 bytes)
+   1305 1516       3       clojure.core$maybe_min_hash$fn__6909::invoke (61 bytes)
+   1306 1517       3       clojure.core$maybe_min_hash$fn__6909$fn__6913::<init> (15 bytes)
+   1306 1515       3       clojure.lang.Numbers::equal (40 bytes)
+   1306 1518       3       clojure.lang.ArrayChunk::count (10 bytes)
+   1307 1503       3       clojure.asm.commons.Method::getMethod (6 bytes)
+   1307 1519       3       clojure.spec.alpha$spec_QMARK_::invoke (7 bytes)
+   1307 1508       1       clojure.asm.SymbolTable::getClassName (5 bytes)
+   1307 1520     n 0       jdk.internal.misc.Unsafe::putInt (native)   
+   1307 1521       3       clojure.core$map::invoke (10 bytes)
+   1308 1522       3       clojure.core$identity::invoke (7 bytes)
+   1308 1523       3       clojure.core$identity::invokeStatic (4 bytes)
+   1309 1524       2       java.lang.String::equals (65 bytes)
+   1310 1526       3       clojure.lang.Compiler::analyzeSymbol (288 bytes)
+   1315 1533       3       clojure.asm.Type::equals (147 bytes)
+   1317 1528       3       clojure.lang.APersistentVector::indexOf (32 bytes)
+   1317 1529       3       clojure.lang.Compiler$InvokeExpr::parse (606 bytes)
+   1317  952       4       clojure.core$ns_publics$fn__6189::invoke (84 bytes)   made not entrant
+   1322 1543     n 0       java.lang.invoke.MethodHandle::linkToStatic(L)L (native)   (static)
+   1327 1537       3       clojure.core$ns_publics$fn__6189::invoke (84 bytes)
+   1328 1538       3       clojure.core$filter$fn__5893::invoke (276 bytes)
+   1331 1531       3       java.util.IdentityHashMap::maskNull (12 bytes)
+   1331 1532       3       clojure.asm.Type::getOpcode (284 bytes)
+   1332 1539       3       java.util.IdentityHashMap::hash (18 bytes)
+   1332 1541       3       clojure.asm.MethodVisitor::visitLineNumber (17 bytes)
+   1332 1542       3       clojure.asm.MethodWriter::visitLineNumber (50 bytes)
+   1332 1534       3       clojure.lang.Compiler::access$700 (4 bytes)
+   1333 1527       3       clojure.lang.Compiler::inTailCall (31 bytes)
+   1333 1530       3       clojure.lang.Compiler$InvokeExpr::<init> (474 bytes)
+   1334 1546     n 0       java.lang.invoke.MethodHandle::linkToInterface(LL)L (native)   (static)
+   1334 1547     n 0       java.lang.Class::getSuperclass (native)   
+   1335 1548     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLLLL)V (native)   (static)
+   1336 1550     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLL)L (native)   
+   1336 1551     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLLL)L (native)   (static)
+   1338 1549       3       jdk.internal.org.objectweb.asm.Type::getArgumentsAndReturnSizes (151 bytes)
+   1338 1552     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLL)I (native)   (static)
+   1340 1553       3       jdk.internal.org.objectweb.asm.ClassWriter::newStringishItem (68 bytes)
+   1340 1554       3       java.lang.invoke.MemberName::initResolved (53 bytes)
+   1341 1544       1       java.lang.invoke.MethodHandles$Lookup::lookupClass (5 bytes)
+   1341 1545       1       java.lang.invoke.MethodTypeForm::basicType (5 bytes)
+   1341 1535       1       clojure.lang.Var::isDynamic (5 bytes)
+   1341 1540       1       java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync::writerShouldBlock (2 bytes)
+   1343 1555       3       clojure.lang.ArraySeq::createFromObject (212 bytes)
+   1343 1559     n 0       java.lang.reflect.Array::getLength (native)   (static)
+   1344 1557       3       clojure.core$into1::invokeStatic (48 bytes)
+   1344 1556       3       java.lang.Class::getInterfaces (49 bytes)
+1341 : Before defn of foo2 #1
+   1345 1560       3       java.lang.Class::getInterfaces (6 bytes)
+   1345 1561       3       clojure.core$bases::invokeStatic (65 bytes)
+   1346 1558       3       clojure.lang.Var::fn (8 bytes)
+   1346 1563       3       clojure.lang.Tuple::create (20 bytes)
+   1346 1564       3       clojure.spec.alpha$deriv::invoke (10 bytes)
+   1347 1565       3       clojure.spec.alpha$deriv::invokeStatic (1364 bytes)
+   1352 1569       3       clojure.core$distinct_QMARK_::invokeStatic (236 bytes)
+   1353 1567       3       clojure.core$not_EQ_::invokeStatic (25 bytes)
+   1353 1568       3       clojure.core$distinct_QMARK_::doInvoke (16 bytes)
+   1353 1571       3       clojure.lang.Numbers$LongOps::opsWith (2 bytes)
+   1354 1572       3       clojure.lang.Numbers$LongOps::equiv (18 bytes)
+   1354 1573       3       clojure.core$conj__5390::invokeStatic (13 bytes)
+   1354 1562       1       clojure.lang.MultiFn::getPreferTable (5 bytes)
+   1354 1566       1       clojure.lang.Repeat::first (5 bytes)
+   1354 1574       1       clojure.core$assoc__5416::getRequiredArity (2 bytes)
+   1354 1436       4       clojure.asm.Type::appendDescriptor (234 bytes)   made not entrant
+   1355 1575       3       java.util.ArrayList$Itr::next (66 bytes)
+   1356 1576       3       clojure.asm.MethodWriter::visitAbstractType (8 bytes)
+1356 : After  defn of foo2 #1
+   1356 1577       3       clojure.lang.PersistentArrayMap::containsKey (14 bytes)
+   1357 1578       3       clojure.asm.Type::appendDescriptor (234 bytes)
+
+----------------------------------------------------------------------
+Start experiment now - foo2 was recently defined above, but below is 1st call
+----------------------------------------------------------------------
+   1358 1580       3       java.lang.reflect.Method::getParameterTypes (11 bytes)
+   1359 1581       3       clojure.lang.Compiler::maybePrimitiveType (46 bytes)
+   1360 1582       3       clojure.lang.PersistentVector::cons (6 bytes)
+   1360 1583       3       clojure.spec.alpha$regex_QMARK_::invoke (7 bytes)
+   1361 1584       3       clojure.spec.alpha$regex_QMARK_::invokeStatic (64 bytes)
+   1361 1585       3       clojure.core$partition::invokeStatic (27 bytes)
+   1362 1586       3       clojure.core$partition$fn__5990::<init> (20 bytes)
+   1362 1587       3       clojure.core$partition$fn__5990::invoke (105 bytes)
+   1364 1588       3       clojure.asm.commons.GeneratorAdapter::typeInsn (13 bytes)
+   1364 1589       3       clojure.asm.MethodWriter::visitTypeInsn (116 bytes)
+   1364 1590       3       clojure.asm.Type::getSize (86 bytes)
+   1364 1592       3       java.lang.Module::isNamed (13 bytes)
+   1364 1591       3       clojure.asm.ClassWriter::visitField (53 bytes)
+   1365 1593       3       clojure.lang.Numbers::inc (17 bytes)
+   1367 1595 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   1367 1596       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   1372 1221       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (477 bytes)   made not entrant
+   1372 1536       4       java.lang.String::equals (65 bytes)
+   1373 1524       2       java.lang.String::equals (65 bytes)   made not entrant
+   1373 1525       4       clojure.lang.PersistentHashMap::valAt (48 bytes)
+   1386 1458       3       clojure.lang.PersistentHashMap::valAt (48 bytes)   made not entrant
+   1386 1597 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   1387 1595 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+   1387 1594       4       clojure.lang.Numbers::inc (17 bytes)
+   1387 1593       3       clojure.lang.Numbers::inc (17 bytes)   made not entrant
+   1387 1570       4       clojure.lang.LazySeq::<init> (10 bytes)
+   1388  918       3       clojure.lang.LazySeq::<init> (10 bytes)   made not entrant
+   1388 1496       4       clojure.lang.Util::hash (11 bytes)
+   1389  376       3       clojure.lang.Util::hash (11 bytes)   made not entrant
+   1389 1480       4       java.lang.Integer::valueOf (32 bytes)
+   1390  379       3       java.lang.Integer::valueOf (32 bytes)   made not entrant
+   1390 1491       4       clojure.lang.APersistentMap$KeySeq::first (18 bytes)
+   1397  779       3       clojure.lang.APersistentMap$KeySeq::first (18 bytes)   made not entrant
+   1397 1492       4       clojure.lang.APersistentMap$KeySeq::next (13 bytes)
+   1399  776       3       clojure.lang.APersistentMap$KeySeq::next (13 bytes)   made not entrant
+   1399 1478       4       java.nio.Buffer::position (55 bytes)
+   1400  300       3       java.nio.Buffer::position (55 bytes)   made not entrant
+   1400 1579       4       java.lang.Integer::reverseBytes (26 bytes)
+   1400 1348       3       java.lang.Integer::reverseBytes (26 bytes)   made not entrant
+   1405  788       3       clojure.lang.Namespace::reference (110 bytes)   made not entrant
+   1407  787       3       clojure.lang.Namespace::refer (10 bytes)   made not entrant
+   1426 1597 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+   1427 1044       4       java.lang.ThreadLocal::get (38 bytes)   made not entrant
+   1428 1598       3       jdk.internal.math.FDBigInteger::mult (64 bytes)
+   1428 1599       3       jdk.internal.math.FDBigInteger::<init> (30 bytes)
+1365 - 1427 : Trial 1 Elapsed time: 62.03474 msecs
+   1428 1600       3       jdk.internal.math.FDBigInteger::trimLeadingZeros (57 bytes)
+   1428 1601 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   1431 1602       4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   1433 1596       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)   made not entrant
+   1646 1603       3       java.util.ArrayList::isEmpty (13 bytes)
+   1646 1058       4       java.lang.ThreadLocal$ThreadLocalMap::getEntry (42 bytes)   made not entrant
+1428 - 1646 : Trial 2 Elapsed time: 217.545467 msecs
+   1646 1604       3       java.lang.invoke.DirectMethodHandle::internalMemberName (8 bytes)
+   1646 1605       3       java.util.HashMap::containsKey (18 bytes)
+1646 - 1870 : Trial 3 Elapsed time: 224.153984 msecs
+   1871 1606       3       java.nio.charset.CoderResult::isUnderflow (13 bytes)
+1871 - 2110 : Trial 4 Elapsed time: 239.166052 msecs
+2110 - 2335 : Trial 5 Elapsed time: 225.21169 msecs
+   2336 1607       3       java.nio.ByteBuffer::arrayOffset (35 bytes)
+2336 - 2565 : Trial 6 Elapsed time: 229.258071 msecs
+   2565 1608       3       java.util.Collections$UnmodifiableCollection::contains (11 bytes)
+2565 - 2799 : Trial 7 Elapsed time: 233.421533 msecs
+   2799 1609       3       java.util.stream.ReferencePipeline$2$1::accept (27 bytes)
+2799 - 3037 : Trial 8 Elapsed time: 237.501823 msecs
+   3037 1610       3       java.nio.CharBuffer::arrayOffset (35 bytes)
+   3037 1611       3       java.lang.management.ManagementFactory$PlatformMBeanFinder$$Lambda$35/0x0000000800342840::test (12 bytes)
+   3037 1612       3       java.lang.management.ManagementFactory$PlatformMBeanFinder::lambda$findSingleton$5 (13 bytes)
+3037 - 3283 : Trial 9 Elapsed time: 245.639055 msecs
+   3525 1614       3       java.util.Collections$SingletonSet::contains (9 bytes)
+3283 - 3525 : Trial 10 Elapsed time: 242.120287 msecs
+   3526 1613       3       java.util.HashSet::contains (9 bytes)
+   3526 1615       4       clojure.lang.Var::isBound (44 bytes)
+   3526 1616       3       java.lang.ThreadLocal$ThreadLocalMap::getEntry (42 bytes)
+   3526 1618       3       java.lang.Long::stringSize (55 bytes)
+   3527 1617       3       java.lang.Long::toString (55 bytes)
+   3527 1619       3       clojure.asm.commons.GeneratorAdapter::putStatic (11 bytes)
+3527 : Before defn of foo2 #2
+   3528 1621       3       clojure.lang.LispReader$ListReader::invoke (157 bytes)
+   3529 1624       3       clojure.core$map$fn__5873::invoke (163 bytes)
+   3529  810       3       clojure.lang.Var::isBound (44 bytes)   made not entrant
+   3529 1620       4       clojure.asm.SymbolTable::put (150 bytes)
+   3530 1625       3       clojure.spec.alpha$pcat_STAR_::invoke (7 bytes)
+   3530 1626       3       clojure.spec.alpha$pcat_STAR_::invokeStatic (730 bytes)
+   3534 1631       3       java.lang.ThreadLocal::get (38 bytes)
+   3534 1632       3       clojure.asm.MethodWriter::addSuccessorToCurrentBasicBlock (24 bytes)
+3534 : After  defn of foo2 #2
+   3535 1627       3       clojure.core$deref::invokeStatic (29 bytes)
+   3535 1635       3       clojure.lang.KeywordLookupSite::get (25 bytes)
+   3535 1622       3       java.util.ArrayList::rangeCheckForAdd (26 bytes)
+   3535 1623       3       java.util.ArrayList::listIterator (15 bytes)
+   3536 1634       3       clojure.lang.Var::applyTo (11 bytes)
+   3536 1636       4       clojure.lang.PersistentHashMap::assoc (153 bytes)
+   3536 1633       3       clojure.core$meta__5418::invokeStatic (24 bytes)
+   3536 1638       3       clojure.lang.Atom::deref (8 bytes)
+   3537 1637       1       clojure.core$vector::getRequiredArity (3 bytes)
+   3537 1639   !   3       sun.security.provider.NativePRNG$RandomIO::implNextBytes (162 bytes)
+   3538 1640       3       clojure.core$cons__5376::invoke (10 bytes)
+   3540 1641       3       java.util.ArrayList::elementData (7 bytes)
+   3540 1642       3       clojure.asm.commons.GeneratorAdapter::fieldInsn (19 bytes)
+   3540 1643       3       clojure.asm.MethodWriter::visitFieldInsn (258 bytes)
+   3541 1644       3       clojure.asm.SymbolTable::addConstantFieldref (10 bytes)
+   3541 1645       3       clojure.lang.Compiler::access$1300 (4 bytes)
+   3543 1646 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   3543 1078       3       clojure.asm.SymbolTable::put (150 bytes)   made not entrant
+   3543 1628       4       java.lang.reflect.Method::<init> (68 bytes)
+   3543 1647       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   3550 1055       3       java.lang.reflect.Method::<init> (68 bytes)   made not entrant
+   3550 1648 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   3550 1219       3       clojure.lang.PersistentHashMap::assoc (153 bytes)   made not entrant
+   3550 1629       4       jdk.internal.reflect.ReflectionFactory::copyMethod (10 bytes)
+   3551 1646 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+   3551 1630       4       java.lang.reflect.Method::copy (84 bytes)
+   3554 1056       3       java.lang.reflect.Method::copy (84 bytes)   made not entrant
+   3554 1025       3       jdk.internal.reflect.ReflectionFactory::copyMethod (10 bytes)   made not entrant
+   3593 1648 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+3541 - 3594 : Trial 1 Elapsed time: 52.626509 msecs
+   3594 1649 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   3597 1650       4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   3599 1647       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)   made not entrant
+3594 - 3837 : Trial 2 Elapsed time: 242.782239 msecs
+3837 - 4074 : Trial 3 Elapsed time: 237.27345 msecs
+4074 - 4302 : Trial 4 Elapsed time: 227.782016 msecs
+4303 - 4535 : Trial 5 Elapsed time: 232.711275 msecs
+4536 - 4762 : Trial 6 Elapsed time: 226.026837 msecs
+4762 - 4988 : Trial 7 Elapsed time: 226.054946 msecs
+   5216 1651       4       java.lang.Long::valueOf (40 bytes)
+4988 - 5216 : Trial 8 Elapsed time: 227.349203 msecs
+   5216 1652       3       java.lang.invoke.Invokers$Holder::linkToTargetMethod (9 bytes)
+   5216 1653       3       java.lang.invoke.DirectMethodHandle$Holder::invokeStatic (14 bytes)
+   5216 1654       1       java.util.stream.ReferencePipeline$StatelessOp::opIsStateful (2 bytes)
+   5217  835       3       java.lang.Long::valueOf (40 bytes)   made not entrant
+5216 - 5447 : Trial 9 Elapsed time: 230.555657 msecs
+   5679 1655       3       java.lang.invoke.Invokers$Holder::linkToTargetMethod (8 bytes)
+5447 - 5679 : Trial 10 Elapsed time: 231.909849 msecs
+   5679 1656       3       java.lang.invoke.LambdaForm$MH/0x0000000800064840::invoke (8 bytes)
+   5680 1657       3       java.lang.ClassLoader::checkPackageAccess (102 bytes)
+5680 : Before defn of foo2 #3
+   5681 1658       3       java.util.stream.AbstractPipeline::isParallel (8 bytes)
+   5681 1659       4       clojure.lang.Util::equiv (65 bytes)
+   5681 1660       3       sun.security.provider.SHA::implCompress0 (482 bytes)
+   5682 1662       3       clojure.core$some::invokeStatic (78 bytes)
+   5682 1663       3       clojure.core$conj__5390::invoke (10 bytes)
+   5683 1664       3       clojure.core$empty_QMARK_::invokeStatic (10 bytes)
+   5683 1666       3       clojure.lang.Compiler$LocalBindingExpr::hasJavaClass (23 bytes)
+   5683 1665       3       clojure.core$empty_QMARK_::invoke (7 bytes)
+   5683 1668       3       clojure.core$concat::invokeStatic (32 bytes)
+   5683  989       3       clojure.lang.Util::equiv (65 bytes)   made not entrant
+   5683 1661       4       clojure.lang.PersistentArrayMap$Seq::next (34 bytes)
+   5684 1669       3       clojure.core$concat$cat__5495::<init> (5 bytes)
+   5684 1670       3       clojure.lang.Util::isPrimitive (24 bytes)
+   5684 1667       1       clojure.lang.Compiler$NumberExpr::hasJavaClass (2 bytes)
+   5684 1671       3       java.util.regex.Matcher::getTextLength (10 bytes)
+5685 : After  defn of foo2 #3
+   5685 1673       3       java.util.Arrays::copyOf (10 bytes)
+   5685 1007       3       clojure.lang.PersistentArrayMap$Seq::next (34 bytes)   made not entrant
+   5685 1672       4       clojure.asm.SymbolTable::addConstantUtf8 (98 bytes)
+   5686 1675       3       java.util.Arrays::fill (21 bytes)
+   5686 1676       3       java.lang.reflect.Method::isBridge (16 bytes)
+   5687 1677       3       clojure.core$deref::invoke (7 bytes)
+   5687 1679       3       clojure.spec.alpha$alt2::invoke (10 bytes)
+   5687 1680       3       clojure.spec.alpha$alt2::invokeStatic (81 bytes)
+   5687 1681       3       java.util.Arrays::fill (21 bytes)
+   5688 1682       3       clojure.spec.alpha$accept_QMARK_::invoke (7 bytes)
+   5688 1685       3       clojure.core$dorun::invokeStatic (38 bytes)
+   5688 1683       3       clojure.spec.alpha$accept_QMARK_::invokeStatic (92 bytes)
+   5688 1684       3       clojure.core$not::invoke (7 bytes)
+   5689 1687       3       java.util.IdentityHashMap::get (60 bytes)
+   5689 1686       3       java.lang.Class::getReflectionFactory (26 bytes)
+   5689 1690       3       clojure.lang.Compiler$LocalBinding::getPrimitiveType (8 bytes)
+   5689 1692       3       clojure.asm.MethodWriter::visitVarInsn (302 bytes)
+   5689 1678       4       clojure.lang.RT::getFrom (120 bytes)
+   5690 1695       3       clojure.asm.MethodWriter::computeAllFrames (508 bytes)
+   5691 1169       3       clojure.lang.RT::getFrom (120 bytes)   made not entrant
+   5691 1689       4       clojure.asm.ByteVector::putShort (52 bytes)
+   5692 1691       3       clojure.lang.Compiler$StaticMethodExpr::getJavaClass (55 bytes)
+   5692 1694       3       clojure.asm.commons.GeneratorAdapter::getStatic (11 bytes)
+   5692 1688       3       java.util.Formatter$Flags::<init> (10 bytes)
+   5692 1081       3       clojure.asm.ByteVector::putShort (52 bytes)   made not entrant
+   5693 1696 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   5693 1693       4       java.util.Objects::requireNonNull (15 bytes)
+   5693 1697       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   5693  135       3       java.util.Objects::requireNonNull (15 bytes)   made not entrant
+   5693 1674       4       java.lang.String::lastIndexOf (12 bytes)
+   5696  127       3       java.lang.String::lastIndexOf (12 bytes)   made not entrant
+   5696 1698 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   5697 1696 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+   5704 1085       3       clojure.asm.SymbolTable::addConstantUtf8 (98 bytes)   made not entrant
+   5738 1698 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+   5738 1699       3       java.util.stream.PipelineHelper::<init> (5 bytes)
+5690 - 5738 : Trial 1 Elapsed time: 47.992075 msecs
+   5739 1700 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   5741 1701       4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   5743 1697       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)   made not entrant
+   5963 1702       3       java.nio.CharBuffer::5739 - 5962 : Trial 2 Elapsed time: 223.911241 msecs
+position (6 bytes)
+   5963 1703       3       java.nio.CharBuffer::position (8 bytes)
+5963 - 6204 : Trial 3 Elapsed time: 241.585572 msecs
+   6506 1704       1       java.util.stream.Collectors$CollectorImpl::characteristics (5 bytes)
+6205 - 6506 : Trial 4 Elapsed time: 300.85969 msecs
+   6506 1705       3       sun.nio.cs.UTF_8$Encoder::encodeArrayLoop (489 bytes)
+6506 - 6747 : Trial 5 Elapsed time: 240.784856 msecs
+6747 - 6975 : Trial 6 Elapsed time: 227.715017 msecs
+   6975 1706       1       java.util.stream.AbstractPipeline::getStreamAndOpFlags (5 bytes)
+6975 - 7197 : Trial 7 Elapsed time: 222.246223 msecs
+7197 - 7419 : Trial 8 Elapsed time: 221.87477 msecs
+   7641 1707       1       java.lang.management.DefaultPlatformMBeanProvider$7::mbeanInterfaceNames (5 bytes)
+7420 - 7641 : Trial 9 Elapsed time: 221.692525 msecs
+7642 - 7860 : Trial 10 Elapsed time: 218.154558 msecs
+
+
+----------------------------------------------------------------------
+The 'critical path' part of the run is over.  You can ignore GC and
+JIT tracing output from here onwards.
+----------------------------------------------------------------------
+   7861 1708       3       clojure.lang.PersistentList::withMeta (6 bytes)
+   7862 1709       3       clojure.lang.PersistentList::withMeta (31 bytes)
+   7862 1710       3       clojure.lang.PersistentTreeMap::doCompare (12 bytes)
+   7862 1711       3       clojure.lang.RT$DefaultComparator::compare (6 bytes)
+   7864 1712       1       clojure.core$hash_map::getRequiredArity (2 bytes)
+   7865 1713       4       clojure.lang.APersistentMap::invoke (6 bytes)
+   7866 1714       3       clojure.lang.Symbol::compareTo (77 bytes)
+   7866 1071       3       clojure.lang.APersistentMap::invoke (6 bytes)   made not entrant
+   7867 1716       3       java.lang.StringLatin1::compareTo (52 bytes)
+   7867 1715       3       java.lang.StringLatin1::compareTo (14 bytes)
+   7869 1717       4       java.lang.String::regionMatches (150 bytes)
+   7870 1718       3       clojure.lang.ChunkedCons::<init> (8 bytes)
+   7870 1719       3       clojure.lang.ChunkedCons::<init> (16 bytes)
+   7870 1721       3       java.lang.Integer::numberOfLeadingZeros (78 bytes)
+   7871 1722       3       clojure.spec.alpha$invalid_QMARK_::invoke (7 bytes)
+   7871 1723       3       clojure.spec.alpha$invalid_QMARK_::invokeStatic (22 bytes)
+   7871 1724       3       java.lang.String::toCharArray (25 bytes)
+   7871 1726       3       java.util.IdentityHashMap::put (137 bytes)
+   7872 1725       3       java.lang.StringLatin1::toChars (16 bytes)
+   7873 1728       3       clojure.spec.alpha$reg_resolve::invoke (7 bytes)
+   7873 1729       3       clojure.spec.alpha$reg_resolve::invokeStatic (128 bytes)
+   7874 1730       3       clojure.lang.APersistentMap::cons (135 bytes)
+   7875 1731       3       clojure.core$vector_QMARK___5414::invokeStatic (19 bytes)
+   7875 1732       3       java.lang.Long::intValue (6 bytes)
+   7875 1734       3       clojure.lang.APersistentVector::invoke (29 bytes)
+   7875 1735       3       clojure.lang.Compiler$LocalBinding::hasJavaClass (108 bytes)
+   7876 1736       3       clojure.spec.alpha$the_spec::invoke (7 bytes)
+   7876 1737       3       clojure.spec.alpha$the_spec::invokeStatic (98 bytes)
+   7876 1739       3       clojure.core$second__5392::invokeStatic (10 bytes)
+   7877 1738   !   3       clojure.lang.Compiler::checkSpecs (68 bytes)
+   7878 1742       3       clojure.lang.Compiler::munge (82 bytes)
+   7878 1727       4       clojure.lang.Symbol::equals (55 bytes)
+   7879 1743  s    3       sun.security.provider.SecureRandom::engineNextBytes (242 bytes)
+   7880 1746       3       clojure.asm.Type::getMethodDescriptor (53 bytes)
+   7881 1745       3       clojure.asm.commons.Method::<init> (11 bytes)
+   7881 1428       3       clojure.lang.Symbol::equals (55 bytes)   made not entrant
+   7881 1747       3       clojure.lang.Compiler$ObjExpr::emitConstant (39 bytes)
+   7881 1744       4       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (552 bytes)
+   7881 1749       4       clojure.asm.Type::getArgumentsAndReturnSizes (138 bytes)
+   7882 1748       3       clojure.asm.commons.GeneratorAdapter::checkCast (19 bytes)
+   7882 1740       3       clojure.spec.alpha$preturn::invoke (7 bytes)
+   7882 1741       3       clojure.spec.alpha$preturn::invokeStatic (765 bytes)
+   7885 1751       3       java.util.regex.Pattern::append (39 bytes)
+   7885 1752       1       clojure.lang.ChunkedCons::chunkedFirst (5 bytes)
+   7889 1273       3       clojure.asm.Type::getArgumentsAndReturnSizes (138 bytes)   made not entrant
+   7889 1750       4       clojure.asm.Frame::merge (317 bytes)
+   7891 1753       3       java.lang.invoke.MemberName::getMethodOrFieldType (72 bytes)
+   7892 1754     n 0       java.lang.invoke.MethodHandle::linkToStatic(LJLL)L (native)   (static)
+   7893 1756       3       java.lang.invoke.MemberName::getInvocationType (56 bytes)
+   7893 1274       3       clojure.asm.Frame::merge (317 bytes)   made not entrant
+   7893 1733       4       java.lang.Object::equals (11 bytes)
+   7893 1758     n 0       java.lang.invoke.MethodHandle::linkToStatic(LJL)L (native)   (static)
+   7893  654       3       java.lang.Object::equals (11 bytes)   made not entrant
+   7894 1720       4       clojure.lang.PersistentArrayMap::assoc (133 bytes)
+   7894 1757       3       sun.invoke.util.Wrapper::forBasicType (16 bytes)
+   7894 1755       3       java.lang.invoke.MemberName::checkForTypeAlias (168 bytes)
+   7894 1761     n 0       java.lang.invoke.MethodHandle::invokeBasic(LJ)L (native)   
+   7894 1762     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLJL)L (native)   (static)
+   7896 1763       3       sun.invoke.util.BytecodeDescriptor::unparseSig (91 bytes)
+   7897 1765       3       java.lang.invoke.MethodTypeForm::canonicalize (64 bytes)
+   7897 1767     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLIL)L (native)   (static)
+   7897 1759       1       java.lang.invoke.LambdaForm$Name::type (5 bytes)
+   7897 1760       3       java.lang.invoke.LambdaForm::forceInterpretation (14 bytes)
+   7897 1766       3       jdk.internal.org.objectweb.asm.ClassWriter::put122 (15 bytes)
+   7898 1769     n 0       java.lang.invoke.MethodHandle::invokeBasic(LLI)L (native)   
+   7898 1770     n 0       java.lang.invoke.MethodHandle::linkToSpecial(LLLIL)L (native)   (static)
+   7898 1768       3       jdk.internal.org.objectweb.asm.MethodWriter::visitVarInsn (300 bytes)
+   7899 1771       3       java.lang.invoke.MemberName::isResolved (13 bytes)
+   7899  325  s    4       java.io.BufferedInputStream::read (49 bytes)   made not entrant
+   7899  317  s    3       java.io.BufferedInputStream::read (113 bytes)   made not entrant
+   7899  315       3       java.io.BufferedInputStream::read1 (108 bytes)   made not entrant
+   7899 1772       3       java.lang.invoke.LambdaForm::parameterType (9 bytes)
+   7901 1773     n 0       jdk.internal.reflect.Reflection::getClassAccessFlags (native)   (static)
+   7901 1774       3       sun.invoke.util.Wrapper::forPrimitiveType (49 bytes)
+   7903 1775       3       java.lang.ref.SoftReference::<init> (13 bytes)
+   7904 1776       3       java.lang.reflect.Modifier::isProtected (12 bytes)
+   7904 1777       3       jdk.internal.org.objectweb.asm.ClassWriter::newClass (11 bytes)
+   7904 1778     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLLL)V (native)   (static)
+   7906 1780       3       java.util.Formatter::checkText (58 bytes)
+   7908 1785       3       java.util.Formatter::ensureOpen (16 bytes)
+   7908 1783       3       java.util.Formatter$Conversion::isGeneral (64 bytes)
+   7908 1784       3       java.util.Formatter$Conversion::isInteger (48 bytes)
+   7908 1786       3       clojure.core$class_QMARK_::invokeStatic (19 bytes)
+   7909 1787       3       clojure.core$disj::invokeStatic (31 bytes)
+   7909 1788       3       clojure.lang.PersistentHashSet::disjoin (32 bytes)
+   7909  543       3       clojure.lang.PersistentArrayMap::assoc (133 bytes)   made not entrant
+   7909 1779   !   4       java.net.URL::<init> (543 bytes)
+   7910 1781       3       java.util.Formatter$FixedString::<init> (26 bytes)
+   7910 1782   !   3       java.util.Formatter$FormatSpecifier::index (50 bytes)
+   7953 1789       3       java.lang.AbstractStringBuilder::appendChars (130 bytes)
+   7960  940       3       clojure.lang.PersistentHashMap$BitmapIndexedNode::assoc (552 bytes)   made not entrant
+   7960 1764       4       jdk.internal.org.objectweb.asm.ByteVector::putUTF8 (142 bytes)
+   7964 1790       3       java.nio.ByteBuffer::position (6 bytes)
+   7967  265       3       jdk.internal.org.objectweb.asm.ByteVector::putUTF8 (142 bytes)   made not entrant
+   7974 1791 %     3       sun.nio.cs.UTF_8$Decoder::decodeArrayLoop @ 73 (691 bytes)
+   7976 1793     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLIL)V (native)   (static)
+   7976 1794     n 0       java.lang.invoke.MethodHandle::linkToStatic(LLIL)V (native)   (static)
+
+----------------------------------------------------------------------
+Use ps to see all JVM command line options used.
+----------------------------------------------------------------------
+
+[exit status 0]
+   7977 1795       4       java.util.regex.Pattern$BmpCharProperty::match (55 bytes)
+   7979 1792       3       java.nio.charset.CoderResult::isOverflow (14 bytes)
+   7979 1797       3       java.util.regex.Matcher::end (22 bytes)
+   7980 1509       3       java.util.regex.Pattern$BmpCharProperty::match (55 bytes)   made not entrant
+   7980 1796       4       java.util.regex.Pattern$Ques::match (196 bytes)
+   7980 1798       3       java.util.regex.Matcher::find (69 bytes)
+   7981 1408       4       clojure.lang.PersistentVector::arrayFor (73 bytes)   made not entrant
+USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
+jafinger         26972 104.5  0.7 10259212 122252 s003  R+    4:27PM   0:10.49 /Users/jafinger/jdks/jdk-hotspot-11.0.4+11/Contents/Home/bin/java -XX:-OmitStackTraceInFastThrow -Xlog:gc -Xlog:gc* -XX:+PrintCompilation -Dclojure.libfile=.cpcache/232865587.libs -classpath src:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar clojure.main -m leeuwenhoek.maybe-jit-slower
+   7982 1802       3       java.util.regex.Pattern$BnM::match (161 bytes)
+   7982 1803       3       clojure.core$re_matcher::invokeStatic (16 bytes)
+   7982 1806       3       clojure.core$re_find::invokeStatic (17 bytes)
+   7983 1808       1       clojure.lang.ArrayChunk::nth (12 bytes)
+   7983 1805       4       java.util.regex.Matcher::search (154 bytes)
+   7983 1173       3       clojure.lang.ArrayChunk::nth (12 bytes)   made not entrant
+   7983 1804       3       clojure.core$re_find::invoke (10 bytes)
+   7984 1812       3       clojure.lang.PersistentVector::arrayFor (73 bytes)
+   7984 1807       3       clojure.core$re_find::invokeStatic (22 bytes)
+   7984 1809       3       clojure.core$vector::invoke (13 bytes)
+   7984 1810       3       clojure.core$vector::invokeStatic (13 bytes)
+   7984 1390       3       java.util.regex.Pattern$Ques::match (196 bytes)   made not entrant
+   7985 1799 %     4       java.util.regex.Pattern$Start::match @ 31 (90 bytes)
+   7985 1811       3       clojure.spec.alpha$filter_alt$fn__2336::invoke (32 bytes)
+   7985 1813       3       clojure.spec.alpha$add_ret::invoke (13 bytes)
+   7985 1814       3       clojure.spec.alpha$add_ret::invokeStatic (664 bytes)
+   7987  984   !   4       java.util.concurrent.ConcurrentHashMap::putVal (432 bytes)   made not entrant
+[7.989s][info][gc,heap,exit ] Heap
+[7.989s][info][gc,heap,exit ]  garbage-first heap   total 262144K, used 38085K [0x0000000700000000, 0x0000000800000000)
+[7.989s][info][gc,heap,exit ]   region size 1024K, 38 young (38912K), 3 survivors (3072K)
+[7.989s][info][gc,heap,exit ]  Metaspace       used 19867K, capacity 20342K, committed 20736K, reserved 1067008K
+[7.989s][info][gc,heap,exit ]   class space    used 3233K, capacity 3483K, committed 3584K, reserved 1048576K
+
+
+----------------------------------------------------------------------
+Begin portion of JVM output relevant to JIT compilation of method foo2
+----------------------------------------------------------------------
+1341 : Before defn of foo2 #1
+1356 : After  defn of foo2 #1
+   1367 1595 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   1367 1596       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   1386 1597 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   1387 1595 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+   1426 1597 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+1365 - 1427 : Trial 1 Elapsed time: 62.03474 msecs
+   1428 1601 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   1431 1602       4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   1433 1596       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)   made not entrant
+1428 - 1646 : Trial 2 Elapsed time: 217.545467 msecs
+1646 - 1870 : Trial 3 Elapsed time: 224.153984 msecs
+1871 - 2110 : Trial 4 Elapsed time: 239.166052 msecs
+2110 - 2335 : Trial 5 Elapsed time: 225.21169 msecs
+2336 - 2565 : Trial 6 Elapsed time: 229.258071 msecs
+2565 - 2799 : Trial 7 Elapsed time: 233.421533 msecs
+2799 - 3037 : Trial 8 Elapsed time: 237.501823 msecs
+3037 - 3283 : Trial 9 Elapsed time: 245.639055 msecs
+3283 - 3525 : Trial 10 Elapsed time: 242.120287 msecs
+3527 : Before defn of foo2 #2
+3534 : After  defn of foo2 #2
+   3543 1646 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   3543 1647       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   3550 1648 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   3551 1646 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+   3593 1648 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+3541 - 3594 : Trial 1 Elapsed time: 52.626509 msecs
+   3594 1649 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   3597 1650       4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   3599 1647       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)   made not entrant
+3594 - 3837 : Trial 2 Elapsed time: 242.782239 msecs
+3837 - 4074 : Trial 3 Elapsed time: 237.27345 msecs
+4074 - 4302 : Trial 4 Elapsed time: 227.782016 msecs
+4303 - 4535 : Trial 5 Elapsed time: 232.711275 msecs
+4536 - 4762 : Trial 6 Elapsed time: 226.026837 msecs
+4762 - 4988 : Trial 7 Elapsed time: 226.054946 msecs
+4988 - 5216 : Trial 8 Elapsed time: 227.349203 msecs
+5216 - 5447 : Trial 9 Elapsed time: 230.555657 msecs
+5447 - 5679 : Trial 10 Elapsed time: 231.909849 msecs
+5680 : Before defn of foo2 #3
+5685 : After  defn of foo2 #3
+   5693 1696 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   5693 1697       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   5696 1698 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   5697 1696 %     3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+   5738 1698 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)   made not entrant
+5690 - 5738 : Trial 1 Elapsed time: 47.992075 msecs
+   5739 1700 %     4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic @ 13 (37 bytes)
+   5741 1701       4       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)
+   5743 1697       3       leeuwenhoek.maybe_jit_slower$foo2::invokeStatic (37 bytes)   made not entrant
+   5963 1702       3       java.nio.CharBuffer::5739 - 5962 : Trial 2 Elapsed time: 223.911241 msecs
+5963 - 6204 : Trial 3 Elapsed time: 241.585572 msecs
+6205 - 6506 : Trial 4 Elapsed time: 300.85969 msecs
+6506 - 6747 : Trial 5 Elapsed time: 240.784856 msecs
+6747 - 6975 : Trial 6 Elapsed time: 227.715017 msecs
+6975 - 7197 : Trial 7 Elapsed time: 222.246223 msecs
+7197 - 7419 : Trial 8 Elapsed time: 221.87477 msecs
+7420 - 7641 : Trial 9 Elapsed time: 221.692525 msecs
+7642 - 7860 : Trial 10 Elapsed time: 218.154558 msecs
+----------------------------------------------------------------------
+End portion of JVM output relevant to JIT compilation of method foo2
+----------------------------------------------------------------------
+
+
+Info about system:
+
+$ uname -a
+Darwin JAFINGER-M-W0SR 17.7.0 Darwin Kernel Version 17.7.0: Sun Jun  2 20:31:42 PDT 2019; root:xnu-4570.71.46~1/RELEASE_X86_64 x86_64
+$ lsb_release -a
+
+
+Info about JVM:
+
+os.name: Mac OS X
+os.version: 10.13.6
+os.arch: x86_64
+java.runtime.name: OpenJDK Runtime Environment
+java.runtime.version: 11.0.4+11
+java.vm.name: OpenJDK 64-Bit Server VM
+java.vm.vendor: AdoptOpenJDK
+java.vm.version: 11.0.4+11

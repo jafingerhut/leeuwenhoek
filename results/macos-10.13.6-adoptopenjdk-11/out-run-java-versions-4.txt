@@ -1,0 +1,302 @@
++ javac -Xlint -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar src/leeuwenhoek/JavaVersion4.java
+src/leeuwenhoek/JavaVersion4.java:11: warning: [serial] serializable class JavaVersion4_other has no definition of serialVersionUID
+final class JavaVersion4_other extends AFunction {
+      ^
+1 warning
++ javap -c src/leeuwenhoek/JavaVersion4_other.class
+Compiled from "JavaVersion4.java"
+final class JavaVersion4_other extends clojure.lang.AFunction {
+  JavaVersion4_other();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method clojure/lang/AFunction."<init>":()V
+       4: return
+
+  public static java.lang.Object invokeStatic(java.lang.Object);
+    Code:
+       0: aload_0
+       1: invokestatic  #2                  // Method clojure/lang/RT.intCast:(Ljava/lang/Object;)I
+       4: istore_1
+       5: lconst_0
+       6: invokestatic  #3                  // Method clojure/lang/RT.intCast:(J)I
+       9: i2l
+      10: lstore_2
+      11: lload_2
+      12: iload_1
+      13: i2l
+      14: lcmp
+      15: ifge          26
+      18: lload_2
+      19: invokestatic  #4                  // Method clojure/lang/Numbers.inc:(J)J
+      22: lstore_2
+      23: goto          11
+      26: lload_2
+      27: invokestatic  #5                  // Method clojure/lang/Numbers.num:(J)Ljava/lang/Number;
+      30: areturn
+
+  public java.lang.Object invoke(java.lang.Object);
+    Code:
+       0: aload_1
+       1: invokestatic  #6                  // Method invokeStatic:(Ljava/lang/Object;)Ljava/lang/Object;
+       4: areturn
+}
++ javap -c src/leeuwenhoek/JavaVersion4.class
+Compiled from "JavaVersion4.java"
+class JavaVersion4 {
+  public static final clojure.lang.Var afn_obj;
+
+  public static java.lang.management.RuntimeMXBean mxb;
+
+  JavaVersion4();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static long uptime();
+    Code:
+       0: getstatic     #2                  // Field mxb:Ljava/lang/management/RuntimeMXBean;
+       3: invokeinterface #3,  1            // InterfaceMethod java/lang/management/RuntimeMXBean.getUptime:()J
+       8: lreturn
+
+  public static void do10times();
+    Code:
+       0: ldc2_w        #4                  // long 10l
+       3: lstore_0
+       4: lconst_0
+       5: lstore_2
+       6: lload_2
+       7: lload_0
+       8: lcmp
+       9: ifge          109
+      12: getstatic     #6                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      15: invokestatic  #7                  // Method uptime:()J
+      18: lload_2
+      19: lconst_1
+      20: ladd
+      21: invokedynamic #8,  0              // InvokeDynamic #0:makeConcatWithConstants:(JJ)Ljava/lang/String;
+      26: invokevirtual #9                  // Method java/io/PrintStream.print:(Ljava/lang/String;)V
+      29: invokestatic  #10                 // Method java/lang/System.nanoTime:()J
+      32: lstore        4
+      34: getstatic     #11                 // Field afn_obj:Lclojure/lang/Var;
+      37: invokevirtual #12                 // Method clojure/lang/Var.getRawRoot:()Ljava/lang/Object;
+      40: checkcast     #13                 // class clojure/lang/IFn
+      43: ldc2_w        #14                 // long 100000000l
+      46: invokestatic  #16                 // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+      49: invokeinterface #17,  2           // InterfaceMethod clojure/lang/IFn.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+      54: astore        8
+      56: invokestatic  #10                 // Method java/lang/System.nanoTime:()J
+      59: lstore        6
+      61: lload         6
+      63: lload         4
+      65: invokestatic  #18                 // Method clojure/lang/Numbers.minus:(JJ)J
+      68: ldc2_w        #19                 // double 1000000.0d
+      71: invokestatic  #21                 // Method clojure/lang/Numbers.divide:(JD)D
+      74: dstore        9
+      76: getstatic     #6                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      79: dload         9
+      81: invokedynamic #22,  0             // InvokeDynamic #1:makeConcatWithConstants:(D)Ljava/lang/String;
+      86: invokevirtual #23                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      89: getstatic     #6                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      92: aload         8
+      94: invokedynamic #24,  0             // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/Object;)Ljava/lang/String;
+      99: invokevirtual #23                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+     102: lload_2
+     103: lconst_1
+     104: ladd
+     105: lstore_2
+     106: goto          6
+     109: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: invokestatic  #25                 // Method java/lang/management/ManagementFactory.getRuntimeMXBean:()Ljava/lang/management/RuntimeMXBean;
+       3: putstatic     #2                  // Field mxb:Ljava/lang/management/RuntimeMXBean;
+       6: ldc           #26                 // String clojure.core
+       8: ldc           #27                 // String eval
+      10: invokestatic  #28                 // Method clojure/lang/RT.var:(Ljava/lang/String;Ljava/lang/String;)Lclojure/lang/Var;
+      13: astore_1
+      14: aload_1
+      15: ldc           #29                 // String (def foo2 nil)
+      17: invokestatic  #30                 // Method clojure/java/api/Clojure.read:(Ljava/lang/String;)Ljava/lang/Object;
+      20: invokeinterface #17,  2           // InterfaceMethod clojure/lang/IFn.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+      25: pop
+      26: ldc           #31                 // String user
+      28: ldc           #32                 // String foo2
+      30: invokestatic  #28                 // Method clojure/lang/RT.var:(Ljava/lang/String;Ljava/lang/String;)Lclojure/lang/Var;
+      33: astore_2
+      34: ldc           #26                 // String clojure.core
+      36: ldc           #33                 // String alter-var-root
+      38: invokestatic  #28                 // Method clojure/lang/RT.var:(Ljava/lang/String;Ljava/lang/String;)Lclojure/lang/Var;
+      41: astore_3
+      42: ldc           #26                 // String clojure.core
+      44: ldc           #34                 // String constantly
+      46: invokestatic  #28                 // Method clojure/lang/RT.var:(Ljava/lang/String;Ljava/lang/String;)Lclojure/lang/Var;
+      49: astore        4
+      51: aload         4
+      53: new           #35                 // class JavaVersion4_other
+      56: dup
+      57: invokespecial #36                 // Method JavaVersion4_other."<init>":()V
+      60: invokeinterface #17,  2           // InterfaceMethod clojure/lang/IFn.invoke:(Ljava/lang/Object;)Ljava/lang/Object;
+      65: astore        5
+      67: aload_3
+      68: aload_2
+      69: aload         5
+      71: invokeinterface #37,  3           // InterfaceMethod clojure/lang/IFn.invoke:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      76: pop
+      77: invokestatic  #38                 // Method do10times:()V
+      80: return
+
+  static {};
+    Code:
+       0: ldc           #31                 // String user
+       2: ldc           #32                 // String foo2
+       4: invokestatic  #28                 // Method clojure/lang/RT.var:(Ljava/lang/String;Ljava/lang/String;)Lclojure/lang/Var;
+       7: putstatic     #11                 // Field afn_obj:Lclojure/lang/Var;
+      10: return
+}
++ set +x
+----------------------------------------
+tiered_opts=
++ java -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion4
+1043 : Trial 1 Elapsed time: 45.199071 msecs
+ret=100000000
+1120 : Trial 2 Elapsed time: 225.052872 msecs
+ret=100000000
+1345 : Trial 3 Elapsed time: 229.606789 msecs
+ret=100000000
+1575 : Trial 4 Elapsed time: 229.561424 msecs
+ret=100000000
+1805 : Trial 5 Elapsed time: 228.095365 msecs
+ret=100000000
+2033 : Trial 6 Elapsed time: 224.355171 msecs
+ret=100000000
+2258 : Trial 7 Elapsed time: 224.692542 msecs
+ret=100000000
+2483 : Trial 8 Elapsed time: 219.62555 msecs
+ret=100000000
+2703 : Trial 9 Elapsed time: 224.989788 msecs
+ret=100000000
+2928 : Trial 10 Elapsed time: 230.266797 msecs
+ret=100000000
++ set +x
+----------------------------------------
+tiered_opts=-XX:-TieredCompilation
++ java -XX:-TieredCompilation -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion4
+1416 : Trial 1 Elapsed time: 43.026207 msecs
+ret=100000000
+1499 : Trial 2 Elapsed time: 221.115371 msecs
+ret=100000000
+1721 : Trial 3 Elapsed time: 229.193387 msecs
+ret=100000000
+1950 : Trial 4 Elapsed time: 230.824494 msecs
+ret=100000000
+2181 : Trial 5 Elapsed time: 227.810884 msecs
+ret=100000000
+2409 : Trial 6 Elapsed time: 220.971071 msecs
+ret=100000000
+2630 : Trial 7 Elapsed time: 222.716068 msecs
+ret=100000000
+2853 : Trial 8 Elapsed time: 223.883965 msecs
+ret=100000000
+3078 : Trial 9 Elapsed time: 229.269634 msecs
+ret=100000000
+3307 : Trial 10 Elapsed time: 232.205307 msecs
+ret=100000000
++ set +x
+----------------------------------------
+tiered_opts=-XX:TieredStopAtLevel=1
++ java -XX:TieredStopAtLevel=1 -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion4
+919 : Trial 1 Elapsed time: 83.647023 msecs
+ret=100000000
+1027 : Trial 2 Elapsed time: 81.302446 msecs
+ret=100000000
+1109 : Trial 3 Elapsed time: 84.905843 msecs
+ret=100000000
+1194 : Trial 4 Elapsed time: 86.660766 msecs
+ret=100000000
+1281 : Trial 5 Elapsed time: 81.940165 msecs
+ret=100000000
+1363 : Trial 6 Elapsed time: 84.468098 msecs
+ret=100000000
+1447 : Trial 7 Elapsed time: 83.917898 msecs
+ret=100000000
+1532 : Trial 8 Elapsed time: 81.53683 msecs
+ret=100000000
+1613 : Trial 9 Elapsed time: 91.93829 msecs
+ret=100000000
+1705 : Trial 10 Elapsed time: 83.070838 msecs
+ret=100000000
++ set +x
+----------------------------------------
+tiered_opts=-XX:TieredStopAtLevel=2
++ java -XX:TieredStopAtLevel=2 -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion4
+954 : Trial 1 Elapsed time: 190.389869 msecs
+ret=100000000
+1172 : Trial 2 Elapsed time: 189.532542 msecs
+ret=100000000
+1362 : Trial 3 Elapsed time: 190.38975 msecs
+ret=100000000
+1552 : Trial 4 Elapsed time: 193.110797 msecs
+ret=100000000
+1746 : Trial 5 Elapsed time: 189.28258 msecs
+ret=100000000
+1935 : Trial 6 Elapsed time: 192.742866 msecs
+ret=100000000
+2128 : Trial 7 Elapsed time: 192.523391 msecs
+ret=100000000
+2321 : Trial 8 Elapsed time: 189.202337 msecs
+ret=100000000
+2510 : Trial 9 Elapsed time: 188.654447 msecs
+ret=100000000
+2699 : Trial 10 Elapsed time: 187.463085 msecs
+ret=100000000
++ set +x
+----------------------------------------
+tiered_opts=-XX:TieredStopAtLevel=3
++ java -XX:TieredStopAtLevel=3 -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion4
+1037 : Trial 1 Elapsed time: 351.576955 msecs
+ret=100000000
+1424 : Trial 2 Elapsed time: 339.150909 msecs
+ret=100000000
+1763 : Trial 3 Elapsed time: 342.057887 msecs
+ret=100000000
+2105 : Trial 4 Elapsed time: 349.278819 msecs
+ret=100000000
+2455 : Trial 5 Elapsed time: 341.328344 msecs
+ret=100000000
+2797 : Trial 6 Elapsed time: 352.116909 msecs
+ret=100000000
+3149 : Trial 7 Elapsed time: 345.96657 msecs
+ret=100000000
+3495 : Trial 8 Elapsed time: 348.023178 msecs
+ret=100000000
+3844 : Trial 9 Elapsed time: 357.215271 msecs
+ret=100000000
+4201 : Trial 10 Elapsed time: 348.81797 msecs
+ret=100000000
++ set +x
+----------------------------------------
+tiered_opts=-XX:TieredStopAtLevel=4
++ java -XX:TieredStopAtLevel=4 -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion4
+1025 : Trial 1 Elapsed time: 47.308857 msecs
+ret=100000000
+1103 : Trial 2 Elapsed time: 224.499855 msecs
+ret=100000000
+1328 : Trial 3 Elapsed time: 227.181983 msecs
+ret=100000000
+1555 : Trial 4 Elapsed time: 231.012218 msecs
+ret=100000000
+1787 : Trial 5 Elapsed time: 225.803571 msecs
+ret=100000000
+2013 : Trial 6 Elapsed time: 219.950604 msecs
+ret=100000000
+2233 : Trial 7 Elapsed time: 225.768558 msecs
+ret=100000000
+2459 : Trial 8 Elapsed time: 225.720412 msecs
+ret=100000000
+2685 : Trial 9 Elapsed time: 227.39328 msecs
+ret=100000000
+2913 : Trial 10 Elapsed time: 228.473209 msecs
+ret=100000000
++ set +x

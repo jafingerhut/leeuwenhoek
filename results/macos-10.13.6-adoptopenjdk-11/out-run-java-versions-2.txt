@@ -1,0 +1,240 @@
++ javac -Xlint -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar src/leeuwenhoek/JavaVersion2.java
++ javap -c src/leeuwenhoek/JavaVersion2_other.class
+Compiled from "JavaVersion2.java"
+class JavaVersion2_other {
+  JavaVersion2_other();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static java.lang.Number foo2_inner(int);
+    Code:
+       0: lconst_0
+       1: lstore_1
+       2: lload_1
+       3: iload_0
+       4: i2l
+       5: lcmp
+       6: ifge          17
+       9: lload_1
+      10: invokestatic  #2                  // Method clojure/lang/Numbers.inc:(J)J
+      13: lstore_1
+      14: goto          2
+      17: lload_1
+      18: invokestatic  #3                  // Method clojure/lang/Numbers.num:(J)Ljava/lang/Number;
+      21: areturn
+
+  public static java.lang.Number foo2(java.lang.Object);
+    Code:
+       0: aload_0
+       1: checkcast     #4                  // class java/lang/Long
+       4: invokevirtual #5                  // Method java/lang/Long.longValue:()J
+       7: l2i
+       8: istore_1
+       9: iload_1
+      10: invokestatic  #6                  // Method foo2_inner:(I)Ljava/lang/Number;
+      13: areturn
+}
++ javap -c src/leeuwenhoek/JavaVersion2.class
+Compiled from "JavaVersion2.java"
+class JavaVersion2 {
+  static java.lang.management.RuntimeMXBean mxb;
+
+  JavaVersion2();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static long uptime();
+    Code:
+       0: getstatic     #2                  // Field mxb:Ljava/lang/management/RuntimeMXBean;
+       3: invokeinterface #3,  1            // InterfaceMethod java/lang/management/RuntimeMXBean.getUptime:()J
+       8: lreturn
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: invokestatic  #4                  // Method java/lang/management/ManagementFactory.getRuntimeMXBean:()Ljava/lang/management/RuntimeMXBean;
+       3: putstatic     #2                  // Field mxb:Ljava/lang/management/RuntimeMXBean;
+       6: iconst_0
+       7: istore_1
+       8: iload_1
+       9: bipush        10
+      11: if_icmpge     83
+      14: invokestatic  #5                  // Method java/lang/System.nanoTime:()J
+      17: lstore_2
+      18: ldc2_w        #6                  // long 100000000l
+      21: invokestatic  #8                  // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+      24: invokestatic  #9                  // Method JavaVersion2_other.foo2:(Ljava/lang/Object;)Ljava/lang/Number;
+      27: astore        6
+      29: invokestatic  #5                  // Method java/lang/System.nanoTime:()J
+      32: lstore        4
+      34: lload         4
+      36: lload_2
+      37: lsub
+      38: l2d
+      39: ldc2_w        #10                 // double 1000000.0d
+      42: ddiv
+      43: dstore        7
+      45: getstatic     #12                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      48: aload         6
+      50: invokedynamic #13,  0             // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/Number;)Ljava/lang/String;
+      55: invokevirtual #14                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      58: getstatic     #12                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      61: invokestatic  #15                 // Method uptime:()J
+      64: iload_1
+      65: iconst_1
+      66: iadd
+      67: dload         7
+      69: invokedynamic #16,  0             // InvokeDynamic #1:makeConcatWithConstants:(JID)Ljava/lang/String;
+      74: invokevirtual #14                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      77: iinc          1, 1
+      80: goto          8
+      83: return
+}
++ set +x
+----------------------------------------
+tiered_opts=
++ java -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion2
+ret=100000000
+920 : Trial 1 Elapsed time: 771.077989 msecs
+ret=100000000
+1163 : Trial 2 Elapsed time: 218.49452 msecs
+ret=100000000
+1394 : Trial 3 Elapsed time: 231.072811 msecs
+ret=100000000
+1626 : Trial 4 Elapsed time: 231.87831 msecs
+ret=100000000
+1850 : Trial 5 Elapsed time: 224.255296 msecs
+ret=100000000
+2065 : Trial 6 Elapsed time: 214.162141 msecs
+ret=100000000
+2286 : Trial 7 Elapsed time: 220.548028 msecs
+ret=100000000
+2513 : Trial 8 Elapsed time: 227.306783 msecs
+ret=100000000
+2728 : Trial 9 Elapsed time: 214.521918 msecs
+ret=100000000
+2951 : Trial 10 Elapsed time: 222.85933 msecs
++ set +x
+----------------------------------------
+tiered_opts=-XX:-TieredCompilation
++ java -XX:-TieredCompilation -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion2
+ret=100000000
+1173 : Trial 1 Elapsed time: 1024.551779 msecs
+ret=100000000
+1446 : Trial 2 Elapsed time: 237.514601 msecs
+ret=100000000
+1674 : Trial 3 Elapsed time: 228.134826 msecs
+ret=100000000
+1896 : Trial 4 Elapsed time: 221.110837 msecs
+ret=100000000
+2119 : Trial 5 Elapsed time: 222.743502 msecs
+ret=100000000
+2346 : Trial 6 Elapsed time: 227.26245 msecs
+ret=100000000
+2577 : Trial 7 Elapsed time: 230.395107 msecs
+ret=100000000
+2799 : Trial 8 Elapsed time: 222.126679 msecs
+ret=100000000
+3022 : Trial 9 Elapsed time: 222.740733 msecs
+ret=100000000
+3247 : Trial 10 Elapsed time: 224.708511 msecs
++ set +x
+----------------------------------------
+tiered_opts=-XX:TieredStopAtLevel=1
++ java -XX:TieredStopAtLevel=1 -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion2
+ret=100000000
+861 : Trial 1 Elapsed time: 725.906138 msecs
+ret=100000000
+967 : Trial 2 Elapsed time: 87.80655 msecs
+ret=100000000
+1052 : Trial 3 Elapsed time: 85.203441 msecs
+ret=100000000
+1138 : Trial 4 Elapsed time: 85.899314 msecs
+ret=100000000
+1224 : Trial 5 Elapsed time: 85.138835 msecs
+ret=100000000
+1307 : Trial 6 Elapsed time: 83.350382 msecs
+ret=100000000
+1389 : Trial 7 Elapsed time: 81.119113 msecs
+ret=100000000
+1470 : Trial 8 Elapsed time: 81.120508 msecs
+ret=100000000
+1553 : Trial 9 Elapsed time: 82.20979 msecs
+ret=100000000
+1634 : Trial 10 Elapsed time: 80.908924 msecs
++ set +x
+----------------------------------------
+tiered_opts=-XX:TieredStopAtLevel=2
++ java -XX:TieredStopAtLevel=2 -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion2
+ret=100000000
+988 : Trial 1 Elapsed time: 849.205602 msecs
+ret=100000000
+1198 : Trial 2 Elapsed time: 189.21266 msecs
+ret=100000000
+1387 : Trial 3 Elapsed time: 189.274042 msecs
+ret=100000000
+1581 : Trial 4 Elapsed time: 193.999731 msecs
+ret=100000000
+1773 : Trial 5 Elapsed time: 191.659218 msecs
+ret=100000000
+1962 : Trial 6 Elapsed time: 188.60742 msecs
+ret=100000000
+2164 : Trial 7 Elapsed time: 201.503345 msecs
+ret=100000000
+2353 : Trial 8 Elapsed time: 189.360107 msecs
+ret=100000000
+2544 : Trial 9 Elapsed time: 190.528906 msecs
+ret=100000000
+2739 : Trial 10 Elapsed time: 194.477688 msecs
++ set +x
+----------------------------------------
+tiered_opts=-XX:TieredStopAtLevel=3
++ java -XX:TieredStopAtLevel=3 -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion2
+ret=100000000
+1224 : Trial 1 Elapsed time: 1082.055217 msecs
+ret=100000000
+1590 : Trial 2 Elapsed time: 344.176079 msecs
+ret=100000000
+1949 : Trial 3 Elapsed time: 359.41889 msecs
+ret=100000000
+2303 : Trial 4 Elapsed time: 353.150162 msecs
+ret=100000000
+2660 : Trial 5 Elapsed time: 357.06441 msecs
+ret=100000000
+3013 : Trial 6 Elapsed time: 352.369472 msecs
+ret=100000000
+3355 : Trial 7 Elapsed time: 342.354882 msecs
+ret=100000000
+3700 : Trial 8 Elapsed time: 344.484884 msecs
+ret=100000000
+4048 : Trial 9 Elapsed time: 347.775228 msecs
+ret=100000000
+4388 : Trial 10 Elapsed time: 339.724491 msecs
++ set +x
+----------------------------------------
+tiered_opts=-XX:TieredStopAtLevel=4
++ java -XX:TieredStopAtLevel=4 -classpath src/leeuwenhoek:/Users/jafinger/.m2/repository/org/clojure/clojure/1.10.1/clojure-1.10.1.jar:/Users/jafinger/.m2/repository/org/clojure/spec.alpha/0.2.176/spec.alpha-0.2.176.jar:/Users/jafinger/.m2/repository/org/clojure/core.specs.alpha/0.2.44/core.specs.alpha-0.2.44.jar JavaVersion2
+ret=100000000
+920 : Trial 1 Elapsed time: 777.149112 msecs
+ret=100000000
+1182 : Trial 2 Elapsed time: 233.675608 msecs
+ret=100000000
+1400 : Trial 3 Elapsed time: 217.202578 msecs
+ret=100000000
+1615 : Trial 4 Elapsed time: 215.239753 msecs
+ret=100000000
+1833 : Trial 5 Elapsed time: 217.338832 msecs
+ret=100000000
+2048 : Trial 6 Elapsed time: 215.092119 msecs
+ret=100000000
+2269 : Trial 7 Elapsed time: 221.040455 msecs
+ret=100000000
+2491 : Trial 8 Elapsed time: 221.753807 msecs
+ret=100000000
+2721 : Trial 9 Elapsed time: 229.586373 msecs
+ret=100000000
+2940 : Trial 10 Elapsed time: 218.418191 msecs
++ set +x
